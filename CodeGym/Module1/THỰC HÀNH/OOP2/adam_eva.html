@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor (){
+                this.weight = 10;
+            }
+            decrease(){
+                this.weight--;
+            }
+            isEmpty(){
+                if( this.weight==0) return true;
+                else return false;
+            }
+            getWeight(){
+                return this.weight;
+            }
+
+        }
+        class Human{
+            constructor(name,gender,ng_weight){
+                this.name = name;
+                this.gender = gender;
+                this.ng_weight = ng_weight;
+            }
+            setGender (gender){
+                this.gender = gender;
+            }
+            isMale(){
+               if(this.gender=="male") return true;
+               else return false;
+            }
+            checkApple(apply){
+                if(!apply.isEmpty()){
+                    this.eat(apply);
+                }
+            }
+            eat(apple){
+                
+                    apple.decrease;
+                    this.ng_weight++;
+                    // console.log(this.ng_weight);
+                
+            }
+            say(str){
+                document.write(str);
+            }
+            setWeight(weight){
+                this.weight = weight;
+            }
+            getWeight(weight){
+                return this.weight;
+            }
+            
+
+        }
+
+        var apple = new Apple();
+        console.log(apple.weight);
+        var adam = new Human('Adam','male',35);
+        console.log(adam.isMale());
+        console.log(adam.ng_weight);
+        var eva= new Human('Eva','female',32);
+        adam.checkApple(apple);
+        eva.checkApple(apple);
+    </script>
+</body>
+</html>

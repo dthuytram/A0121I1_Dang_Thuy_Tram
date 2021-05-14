@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function check_Nguyento(num){
+       
+        if(num==0||num==1) return false;
+        else if(num==2) return true;
+        else 
+        {
+            if(num%2==0) t=num/2;
+            else t= num/2-1;
+            for( var i=2;i<=t;i++){
+               
+                if(num%i==0) {
+                   
+                    return false;
+                }
+            }
+           
+        }
+        return true;
+        
+    }
+    var a= new Array();
+    var c= new Array();
+    do{
+    var n = prompt("Nhập số phần tử:");
+    } while(n>50);
+    for( var i=1;i<=n;i++){
+        var num = parseInt(prompt("Số"+i+"là:"));
+        // a.push(num);
+        if(check_Nguyento(num)==true) c.push(num);
+        
+    
+    }
+    
+    for( var i=0;i<c.length;i++)
+    {
+        document.write(c[i]+" ");
+    
+    }
+    
+</script>
+</html>

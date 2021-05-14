@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  // cham than + enter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        #kq{
+           background-color:#4CAF50;
+           color:white;
+           font-size: 15px;
+           border:1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    // var a= new Customer("dang thuy tram","10201101","tramdangthuy3011@gmail.com","0914814420","30/11/2000","23 dong da",0.2,"diamond","villa",9,10);
+    
+    class Customer{
+        constructor(maso,loaitietkiem,hotenkhach,cmnd,ngaymoso,tiengui)
+        {   this.maso = maso;
+            this.loaitietkiem = loaitietkiem;
+            this.hotenkhach = hotenkhach;
+            this.cmnd = cmnd;
+            this.ngaymoso = ngaymoso;
+            this.tiengui = tiengui;
+            
+        }
+        setMaso(maso){
+            this.maso = maso;
+        }
+        setLoaitietkiem (loaitietkiem){
+            this.loaitietkiem = loaitietkiem;
+        }
+        setHoten(hotenkhach){
+            this.hotenkhach = hotenkhach;
+        }
+        setCmnd (cmnd){
+            this.cmnd = cmnd;
+        }
+        setNgaymoso(ngaymoso){
+            this.ngaymoso= ngaymoso;
+        }
+        setTiengui(tiengui){
+            this.tiengui= tiengui;
+        }
+        getMaso(){
+            return this.maso;
+        }
+        getLoaitietkiem(){
+            return this.loaitietkiem;
+        }
+        getHoten(){
+            return this.hoten;
+        }
+        getCmnd(){
+            return this.cmnd;
+        }
+        getNgaymoso(){
+            return this.ngaymoso;
+        }
+        getTiengui(){
+            return this.tiengui;
+        }
+       
+        
+        displayCustomer(){
+            console.log("Display rea");
+            var result="";
+            // result += "<table>";
+            // result += "<tr><th> Name </th> <th>Address</th> <th>Phone </th> <th>Birthday </th> </tr> <tr> ";
+            //thêm tr trên để tạo hàng "tiêu đề" không bị lặp
+            for( var i=0;i<array.length;i++){
+         
+                    result += "\n\n"+(i+1)+" " + array[i].maso +"\n"+
+                    (i+2) +" " + array[i].loaitietkiem +"\n"+
+                    (i+3)+" " + array[i].hotenkhach +"\n"+
+                    (i+4)+" " + array[i].cmnd +"\n";
+                                  
+                   
+                    
+                
+               
+            }
+            // result+="</table>";
+            alert(result);
+        
+        }
+    
+    
+        addNew(){
+          
+            var maso = prompt("Enter maso (5 kitu) :");
+            var pattern = /^\d{1,5}$/;
+            while (!maso.match(pattern)) {
+                maso = prompt("data Error Enter maso again:");
+            }
+            // loai tiet kiem
+            var loaitietkiem = prompt("Enter loaitietkiem (10 kitu) :");
+            var pattern = /^\d{1,10}$/;
+            while (!loaitietkiem.match(pattern)) {
+                loaitietkiem = prompt("data Error Enter loaitietkiem again:");
+            }            
+            
+            //hoten khach hang
+            var hotenkhach = prompt("Enter hoten (30 kitu) :");
+            if(hotenkhach.length>30){
+                hotenkhach = prompt("data Error Enter hotenkhach again:");
+
+            }
+
+            //cmnd
+            var cmnd = prompt("Enter cmnd (kieuso) :");
+            for( var i=0;i<=cmnd.length;i++){
+                if(cmnd[i]>="a"&&cmnd[i]<="a"){
+                    cmnd = prompt("data Error Enter hotenkhach again:");
+                }
+            }
+            cmnd = parseInt(cmnd);
+            // date
+            
+            var ngaymoso = prompt("Nhap ngay mo so (format dung) ");
+            var comp = ngaymoso.split('/');
+            var d = parseInt(comp[0], 10);
+            var m = parseInt(comp[1], 10);
+            var y = parseInt(comp[2], 10);
+            var date = new Date(y,m-1,d);
+            if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
+                alert(" Nhap dung roi");
+            }
+            else {
+               alert( "please enter valid date");
+               var ngaymoso = prompt("Nhap lai!! Ngay mo so (format dung) ");
+            }
+            // tiengui
+            var tiengui = prompt("nhap tien gui");
+            for( var i=0;i<=tiengui.length;i++){
+                if(tiengui[i]>="a"&&tiengui[i]<="a"){
+                    tiengui = prompt("data Error Enter tiengui again:");
+                }
+            }
+            // }
+            array.push(new Customer(maso,loaitietkiem,hotenkhach,cmnd,ngaymoso,tiengui));
+            // array.push(new Customer(1,"loaitietkiem","hotenkhach",1,"12/3/2020",12));
+            // array.push(new Customer(1,"lo","alo",1,"12/3/2020",12));
+            this.displayCustomer();
+            
+        }
+       
+        deleteCustomer(){
+            for( var i=0;i<array.length;i++){
+                   
+                    var choice = parseInt(prompt((i+1)+" "+array[i].maso+"\n"));
+                    if(confirm(" Co chac muon xoa khong")==true){
+                        
+                        array.splice((choice - 1), 1);
+                    }
+                    
+                    // Triển khai các thông tin trng hàm
+                }
+                this.displayCustomer();
+            }
+            
+    
+    }
+
+
+    var array = new Array();
+    var b= new Array();
+    var result ="";
+    var choice = 0;
+    var obj = new Customer(1,"loaitietkiem","hotenkhach",1,"12/3/2020",12);
+    obj.displayCustomer();
+    while (choice < 6) {
+        choice = parseInt(prompt("Hãy chọn từ 1-> 5 \n1. Add new customer\n2. Display information customer\n3. Delete customer "));
+        switch (choice) {
+            case 1:
+                obj.addNew();
+                break;
+            case 2:
+                obj.displayCustomer();
+                break;
+            case 3:
+                obj.deleteCustomer();
+            default:
+                break;
+        }
+    }
+    
+</script>
+</html>
+
+

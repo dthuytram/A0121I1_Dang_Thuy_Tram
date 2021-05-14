@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var numbers=[1,2];
+    numbers[3]=3;
+    numbers[4]=4;
+    document.write(numbers.length);
+
+    var str = "red,blue,yellow";
+    var res= str.slice(5,9);
+    document.write(res);
+
+
+    // hình chữ nhật 
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Trình duyệt của bạn không hỗ trợ thẻ canvas trong HTML5.
+    </canvas>
+
+    <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0,0,150,75);
+    </script>
+
+    </body>
+    </html>
+    // hình tròn 
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Trình duyệt của bạn không hỗ trợ thẻ canvas trong HTML5.
+    </canvas>
+
+    <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.stroke();
+    </script>
+
+    </body>
+    </html>
+        
+</script>
+</html>

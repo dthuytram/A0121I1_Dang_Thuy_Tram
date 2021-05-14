@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(doC) {
+                if (doC>-273){
+                    this.doC = doC;
+                }
+                else {
+                    alert("Invalid value");
+                }
+            }
+            getdoF(){
+                return (9/5) * this.doC + 32;
+            }
+            getdoK(){
+                return this.doC + 273.15;
+            }
+        }
+
+        var p1 = new Temperature(-300);
+        alert(p1.doC+" do C: \n"+p1.getdoF()+" do F\n"+p1.getdoK()+" do K");
+    </script>
+</body>
+</html>

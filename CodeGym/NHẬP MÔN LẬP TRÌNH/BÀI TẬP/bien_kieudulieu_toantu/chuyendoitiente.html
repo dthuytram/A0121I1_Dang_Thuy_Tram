@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+   <script>
+       function convert(){
+           var number = document.getElementById("num").value;
+           var abc = document.getElementById("abc").value;
+           var cba = document.getElementById("cba").value;
+        //    alert(cba);
+           var result =  " Result: ";
+           if (abc=="VietNam") {
+               if(cba=="USD"){
+                result = result + (number/25 )+ " USD";
+               }
+               else if(cba=="euro"){
+                // alert(result);
+                result = result + (number * 0.000036)+ " Euro";
+               }
+               else {
+                   result += 0;
+               }
+            }
+            if (abc=="USD") {
+               if(cba=="VietNam"){
+                result = result + (number*25 )+ " VNĐ";
+               }
+               else if(cba=="euro"){
+                // alert(result);
+                result = result + (number/ 0.82 )+ " Euro";
+               }
+               else {
+                   result += 0;
+               }
+            }
+            if (abc=="euro") {
+               if(cba=="VietNam"){
+                result = result + (number/0.000036 )+ " USD";
+               }
+               else if(cba=="USD"){
+                // alert(result);
+                result = result + (number * 0.82)+ " Euro";
+               }
+               else {
+                   result += 0;
+               }
+            }
+           
+           document.getElementById("result").innerHTML = result;
+           // gán giá trị kết quả vào
+       }
+   </script>
+</head>
+<body>
+    <table>
+        <tr>
+        <th> Amount </th>
+        <th> From currently</th>
+        <th> To Currently </th>
+        <th> </th>
+    </tr>
+    <tr>
+        <td><input type="text" value="1" id="num"></td>
+        <td><select name="abc" id ="abc">
+            <option value="VietNam">VietNam</option>
+            <option value="USD">USA</option>
+            <option value="euro">Euro</option>
+
+        </select>
+        </td>
+    
+        <td> 
+            <select name="abc" id="cba">
+                <option value="VietNam">VietNam</option>
+                <option value="USD"> USD</option>
+                <option value ="euro"> Euro</option>
+            </select>
+        </td>
+        <td> <input type="button" value="Convert" onclick="convert()"> </td>
+      
+    </tr>
+    <tr> <td id="result" colspan="4"></td></tr>
+</table>
+
+</body>
+
+
+</html>

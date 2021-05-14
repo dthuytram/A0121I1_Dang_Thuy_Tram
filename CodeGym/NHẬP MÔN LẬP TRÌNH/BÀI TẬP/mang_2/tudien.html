@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <script>
+        var anh =["hi","nice","chung ta","tam biet"];
+        var viet=["chao","dep","we","bye"];
+        
+        
+        function display_array(){
+            var a = document.getElementById("txtValue");
+            for(var i=0; i< anh.length;i++ )
+            {
+                if((a.value).includes(anh[i])){
+                    document.getElementById("result").innerHTML= viet[i];
+                }
+            }
+            for(var i=0; i< viet.length;i++ )
+            {
+                if((a.value).includes(viet[i])){
+                    document.getElementById("result").innerHTML= anh[i];
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <div id="result"></div>
+</body>
+</html>

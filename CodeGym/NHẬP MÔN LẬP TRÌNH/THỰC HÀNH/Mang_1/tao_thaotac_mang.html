@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {padding-top:50px}
+     </style>
+     <script>
+         // xem lai
+         // khai bao mang
+        let array = new Array();
+
+        // them cac gia tri tu input-text vao mang 
+        function add_element_to_array(){
+            array[x] = document.getElementById("txtValue").value;
+            alert("Element: "+array[x]+"Added at index "+x);
+            x++;
+            document.getElementById("txtValue").value="";
+        }
+
+        // hien thi cac gia tri trong mang
+        function display_array(){
+            let e ="</hr>";
+            for( let i=0;i< array.length();i++){
+                e+= "Element "+ i + "=" + array[i] +"</br>";
+            }
+            // xem lai
+            document.getElementById("result").innerHTML = e;
+        }
+     </script>
+</head>
+
+<body>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <div id="result"></div>
+</body>
+
+</html>

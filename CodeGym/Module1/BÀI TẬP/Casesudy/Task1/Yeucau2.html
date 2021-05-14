@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  // cham than + enter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                Tên:
+                
+            </td>
+            <td> <p id="ten"></p></td>
+        </tr>
+           <tr>
+               <td>
+                   Chung minh nhan dan:
+                   
+               </td>
+               <td> <p id="CMND"></p></td>
+           </tr>
+           <tr>
+               <td> Ngay thang nam sinh:</td>
+               <td>
+    
+                <p id="YEAR">  </p>
+               </td>
+               
+           </tr>
+           <tr>
+               <td>
+                   Loai khach hang:
+               </td>
+               <td>
+                   <p id="TYPE_CUSTOMER"> </p>
+               </td>
+           </tr>
+           <tr>
+               <td>EMAIL:</td>
+               <td>
+                <p id="EMAIL">  </p>
+               </td>
+           </tr>
+           <TR>
+               <td>DIACHI: </td>
+               <TD>
+                <p id="ADDRESS"> </p>
+               </TD>
+           </TR>
+           <TR>
+            <td>GIAMGIA:</td>
+            <TD>
+             <p id="GIAMGIA">  </p>
+            </TD>
+           </TR>
+           <TR>
+            <td>SO TIEN PHAI TRA:</td>
+            <TD>
+             <p id="TYPE_DICHVU">  </p>
+            </TD>
+        </TR>
+        
+        <TR>
+            <td>NGAYTHUE: </td>
+            <TD>
+             <p id="NGAYTHUE"> </p>
+            </TD>
+        </TR>
+        
+       </table>
+<script>
+    
+    var choice = parseInt(prompt("1. Show Information Customer\n2. Edit Information Customer.\n3. Show the amount to be paid after discount\
+    "));
+    switch(choice){
+        case 1:
+            Show();
+            break;
+        case 2:
+            if(confirm('Bạn có muốn chỉnh sửa không?')){
+                Edit();
+            }
+            else{
+                document.write('Sao thế bạn?');
+            }
+            
+            break;
+        case 3:
+        var ten = "Dang ";
+        var cmnd = "1020110000";
+        var year = "21/2/2000";
+        var email = "tramdangthuy@gmail.com";
+        var address = "da nang";
+        var giamgia = 10000;
+        var customer = "diamond";
+        var loaidichvu= "villas";
+        var ngaythue = 3;
+            address = address.toLocaleLowerCase();
+            customer = customer.toLocaleLowerCase();
+            loaidichvu = loaidichvu.toLocaleLowerCase();
+            alert(address+" "+customer+" "+ngaythue);
+                    if (loaidichvu === 'villas'){
+                        giaDichVu = 500;
+                    }
+                    if (loaidichvu === 'house'){
+                        giaDichVu = 300;
+                    }
+                    if (loaidichvu === 'room'){
+                        giaDichVu = 100;
+                    }
+                    if(address==='da nang'){
+                        saleAddress = 20;
+                    }
+                    if (address==='hue'){
+                        saleAddress = 10;
+                    }
+                    if(address==='quang nam'){
+                        saleAddress = 5;
+                    }
+                    if (ngaythue>7){
+                        saleRentDay = 30;
+                    }
+                    else if (ngaythue>=5){
+                        saleRentDay = 20;
+                    }
+                    else if (ngaythue>=2){
+                        saleRentDay = 10;
+                    }
+                    if (customer ==='diamond'){
+                        saleCustomer = 20;
+                    }
+                    if (customer ==='platium'){
+                        saleCustomer = 10;
+                    }
+                    if (customer ==='gold'){
+                        saleCustomer = 5;
+                    }
+                    if (customer ==='silver'){
+                        saleCustomer = 2;
+                    }
+                    giamGia = saleCustomer+saleRentDay+saleAddress;
+                    giaPhaiTra = giaDichVu*ngaythue-giamGia;
+                    alert("So tien phai tra la: "+giaPhaiTra);
+                    break;
+
+    }
+    function show_2(key){
+        var ten = "Dang ";
+        var cmnd = "1020110000";
+        var year = "21/2/2000";
+        var email = "tramdangthuy@gmail.com";
+        var address = "da nang";
+        var giamgia = 0.1;
+        var customer = "diamond";
+        var loaidichvu= "villas";
+        var ngaythue = 3;
+        switch (key) {
+            case 1:
+            var ten1 = String(prompt("Nhập tên mới:"));
+            ten = ten1;
+            break;
+            
+            case 2:
+            var cmnd1 = String(prompt("Nhập CMND mới:"));
+            cmnd = cmnd1;
+            break;
+
+            case 3:
+            var year1 = String(prompt("Nhập ngày/ tháng/ năm sinh: "));
+            year = year1;
+            break;
+
+            case 4:
+            var email1 = String(prompt("Nhập email mới:"));
+            email = email1;
+            break;
+
+            case 5:
+            var addr1 = String(prompt("Nhập email mới:"));
+            address = adrr1;
+            break;
+
+
+            case 6:
+            var dvu1 = String(prompt("Nhập email mới:"));
+            loaidichvu = dvu1;
+            break;
+
+            case 7:
+            var ngaythue1 = String(prompt("Nhập email mới:"));
+            ngaythue = ngaythue1;
+            break;
+            
+            case 8:
+            var cus1 = String(prompt("Nhập email mới:"));
+            customer = cus1;
+            break;
+        }
+        document.getElementById("ten").innerHTML = ten; 
+        document.getElementById("CMND").innerHTML = cmnd;
+        document.getElementById("YEAR").innerHTML=year;
+        document.getElementById("EMAIL").innerHTML=email;
+        document.getElementById("ADDRESS").innerHTML=address;
+        document.getElementById("GIAMGIA").innerHTML=giamgia;
+        document.getElementById("TYPE_CUSTOMER").innerHTML=customer;
+        document.getElementById("TYPE_DICHVU").innerHTML=loaidichvu;
+        document.getElementById("NGAYTHUE").innerHTML=ngaythue;
+        // loaidichvu.toLocaleLowerCase(); // chuyen ve chu thuong
+    
+    }
+    function Show(){
+        var ten = "Dang ";
+        var a = "1020110000";
+        var year = "21/2/2000";
+        var email = "tramdangthuy@gmail.com";
+        var address = "da nang";
+        var giamgia = 0.1;
+        var customer = "gold";
+        var type_cus = "Student";
+        var loaidichvu= "villas";
+        var ngaythue = 3;
+        loaidichvu.toLocaleLowerCase(); // chuyen ve chu thuong
+        switch(loaidichvu){
+        case 'villas':
+            gia_dichvu = 500000;
+            break;
+        case 'house':
+            gia_dichvu = 300000;
+            break;
+        case 'room':
+            gia_dichvu=100000;
+            break;
+        }
+        var tien = gia_dichvu*3*(1-giamgia/100);
+        document.getElementById("ten").innerHTML = ten; 
+        document.getElementById("CMND").innerHTML = a;
+        document.getElementById("YEAR").innerHTML=year;
+        document.getElementById("EMAIL").innerHTML=email;
+        document.getElementById("ADDRESS").innerHTML=address;
+        document.getElementById("GIAMGIA").innerHTML=giamgia;
+        document.getElementById("TYPE_CUSTOMER").innerHTML=customer;
+        document.getElementById("TYPE_DICHVU").innerHTML=tien;
+        document.getElementById("NGAYTHUE").innerHTML=ngaythue;
+        
+       
+
+    }
+    function Edit(){
+        var key = parseInt(prompt("1. Tên \n2. CMND .\n3.Ngay thang nam sinh \n 4. Email \n 5. Diachi  \n 6. GiamGia  \n 7. So tien phai tra \n 8. Ngay thue\
+    "));
+        
+    
+        switch (key) {
+            case 1:
+                show_2(key);
+                break;
+            case 2:
+                show_2(key);
+                break;
+            case 3:
+                show_2(key);
+                break;
+            case 4:
+                show_2(key);
+                break;
+            case 5:
+                show_2(key);
+                break;
+            case 6:
+                show_2(key);
+                break;
+            case 7:
+                show_2(key);
+                break;
+            case 8:
+                show_2(key);
+                break;
+            default:
+                alert("Failed");
+                break;
+        }
+        
+    }
+
+
+</script>
+</html>
+
+

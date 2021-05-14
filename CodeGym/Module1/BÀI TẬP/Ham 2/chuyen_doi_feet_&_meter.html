@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <title>Chuyen doi feer va meter</title>
+</head>
+<body>
+    <input type="text" id="giaTri"/>
+    <select id="donVi">
+        <option>Meter</option>
+        <option>Feet</option>
+    </select>
+    <input type="submit" id="submit" value="Submit" onclick="footToMeter()"/>
+    <p id="ketQua"></p>
+    <script>
+        // var giaTri = document.getElementById("giaTri").value;
+        // var donVi = document.getElementById("donVi");
+        // var submit = document.getElementById("submit");
+        // if (donVi.value==='Meter'){
+        //     submit.onclick = footToMeter(giaTri);
+        // }
+        // else if (donVi.value==='Feet'){
+        //     submit.onclick = meterToFoot(giaTri);
+        // }
+
+        function footToMeter(foot){
+            var meter = 0.305 * foot;
+            document.getElementById("ketQua").innerHTML = meter;
+        }
+        function meterToFoot(meter){
+            var foot = 3.279 * meter
+            document.getElementById("ketQua").innerHTML = foot;
+        }
+    </script>
+</body>
+</html>

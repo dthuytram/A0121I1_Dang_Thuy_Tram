@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh chu nhat</title>
+</head>
+<body>
+    <canvas id="myCanvas" height="600px" width="1360px" style="border: 1px solid #5f6062" />
+    <script>
+        class Rectangle{
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            getDienTich(){
+                return this.x * this.y;
+            }
+            getChuVi(){
+                return 2 * (this.x + this.y);
+            }
+            setx(x){
+                return this.x = x;
+            }
+            sety(y){
+                return this.y = y;
+            }
+        }
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var p1 = new Rectangle(100,400);
+        var s1 = p1.getDienTich();
+        var c1 = p1.getChuVi();
+        p1.setx(300);
+        p1.sety(50);
+        var s2 = p1.getDienTich();
+        var c2 = p1.getChuVi();
+        alert("Dien tich ban dau = "+s1+" Chu vi ban dau = "+c1+"\nDien tich ban dau = "+s2+" Chu vi ban dau = "+c2);
+        ctx.beginPath();
+        ctx.rect(600,100,p1.x,p1.y);
+        ctx.fill();
+    </script>
+</body>
+</html>

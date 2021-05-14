@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">body{   
+    font-family:Arial, Helvetica, sans-serif;   
+    font-size:12px;
+    }
+    .glyphicon {    
+    margin-right:5px;
+    }
+    .thumbnail {    
+    margin-bottom: 20px;    
+    padding: 0px;   
+    -webkit-border-radius: 0px; 
+    -moz-border-radius: 0px;    
+    border-radius: 0px;
+    }
+    .item.list-group-item { 
+    float: none;    
+    width: 100%;    
+    background-color: #fff; 
+    margin-bottom: 10px;
+    }
+    .item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover { 
+    background: #428bca;
+    }
+    .item.list-group-item .list-group-image {   
+    margin-right: 10px;
+    }
+    .item.list-group-item .thumbnail {  
+    margin-bottom: 0px;
+    }
+    .item.list-group-item .caption {    
+    padding: 9px 9px 0px 9px;
+    }
+    .item.list-group-item:nth-of-type(odd) { 
+    background: #eeeeee;
+    }
+    .item.list-group-item:before, .item.list-group-item:after { 
+    display: table; content:"";
+    }
+    .item.list-group-item img { 
+    float: left;
+    }
+    .item.list-group-item:after {   
+    clear: both;
+    }
+    .list-group-item-text { 
+    margin: 0 0 11px;
+    }
+/* Add new */
+    
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #b91eda,
+    #a02ae0,
+    #8234e5,
+    #5d3be8,
+    #1241eb
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main{
+  max-width: 720px;
+  margin: 5% auto;
+}
+
+.card{
+  box-shadow: 0 6px 6px rgba(#000, 0.3);
+  transition: 200ms;
+  background: #fff;
+}
+  .card__title{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+  }
+    h3{
+      flex: 0 1 200px;
+      text-align: right;
+      margin: 0;
+      color: #252525;
+      font-family: sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    
+    .icon{
+      flex: 1 0 10px;
+      background: #115dd8;
+      color: #fff;
+      padding: 10px 10px;
+      transition: 200ms;
+     
+  }
+  
+      
+      p{
+        margin: 0;
+        padding: 0;
+      }
+        .sub{
+          font-family: "Montserrat", sans-serif;
+          font-size: 26px;
+          text-transform: uppercase;
+          color: #686e77;
+          font-weight: 300;
+          margin-bottom: 5px;
+        }
+        
+        .price{
+          font-family: "Fjalla One", sans-serif;
+          color: #252525;
+          font-size: 26px;
+        }
+      
+    
+    .image{
+      padding-top: 15px;
+      width: 100%;
+    }
+      img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    
+    
+    .description{
+      margin-bottom: 25px;
+    }
+      p{
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        line-height: 27px;
+        font-size: 16px;
+        color: #555;
+      }
+    
+    
+    span.stock{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: #a1cc16;
+    }
+    
+    
+      .stars{
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+      }
+        li{
+          display: inline-block;
+        }
+          .fa{
+            color: #f7c01b;
+          }
+        
+      
+      
+      span{
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        margin-left: 5px;
+        color: #555;
+      }
+    
+  
+  
+  .card__footer{
+    padding: 30px 40px;
+    display: flex;
+    flex-flow: row no-wrap;
+    align-items: center;
+    position: relative;
+  }
+    
+    .recommend{
+      flex: 1 0 10px;
+    }
+      p{
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        color: #555;
+      }
+     
+      h3{
+        margin: 0;
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #115dd8;
+      }
+    
+       main{
+         max-width: 800px;
+         margin: 5% auto;
+       }
+      button{
+        cursor: pointer;
+        border: 1px solid #115dd8;
+        padding: 14px 30px;
+        border-radius: 200px;
+        color: #fff;
+        background: #115dd8;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        transition: 200ms;
+        
+       
+      
+    }
+  
+
+
+
+    
+    
+    </style>
+</head>
+<body>
+  
+
+<div class="container"> 
+  <h3> Sản phẩm nổi bật</h3> 
+  <div class="well well-sm text-right"> <strong>Chọn kiểu hiển thị</strong> 
+   <div class="btn-group"> <a href="http://hocwebgiare.com/#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list"> </span>Dạng danh sách</a> <a href="http://hocwebgiare.com/#" id="grid" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th"></span>Dạng lưới</a> 
+   </div> 
+  </div> 
+  <div id="products" class="row list-group"> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/1.jpg" alt="Sản phẩm 1" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 1</h4> 
+      <p class="group inner list-group-item-text"> Product dent ut laoreet dolore.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead"> 200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="http://hocwebgiare.com/">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/2.jpg" alt="Sản phẩm 2" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 2</h4> 
+      <p class="group inner list-group-item-text"> Product dent ut laoreet dolore.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead"> 200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="...">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/3.jpg" alt="Sản phẩm 3" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 3</h4> 
+      <p class="group inner list-group-item-text">Product dent ut laoreet dolore.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead"> 200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="...">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/4.jpg" alt="Sản phẩm 4" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 4</h4> 
+      <p class="group inner list-group-item-text"> Product dent ut laoreet dolore.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead"> 200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="http://hocwebgiare.com/">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/5.jpg" alt="Sản phẩm 5" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 5</h4> 
+      <p class="group inner list-group-item-text">Product dent ut laoreet dolore.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead"> 200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="http://hocwebgiare.com/">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/6.jpg" alt="Sản phẩm 6" width="300"> 
+     <main>
+      <div class="half">
+        <div class="description">
+          <p>Nhãn hàng hấp dẫn cho khách hàng abcbcbccbcb.</p>
+        </div>
+        <span class="stock"><i class="fa fa-pen"></i> In stock</span>
+        <div class="reviews">
+          <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star-o"></i></li>
+          </ul>
+          <span>(64 reviews)</span>
+          <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="...">Chi tiết</a> 
+          </div> 
+        </div>
+       
+      </main>
+      </div>
+    </div>
+
+    
+    </div>
+  </div>
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/7.jpg" alt="Sản phẩm 7" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 7</h4> 
+      <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead">200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="http://hocwebgiare.com/">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="item  col-xs-3 col-lg-3"> 
+    <div class="thumbnail"> <img class="group list-group-image" src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/product/images/8.jpg" alt="Sản phẩm 8" width="300"> 
+     <div class="caption"> 
+      <h4 class="group inner list-group-item-heading"> Sản phẩm 8</h4> 
+      <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6"> 
+        <p class="lead">200.000 đ</p> 
+       </div> 
+       <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="...">Chi tiết</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>
+ </div>
+</body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</html>

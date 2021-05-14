@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 1</title>
+</head>
+<body>
+<script>
+    var bai = parseInt(prompt("Nhap so tu 1 -> 9"));
+    var arr = [1, -4, 2, 44, 100, 99, 1000, 8, 0, 9];
+    switch (bai) {
+        case 1:
+            bai1(arr);
+            break;
+        case 2:
+        case 3:
+            bai23(arr);
+            break;
+        case 4:
+            bai4();
+            break;
+        case 5:
+            bai5();
+            break;
+        case 6:
+        case 7:
+            bai67();
+            break;
+        case 8:
+            bai8();
+            break;
+        case 9:
+            bai9();
+            break;
+        default:
+            document.write("invalid value");
+    }
+
+    function bai1(arr) {
+        // Dem phan tu lon hon bang 10
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                count++;
+            }
+        }
+        alert(count);
+    }
+
+    function bai23(arr) {
+        var max = arr[0], vitri = 0;
+        var sum = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            sum += arr[i];
+            if (max < arr[i]) {
+                max = arr[i];
+                vitri = i;
+            }
+        }
+        alert("So lon nhat: "+max+" Vi tri: "+vitri+"\nTrung binh cua mang: "+sum);
+    }
+    function bai4() {
+        var arr = new Array();
+        var numbers = parseInt(prompt("Nhap so phan tu cua mang: "));
+        var i=0;
+        while (i<numbers){
+            var addarr = parseInt(prompt("Nhap so: "));
+            arr.push(addarr);
+            i++;
+        }
+        arr.reverse();
+        alert(arr);
+    }
+    function bai5() {
+        var nguyenam = 'ueoai';
+        var str = prompt("Nhap chuoi bat ki:");
+        var count = 0;
+        for (var i=0;i<str.length;i++){
+            if (nguyenam.includes(str[i]))//dung cho chuoi
+            {
+                count++;
+            }
+        }
+        alert(count);
+    }
+    function bai67() {
+        var arr = new Array();
+        var check = 0;
+        var numbers = 10;
+        var i=0;
+        while (i<numbers){
+            var addarr = parseInt(prompt("Nhap so: "));
+            arr.push(addarr);
+            i++;
+        }
+        var V = parseInt(prompt("Nhap so can tim V: "));
+        for(var i=0;i<arr.length;i++) {
+            if (V === arr[i])
+            {
+                check++;
+                var vitri = i;
+            }
+        }
+        if(check>0){
+            alert("V is in the array");
+            /*
+            splice: tach mang o vi tri bat ki k
+            concat: noi 2 mang
+             */
+            var a = arr.splice(0,vitri);
+            var b = arr.splice(vitri,arr.length);
+            var c = a.concat(b);
+            c.push(0);
+        }
+        else if(check===0){
+            alert("V is not in the array");
+        }
+        alert(c);
+    }
+    function bai8() {
+
+    }
+    function bai9() {
+
+    }
+</script>
+</body>
+</html>

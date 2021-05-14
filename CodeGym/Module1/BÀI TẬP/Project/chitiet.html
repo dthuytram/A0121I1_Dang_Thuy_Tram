@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  body {  
+    font-family:Arial, Helvetica, sans-serif;   
+    overflow-x: hidden;
+    }
+     
+    img {   
+    max-width: 100%;
+    transition: all 1s;
+
+    }
+    
+    .preview {  
+    display: -webkit-box;   
+    display: -webkit-flex;  
+    display: -ms-flexbox;   
+    display: flex;  
+    -webkit-box-orient: vertical;   
+    -webkit-box-direction: normal;  
+    -webkit-flex-direction: column; 
+    -ms-flex-direction: column; 
+    flex-direction: column;
+    } 
+     
+    /* @media screen and (max-width: 996px) { 
+    .preview { 
+    margin-bottom: 20px;
+    }
+    } */
+     
+    .preview-pic {  
+    -webkit-box-flex: 1;    
+    -webkit-flex-grow: 1;   
+    -ms-flex-positive: 1;   
+    flex-grow: 1;
+    }
+     
+    .preview-thumbnail.nav-tabs {   
+    border: none;   
+    margin-top: 15px;
+    }
+     
+    .preview-thumbnail.nav-tabs li {    
+    width: 18%; 
+    margin-right: 2.5%;
+    }
+     
+    .preview-thumbnail.nav-tabs li img {    
+    max-width: 100%;    
+    display: block;
+    }
+     
+    .preview-thumbnail.nav-tabs li a {  
+    padding: 0; 
+    margin: 0;  
+    cursor:pointer;
+    }
+     
+    .preview-thumbnail.nav-tabs li:last-of-type {   
+    margin-right: 0;
+    
+    }
+     
+    .tab-content {  
+    overflow: hidden;
+    }
+     
+    .tab-content img {  
+    width: 100%;    
+    -webkit-animation-name: opacity;    
+    animation-name: opacity; 
+    -webkit-animation-duration: .3s; 
+    animation-duration: .3s;
+    }
+     
+    .card { 
+    margin-top: 0px;    
+    background: #eee;   
+    padding: 3em;   
+    line-height: 1.5em;
+    } 
+     
+    @media screen and (min-width: 997px) { 
+    .wrapper { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    display: flex;
+    }
+    }
+     
+    .details {  
+    display: -webkit-box;
+        display: -webkit-flex;  
+    display: -ms-flexbox;   
+    display: flex;  
+    -webkit-box-orient: vertical;   
+    -webkit-box-direction: normal;  
+    -webkit-flex-direction: column; 
+    -ms-flex-direction: column; 
+    flex-direction: column;
+    }
+     
+    .colors {   
+    -webkit-box-flex: 1;    
+    -webkit-flex-grow: 1;   
+    -ms-flex-positive: 1;   
+    flex-grow: 1;
+    }
+     
+    .product-title, .price, .sizes, .colors {   
+    text-transform: UPPERCASE;  
+    font-weight: bold;
+
+    }
+     
+    .checked, .price span { 
+    color: #ff9f1a;
+    }
+     
+    .product-title, .rating, .product-description, .vote, .sizes {  
+    margin-bottom: 15px;
+
+    }
+    .price{
+      color: #85ad00;
+      margin-bottom: 15px;
+      
+    }
+     
+    .product-title {    
+    margin-top: 0;
+    }
+     
+    .size {
+        margin-right: 10px;
+    }
+     
+    .size:first-of-type {   
+    margin-left: 40px;
+    }
+     
+    .color {    
+    display: inline-block;  
+    vertical-align: middle; 
+    margin-right: 10px; 
+    height: 2em;    
+    width: 2em; 
+    border-radius: 2px;
+    }
+     
+    .color:first-of-type {  
+    margin-left: 20px;
+    }
+     
+    .add-to-cart, .like {   
+    background: #ff9f1a;    
+    padding: 1.2em 1.5em;   
+    border: none;   
+    text-transform: UPPERCASE;  
+    font-weight: bold;  
+    color: #fff;    
+    text-decoration:none; 
+    -webkit-transition: background .3s ease; 
+    transition: background .3s ease;
+    }
+     
+    .add-to-cart:hover, .like:hover {   
+    background: #b36800;    
+    color: #fff;    
+    text-decoration:none;
+    }
+     
+    .not-available {    
+    text-align: center; 
+    line-height: 2em;
+    }
+     
+    .not-available:before { 
+    font-family: fontawesome;   
+    content: "\f00d";   
+    color: #fff;
+    }
+     
+    .orange {   
+    background: #ff9f1a;
+    }
+     
+    .green {    
+    background: #85ad00;
+    }
+     
+    .blue { 
+    background: #0076ad;
+    }
+     
+    .tooltip-inner {    
+    padding: 1.3em;
+    } 
+     
+    /* @-webkit-keyframes opacity { 
+    0% { opacity: 0; -webkit-transform: scale(3); transform: scale(3);} 
+    100% { opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+    } 
+     
+    @keyframes opacity { 
+    0% { opacity: 0; -webkit-transform: scale(3); transform: scale(3);} 
+    100% { opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+    } */
+  
+        /* ADD NEW  */
+        * {
+      font-family: 'Roboto', sans-serif;
+    }
+    .tab-menu {
+      margin-top: 20px;
+    }
+    .tab {
+      padding: 10px 20px;
+      background: #304FFE;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .tab+.tab {
+      margin-left: 10px;
+    }
+    .active {
+      opacity: 0.5;
+    }
+    .content-tab-item {
+      display: none;
+      width: 100%;
+      height:500px;
+    }
+    .active-tab {
+      display: inline-block;
+    }
+    .mota{
+      margin-top: 10px;
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-bottom: 30px;
+      background-color:rgb(228, 225, 222);
+    }
+
+    /* thiết kế đường ngang  */
+   
+    .binhluan{
+      margin-top: 10px;
+      margin-bottom:20px;
+      text-align: center;
+      background-color:rgb(228, 225, 222);
+      
+    }  
+    .p1{
+      margin-top: 5px;
+    }
+    .p2{
+      text-align:right;
+     
+    }
+  /* Add new  */
+    .input{
+      border: 2px solid purple;
+      border-radius: 4px;
+      width: 800px;
+      height: 60px;
+    }
+   /* Liên kết mạng xã hội */
+   .socials-share {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 4px 10px;
+}
+
+.socials-share a {
+    padding: 4px 30px;
+    color: #fff;
+    line-height: 2em;
+    text-decoration: none;
+    border-radius: 2px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.socials-share span.fa {
+    margin-right: 3px;
+}
+
+.bg-facebook {
+    background: #3a5899;
+}
+
+.bg-facebook:hover, .bg-facebook:focus {
+    background: #1d418d;
+}
+
+.bg-twitter {
+    background: #00acee;
+}
+
+.bg-twitter:hover, .bg-twitter:focus {
+    background: #0b93c7;
+}
+
+.bg-google-plus {
+    background: #db4437;
+}
+
+.bg-google-plus:hover, .bg-google-plus:focus {
+    background: #bb2a1d;
+}
+
+.bg-pinterest {
+    background: #cb1e26;
+}
+
+.bg-pinterest:hover, .bg-pinterest:focus {
+    background: #ae0e15;
+}
+
+.bg-email {
+    background: #dd5348;
+}
+
+.bg-email:hover, .bg-email:focus {
+    background: #ce3f34;
+}
+    
+    </style>
+</head>
+<body>
+  <div class="container"> 
+    <div class="card"> 
+     <div class="container-fliud"> 
+      <div class="wrapper row"> 
+       <div class="preview col-md-6"> 
+        <div class="preview-pic tab-content"> 
+         <div class="tab-pane active" id="pic-1"><img src="https://product.hstatic.net/1000237375/product/bia_truoc_f4374be05dbe41f9a31441fd94be6ce4_master.jpg" alt="">
+         </div> 
+         
+        </div> 
+        <ul class="preview-thumbnail nav nav-tabs"> 
+        
+         <li><a data-target="#pic-2" data-toggle="tab"><img src="https://product.hstatic.net/1000237375/product/bia_truoc_f4374be05dbe41f9a31441fd94be6ce4_compact.jpg" alt="Học thiết kế web bán hàng Online"></a>
+         </li> 
+         <li><a data-target="#pic-3" data-toggle="tab"><img src="https://product.hstatic.net/1000237375/product/bia_sau_11c139e6414848fd843cd8dcf0fc8747_compact.jpg" alt="Học thiết kế web bán hàng Online"></a>
+         </li> 
+         <li><a data-target="#pic-4" data-toggle="tab"><img src="https://product.hstatic.net/1000237375/product/z2252662834925_9ae7e93cb77beda16f464bdf3a622934_bd8d7f04532d4a2d96d77fb24819daa0_compact.jpg" alt="Học thiết kế web bán hàng Online"></a>
+         </li> 
+         <li><a data-target="#pic-5" data-toggle="tab"><img src="https://product.hstatic.net/1000237375/product/z2252662838432_0a52fdd8225dda676347d31750163426_d11f0d7b60894e989b56543b3c706973_compact.jpg" alt="Học thiết kế web bán hàng Online"></a>
+         </li> 
+         <li><a data-target="#pic-5" data-toggle="tab"><img src="https://product.hstatic.net/1000237375/product/z2252663136793_e3d095468912da7fd8199a401256568b_31db4ecbc323490a8b09566a9b979c83_compact.jpg" alt="Học thiết kế web bán hàng Online"></a>
+         </li> 
+        </ul> 
+       </div> 
+       <div class="details col-md-6"> 
+        <h3 class="product-title">SÁCH: HỎI NHỎ BIẾT TO - TRÁI ĐẤT</h3>
+        <i>Mã sản phẩm: 8936067603736</i> <br>
+        <div class="rating"> 
+         <div class="stars"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> 
+         </div> <span class="review-no">123 đánh giá</span> 
+        </div>
+        
+        <h4 class="price">₫50.000 - ₫169.000 </h4>
+     
+        <form>
+          <input type="text" id="number" value="0" style="width: 30px;"/> 
+          <input type="button" onclick="incrementValue()" value="+" />    <i>30 sản phẩm</i>
+       </form>
+      
+        <p class="product-description"><br> <b><i>Dịch vụ & Khuyến mãi</i></b>
+          <br><br> 🔖Giảm giá từ 20%, 30%,40% ...Cho tất cả các dòng sách
+          <br>🎁Tặng bookmark cho tất cả các đơn hàng
+          <br>🎁 Tặng móc khoá cho đơn hàng 200k
+          <br>🎁 Tăng sổ tay + Freeship cho đơn hàng 300K
+          <br>🎁 Tăng 1 túi vải + Freeship cho đơn hàng 500K
+          </p>
+        <div class="action"> <a href="http://hocwebgiare.com/" target="_blank">            <button class="add-to-cart btn btn-default" type="button" style="background-color: orange;">MUA NGAY</button>            </a> <a href="http://hocwebgiare.com/" target="_blank">            <button class="like btn btn-default" type="button" style="color: orange;"><span class="fa fa-heart"></span></button>            </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+
+   <!-- Add new  -->
+   <div class="container">
+    
+    <div class="tab-menu">
+      <a class="tab active" id="tabA" onclick="ShowTab('tabA','contentA')">MÔ TẢ</a>
+      <a class="tab" id="tabB" onclick="ShowTab('tabB', 'contentB')">BÌNH LUẬN</a>
+      <!-- <a class="tab" id="tabC" onclick="ShowTab('tabC','contentC')">Title C</a> -->
+    </div>
+
+    <div class="content-tab">
+      <div class="content-tab-item active-tab" id="contentA">
+        <div class="mota">
+          <p style="color: rgb(201, 100, 17);"> <b>Bút Sáp Màu Xoay - 18 màu (Hộp nhựa PP)</b></p> 
+
+          Bút sáp màu xoay được làm từ những thành phần không độc hại, giúp bé an toàn khi sử dụng, kết cấu bút xoay độc đáo, dễ thu gọn, trơn mịn, không dây bẩn, tiết kiệm khi sử dụng. Với 12 màu sắc, trẻ có thể thỏa sức tô vẽ và tạo ra những bức tranh nhiều màu sắc. Bộ bút sáp không chỉ giúp bé nhận biết về nhiều màu sắc khác nhau mà còn để trẻ tự do phát triển khả năng sáng tạo,pha trộn màu khi tô vẽ nâng cao năng khiếu mỹ thuật của mình.
+         
+          <br> <p style="color:rgb(201, 100, 17)"><b>Thông tin sản phẩm:</b></p>
+          <i>Thương hiệu : <b>Chicko</b></i>
+          <br><i>Xuất xứ thương hiệu : Việt Nam</i>
+           <br><i> Độ tuổi: trên 3 tuổi</i>
+          <br><i> Mã barcode: 8936178580391</i>
+          <br><i>Số lượng màu: 12 màu</i>
+          <br><i>Quy cách : Túi nhựa PVC, có móc treo</i>
+         <br><i> Sản xuất tại : Trung Quốc</i>
+         <br><i> Năm sản xuất : 2020</i>
+          <br><i>Sản phẩm bảo vệ môi trường, không độc hại</i>
+          <br><i>Tuân thủ tiêu chuẩn an toàn của liên minh châu Âu, tiêu chuẩn ASTM D4236 của Mỹ</i>
+          <br><p style="color: rgb(201, 100, 17);"><b>Hướng dẫn sử dụng:</b></p> Dùng để tô, vẽ, viết
+          
+          <br><p style="color: rgb(201, 100, 17);"><b>Cảnh báo an toàn: </b></p> Sản phẩm có nhiều chi tiết nhỏ, không dùng cho trẻ dưới 3 tuổi để tránh nuốt phải.
+        </div>
+      </div>
+      <div class="content-tab-item" id="contentB">
+           
+        <hr style="color: rgb(187, 209, 60);">             
+        <div class="binhluan">
+         
+             
+          <div class="p2">
+          <br>Sắp xếp theo<select name="cars" id="cars"> 
+            <option value="volvo">Mới nhất</option>
+            <option value="saab">Cũ nhất</option>
+            
+          </select>
+          </div>
+          <hr style="color: rgb(187, 209, 60);">        
+          <p>
+            <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2020/04/LR-29-scaled.jpg" alt="Trâm Đặng" style="width:60px; height:60px;"/> 
+            <input class="input" type="text" placeholder="Bình luận...">
+            <!-- Liên kết tài khoản -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="socials-share">
+              <a class="bg-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.inithtml.com/" target="_blank"><span class="fa fa-facebook"></span> Share</a>
+              <a class="bg-twitter" href="https://twitter.com/share?text=&url=" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+              <a class="bg-google-plus" href="https://plus.google.com/share?url=https://www.inithtml.com/" target="_blank"><span class="fa fa-google-plus"></span> Plus</a>
+              <a class="bg-pinterest" href="https://www.pinterest.com/pin/create/button/?url=https://www.inithtml.com/&media=https://www.inithtml.com/wp-content/themes/init-html-theme/screenshot.jpg&description=Init%20HTML%20%E2%80%93%20Kh%E1%BB%9Fi%20%C4%91%E1%BA%A7u%20d%E1%BB%B1%20%C3%A1n%20Web
+              Gmail" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
+              <a class="bg-email" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to&su=&body=" target="_blank"><span class="fa fa-envelope"></span> Gmail</a>
+          </div>
+          </p>
+         
+        </div>
+        <hr style="color: rgb(187, 209, 60);">
+        </div>
+      </div>
+    
+
+    <!--  -->
+    
+<!--  -->
+</body>
+</html>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+  function incrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+}
+
+  //hiển thị cái tab 
+  var tabs = document.getElementsByClassName("tab");
+var contents = document.getElementsByClassName("content-tab-item");
+function ShowTab(tab, content){
+  var i;
+  var tabs = document.getElementsByClassName("tab");
+  var contents = document.getElementsByClassName("content-tab-item");
+  var tabclick = document.getElementById(tab);
+  var contentsclick = document.getElementById(content);
+  for(i = 0; i < tabs.length; i++){
+    tabs[i].classList.remove("active");
+    contents[i].classList.remove("active-tab");
+  }
+  tabclick.classList.add("active");
+  contentsclick.classList.add("active-tab");
+}
+    </script>

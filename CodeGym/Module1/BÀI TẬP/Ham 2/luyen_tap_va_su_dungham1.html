@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <div id="result"></div>
+</body>
+<script>
+    // alertMessage();
+    // var num = parseInt(prompt("Nhâp vào sô:"));
+    // increaseNum(num);
+    // var n1 = parseInt(prompt("Số thứ nhất:"));
+    // var n2 = parseInt(prompt("Số thứ hai:"));
+    // compareNum(n1,n2);
+    //Bài1
+    function alertMessage(){
+        document.write("Xin chao");
+    }
+    //Bài2
+    function increaseNum(num){
+        document.write("</br>"+ (num+1));
+    }
+    // Bài3
+    function compareNum(n1,n2){
+        if(n1>n2) alert("tham so 1 lơn hơn");
+        else document.write(n1+n2);
+    }
+    //Bài4
+    // function addNumbers() 
+    // {
+    // firstNum = 4;
+    // secondNum = 8;
+    // result = firstNum + secondNum;
+    // return result;
+    // }
+    // result = 0;
+    // document.write(result);
+    // result = addNumbers(); 
+    // document.write(result);
+
+    var sao =["Polaris", "Aldebaran","Deneb", "Vega", "Altair", "Dubhe","Regulus"];
+    var chom=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+    
+    
+    function display_array(){
+        var a = document.getElementById("txtValue");
+        for(var i=0; i< sao.length;i++ )
+        {
+            if((a.value).includes(sao[i])){
+                document.getElementById("result").innerHTML= chom[i];
+            }
+        }
+        for(var i=0; i< chom.length;i++ )
+        {
+            if((a.value).includes(chom[i])){
+                document.getElementById("result").innerHTML= sao[i];
+            }
+        }
+    }
+
+</script>
+</html>

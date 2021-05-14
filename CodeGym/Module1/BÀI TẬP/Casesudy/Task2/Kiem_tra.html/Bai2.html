@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Phanso{
+        constructor(tuso,mauso){
+            this.tuso =tuso;
+            this.mauso = mauso;
+        }
+        setTuso(tuso){
+            this.tuso = tuso;
+            return this.tuso;
+        }
+        setMauso(mauso){
+            this.mauso= mauso;
+            return this.mauso;
+        }
+        getTuso(){
+            return this.tuso;
+        }
+        getMauso(){
+            return this.mauso;
+        }
+       
+    }
+    var a= parseInt(prompt("Nhap tu so thu 1:"));
+    var b= parseInt(prompt("Nhap mau so thu 1:"));
+    var p1 = new Phanso(a,b);
+    var c= parseInt(prompt("Nhap tu so thu 2:"));
+    var d= parseInt(prompt("Nhap mau so thu 2:")); 
+    var p2 = new Phanso(c,d);
+
+    if((p1.getTuso()*p2.getMauso())==(p2.getTuso()*p1.getMauso())){
+        document.write(p1.getTuso()+"/"+p1.getMauso()+" va");
+        document.write(p2.getTuso()+"/"+p2.getMauso())
+        document.write(": la phan so bang nhau");
+
+    }
+
+    else {
+        document.write(p1.getTuso()+"/"+p1.getMauso()+" va");
+        document.write(p2.getTuso()+"/"+p2.getMauso())
+        document.write(": khong bang nhau");
+    }
+</script>
+</html>

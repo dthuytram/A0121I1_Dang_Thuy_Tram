@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  // cham than + enter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+   <table>
+    <tr>
+        <td>
+            Tên:
+            
+        </td>
+        <td> <p id="ten"></p></td>
+    </tr>
+       <tr>
+           <td>
+               Chung minh nhan dan:
+               
+           </td>
+           <td> <p id="CMND"></p></td>
+       </tr>
+       <tr>
+           <td> Ngay thang nam sinh:</td>
+           <td>
+
+            <p id="YEAR">  </p>
+           </td>
+           
+       </tr>
+       <tr>
+           <td>EMAIL:</td>
+           <td>
+            <p id="EMAIL">  </p>
+           </td>
+       </tr>
+       <TR>
+           <td>DIACHI: </td>
+           <TD>
+            <p id="ADDRESS"> </p>
+           </TD>
+       </TR>
+       <TR>
+        <td>GIAMGIA:</td>
+        <TD>
+         <p id="GIAMGIA">  </p>
+        </TD>
+       </TR>
+       <TR>
+        <td>LOAI KHACH HANG:</td>
+        <TD>
+         <p id="TYPE_CUSTOMER">  </p>
+        </TD>
+    </TR>
+    <TR>
+        <td>LOAIDICHVU:</td>
+        <TD>
+         <p id="TYPE_DICHVU">  </p>
+        </TD>
+    </TR>
+    <TR>
+        <td>NGAYTHUE: </td>
+        <TD>
+         <p id="NGAYTHUE"> </p>
+        </TD>
+    </TR>
+    <tr>
+        <td>
+            Tổng số tiền phải trả:
+            <p id="result"></p>
+        </td>
+    </tr>
+   </table>
+</body>
+<script>
+    let ten = prompt("ten:");
+    let a = parseInt(prompt("cmd:"));
+    var year = prompt("year");
+    var email = prompt("email");
+    var address = prompt("address:");
+    var giamgia = parseInt(prompt("giam gia:"));
+    var type_cus = prompt("loai khach");
+    var loaidichvu= prompt("loai dich vu:");
+    var ngaythue = parseInt(prompt("ngaythue"));
+    
+    document.getElementById("ten").innerHTML = ten; 
+    document.getElementById("CMND").innerHTML = a;
+    document.getElementById("YEAR").innerHTML=year;
+    document.getElementById("EMAIL").innerHTML=email;
+    document.getElementById("ADDRESS").innerHTML=address;
+    document.getElementById("GIAMGIA").innerHTML=giamgia;
+    document.getElementById("TYPE_CUSTOMER").innerHTML=type_cus;
+    document.getElementById("TYPE_DICHVU").innerHTML=loaidichvu;
+    document.getElementById("NGAYTHUE").innerHTML=ngaythue;
+    loaidichvu.toLocaleLowerCase(); // chuyen ve chu thuong
+
+    switch(loaidichvu){
+        case 'villa':
+            loaidichvu = 500;
+            break;
+        case 'house':
+            loaidichvu = 300;
+            break;
+        case 'room':
+            loaidichvu=100;
+            break;
+        
+    }
+        
+        var result = loaidichvu * ngaythue * (1-giamgia/100);
+        document.getElementById("result").innerHTML = result + "dong";
+</script>
+</html>
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+       table th td{
+        width: 50px;
+       }
+   </style>
+</head>
+<body>
+    <h1> Calculator </h1>
+    <input type="text" width="200px" id="num1"> <input type="text" width="150px" id="num2">
+    <br>
+    <br>
+    <input type="button" onclick="add()" value="Addition(+)" > 
+    <input type="button" onclick="sub()" value="Substraction(-)"> 
+    <input type="button" onclick="mul()" value="Multiplication(*)"> 
+    <input type="button" onclick="divide()" value="Division(/)"> 
+    <p id="result"> Result: </p>
+
+
+    
+    <input type="text" value="0">
+    <br><br>
+    <table>
+         
+        <tr>
+            <td > <input type="button" value="Rad"> </td>
+            <td > <input type="button" value="  "> </td>
+            <td > <input type="button" value="x!"> </td>
+            <td > <input type="button" value="("> </td>
+            <td > <input type="button" value=")"> </td>
+            <td > <input type="button" value="%"> </td>
+            <td > <input type="button" value="AC"> </td>
+        
+        </tr>
+    </table>
+</body>
+
+<script>
+    let num1;
+    let num2;
+    let result=0;
+    function khaibao(){
+    num1 = document.getElementById("num1").value;
+    num1 = parseInt (num1);
+    num2 = document.getElementById("num2").value;
+    num2 = parseInt (num2);
+    }
+    
+    function add(){
+        khaibao();
+        // alert(num1);
+        result= num1 + num2;
+        document.getElementById("result").innerHTML= result;
+    }
+    function sub(){
+        khaibao();
+        result= num1 -  num2;
+        document.getElementById("result").innerHTML= result;
+    }
+    function mul(){
+        khaibao();
+        result= num1 *  num2;
+        document.getElementById("result").innerHTML= result;
+    }
+    function divide(){
+        khaibao();
+        // if(num2==0) return;
+        // alert(" Số thứ 2 không hợp lệ");
+        result= num1 / num2;
+        result= parseFloat(result);
+        document.getElementById("result").innerHTML= result;
+    }
+    
+  
+
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="#" id="form">
+            <h1>Đăng kí</h1>
+            <h3>Name</h3>
+            <input type="text" name="" id="name" placeholder="Enter name">
+            <h3>Address</h3>
+            <input type="text" name="" id="email" placeholder="Enter email address ">
+        
+            <h3>PHONE</h3>
+            <input type="text" name="" id="phone" placeholder="Enter phone number ">
+            <h3>Year of Birthday</h3>
+            <input type="text" name="" id="BirthdayYear" placeholder="enter year of birth" >
+              
+            <input type="button" id="btn" value="Add" onclick="Change()"/>
+            <div id="kq"></div>
+    
+        </form>
+    
+</body>
+<script>
+   var a=new Array();
+  function Change()
+  {
+    
+    for( var i=0;i<n;i++){
+        a[i] = new Array();
+        for(var j=0;j<n;j++){
+            var name= document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var BirthdayYear = document.getElementById("BirthdayYear").value;
+            a[i][j] = name;
+            a[i][j] = email;
+            a[i][2] = phone;
+            a[i][3] = BirthdayYear;
+        }
+    }
+    
+    var kq="";
+    kq += "<table>";
+    kq += "<tr><th> Name </th> <th>Address</th> <th>Phone </th> <th>Birthday </th> </tr> <tr> ";
+    //thêm tr trên để tạo hàng "tiêu đề" không bị lặp
+    for( var i=0;i<a.length;i++){
+       for(j=0;j<a.length;j++){
+            kq += "<td>"+a[i][j]+"</td>";
+       }
+    }
+   
+    kq+="</tr></table>";
+    alert(a);
+    document.getElementById('kq').innerHTML=kq;
+}
+</script>
+</html>

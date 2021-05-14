@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #kq{
+           background-color:#4CAF50;
+           color:white;
+           font-size: 15px;
+           border:1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body><div style="display :none" >
+        <form action="#" id="form">
+            <h1>Đăng kí</h1>
+            <h3>Name</h3>
+            <input type="text" name="" id="name" placeholder="Enter name">
+            <h3>Address</h3>
+            <input type="text" name="" id="email" placeholder="Enter email address ">
+        
+            <h3>PHONE</h3>
+            <input type="text" name="" id="phone" placeholder="Enter phone number ">
+            <h3>Year of Birthday</h3>
+            <input type="text" name="" id="BirthdayYear" placeholder="enter year of birth" >
+              
+            <input type="button" id="btn" value="Add" onclick="addNewCustomer()"/>
+          
+    
+        </form>
+    </div>
+    <br><div id="kq"></div>
+        
+    
+</body>
+<script>
+   var a=new Array();
+   a[0]= ["Dang","tramdangthuy3011@gmail.com","0914814420","30/11/2000"];
+   a[1]= ["Mang","tramdangthuy3011@gmail.com","0914814420","30/11/2000"];
+
+   var key= parseInt(prompt("1. Add new Customer\n 2. Display Information Customer\n 3. Edit Information Customer\n 4. Delete Customer\n 5. Exit"));
+       switch (key) {
+           case 1:
+               addNewCustomer();
+               break;
+            case 2:
+                displayCustomer();
+                break;
+            case 3:
+                EditCustomer();
+                break;
+            case 4:
+                deleteCustomer();
+                break;
+       }
+   function addNewCustomer(){
+       var b= new Array();
+        // var n= parseInt(prompt("So luong can nhap:"));
+        var name= document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var BirthdayYear = document.getElementById("BirthdayYear").value;
+        b.push(name);
+        b.push(email);
+        b.push(phone);
+        b.push(BirthdayYear);
+        
+        a.push(b);
+        
+
+        var kq="";
+        kq += "<table>";
+        kq += "<tr><th> Name </th> <th>Address</th> <th>Phone </th> <th>Birthday </th> </tr> <tr> ";
+        //thêm tr trên để tạo hàng "tiêu đề" không bị lặp
+        for( var i=0;i<a.length;i++){
+            for(var j=0;j<a[0].length;j++){
+                    kq += "<td>"+a[i][j]+"</td>";
+                   
+            }
+           kq+="</tr>";
+        }
+    
+        kq+="</table>";
+        alert(a);
+        document.getElementById('kq').innerHTML=kq;
+  
+  
+}
+function displayCustomer(){
+   
+    //thêm tr trên để tạo hàng "tiêu đề" không bị lặp
+    var kq="";
+        kq += "<br><table>";
+        kq += "<tr><th> Name </th> <th>Address</th> <th>Phone </th> <th>Birthday </th> </tr> <tr> ";
+        //thêm tr trên để tạo hàng "tiêu đề" không bị lặp
+        for( var i=0;i<a.length;i++){
+            for(var j=0;j<a[0].length;j++){
+                    kq += "<td>"+a[i][j]+"</td>";
+                   
+            }
+           kq+="</tr>";
+        }
+    
+        kq+="</table>";
+        alert(a);
+        document.getElementById('kq').innerHTML=kq;
+    
+}
+function EditCustomer(){
+    var choose = parseInt(prompt("1. Tên\n 2. Email\n 3. Phone\n 4. Birthday"));
+    var text = String(prompt("Nhập text cần chỉnh sửa"));
+    for( var i=0;i<a.length;i++){
+        for(var j=0;j<a[0].length;j++){
+        
+                a[0][choose-1]= text;
+                
+                    
+        }
+                
+        }
+       displayCustomer();
+    }
+function deleteCustomer(){
+    var choose = parseInt(prompt("Nhập số dòng "));
+    
+    for( var i=0;i<a.length;i++){
+        for(var j=0;j<a[0].length;j++){
+        
+                a.splice(choose-1,1);
+                // Sửa lại
+                    
+        }
+                
+    }
+       displayCustomer();
+    }
+
+
+
+
+  
+    
+   
+
+</script>
+</html>

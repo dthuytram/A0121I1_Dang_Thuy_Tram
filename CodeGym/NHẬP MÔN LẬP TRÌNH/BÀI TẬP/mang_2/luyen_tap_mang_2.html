@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2</title>
+</head>
+<body>
+    <script>
+        var bai = parseInt(prompt("Nhap so tu 1 -> 6"));
+        switch (bai) {
+            case 1:
+                bai1();
+                break;
+            case 2:
+                bai2();
+                break;
+            case 3:
+                bai3();
+                break;
+            case 4:
+                bai4();
+                break;
+            case 5:
+                bai5();
+                break;
+            case 6:
+                bai6();
+                break;
+            default:
+                document.write("khong co bai nay");
+        }
+        function bai1() {
+            var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+            for (var i in a)
+            {
+                document.write("row " + i);
+                for (var j in a[i])
+                {
+                    document.write(" " + a[i][j]);
+                }
+                document.write("<br>");
+            }
+        }
+        function bai2() {
+            var arr =  [ 'c', 's', 'c', '2', '6', '1' ];
+            arr.reverse();
+            alert(arr.join(""));
+        }
+        function bai3() {
+            var n = prompt("Nhap chuoi:");
+            var ktr = '0987654321';
+            var count = 0;
+            for(var i=0;i<n.length;i++){
+                if(n[i] >= '0' && n[i] <= '9'){
+                    count++;
+                }
+            }
+            alert(count);
+        }
+        function bai4() {
+            var n = prompt("Nhap chuoi:");
+            var count=0;
+            if (n[0]===" "){
+                count = 0;
+            }
+            else{
+                count = 1;
+            }
+            for (var i=1;i<n.length;i++){
+                if (n[i-1]===" " && n[i]!==" "){
+                    count++;
+                }
+            }
+            alert(count);
+        }
+    </script>
+</body>
+</html>

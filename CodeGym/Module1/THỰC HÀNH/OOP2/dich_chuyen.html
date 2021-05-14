@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <!-- <img src="/THỰC HÀNH/1a.png" alt="Flowers in Chania"> -->
+    <div id="game"></div>
+</body>
+<script>
+            
+    function Hero(image, top, left, size,speed){
+    this.image = image;
+    this.top = top;
+    this.left = left;
+    this.size = size;
+    this.speed= speed;
+
+    this.getHeroElement = function(){
+        return '<img width="'+ this.size + '"' +
+        ' height="'+ this.size + '"' +
+        ' src="' + this.image +'"' +
+        ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+    }
+
+    this.moveRight = function(){
+        this.left += 20;
+        console.log('ok left: ' + this.left);
+    }
+    this.moveLeft = function(){
+        this.left -=20;
+        console.log('ok right:'+ this.right);
+    }
+    this.moveTop = function(){
+        if(this.top>=0){
+        this.top -=20;
+        }
+        console.log('ok top:'+ this.top);
+    }
+    this.moveBottom = function(){
+        this.top +=20;
+        console.log('ok down:'+this.bottom);
+    }
+
+    }
+
+    var hero = new Hero('/THỰC HÀNH/1a.png', 20, 30, 200,500);
+    var flag = true;
+    var f= true;
+    function start(){
+    if(hero.left < window.innerWidth - hero.size && flag == true){
+        hero.moveRight();
+        
+    }
+    else if(hero.top < window.innerHeight -hero.size && f){
+        hero.moveBottom();
+        flag = false;
+    }
+   else if(hero.top > window.innerHeight - hero.size && hero.left>0 ){
+      hero.moveLeft();
+      f=false;
+       
+   }
+   else{
+        hero.moveTop();
+     
+   }
+//    
+
+    
+    // if(hero.top > window.innerHeight -hero.size){
+    //     console.log('hero.size' + window.innerHeight);
+    //     console.log('hero.size' + hero.size);
+    //     hero.moveLeft();
+    // }
+    
+    document.getElementById('game').innerHTML = hero.getHeroElement();
+    setTimeout(start, 50);
+    }
+
+    start();
+    
+    </script> 
+</html>

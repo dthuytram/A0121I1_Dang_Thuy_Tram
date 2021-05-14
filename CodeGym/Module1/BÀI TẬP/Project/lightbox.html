@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">.product { 
+        padding: 0px;   
+        position: relative; 
+        overflow: hidden;   
+        height: 450px;  
+        border: 1px solid #EAEAEA;  
+        font-family: Arial, Helvetica, sans-serif;  
+        font-size: 12px;
+        }
+         
+        .product:hover .caption {   
+        opacity: 1; 
+        transform: translateY(-150px);  
+        -webkit-transform:translateY(-150px);   
+        -moz-transform:translateY(-150px);  
+        -ms-transform:translateY(-150px);   
+        -o-transform:translateY(-150px);
+        }
+         
+        .product img {  
+        z-index: 2;
+        }
+         
+        .product .caption { 
+        position: absolute; 
+        top:450px;  
+        -webkit-transition:all 0.3s ease-in-out;    
+        -moz-transition:all 0.3s ease-in-out;   
+        -o-transition:all 0.3s ease-in-out; 
+        -ms-transition:all 0.3s ease-in-out;    
+        transition:all 0.3s ease-in-out;    
+        width: 100%;
+        }
+         
+        .product .blur {    
+        background-color: rgba(0, 0, 0, 0.7);   
+        height: 300px;  
+        z-index: 5; 
+        position: absolute; 
+        width: 100%;
+        }
+        .product .caption-text {    
+        z-index: 10;    
+        color: #fff;    
+        position: absolute; 
+        height: 300px;  
+        text-align: center; 
+        top:-20px;  
+        width: 100%;
+        }
+        .button{
+                
+        display: inline-block;
+        width: 120px;
+        height: 10px;
+        padding-top: 10px ;
+        padding-bottom:20px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #b47016;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #999;
+        }
+        .container .dropdown{
+            margin-top: 20px;
+        }
+        /* Layout of System */
+                #head {
+        width: 100%;
+        overflow: auto;
+        }
+
+        .logo {
+        width: 20%;
+        background-color: aquamarine;
+        float: left;
+        box-sizing: border-box;
+        padding: 0px;
+        }
+
+        .banner {
+        width: 34%;
+        height: 260px;
+        background-color: rgb(187, 181, 168);
+        float: right;
+        box-sizing: border-box;
+        padding: 10px;
+        }
+
+        #head-link {
+        background-color: rgb(192, 188, 176);
+        padding: 10px;
+        }
+
+        .content::after {
+        content: '';
+        clear: both;
+        display: table;
+        }
+
+        #left, #content {
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        background-color: rgb(231, 225, 216);
+        }
+
+        #content {
+        width: 75%;
+        background-color: aliceblue;
+        }
+
+        footer {
+        padding: 30px;
+        background-color: brown;
+        }
+        /* End Layout */
+        
+        /* DESIGN DROPDOWN LEFT */
+        body {
+        font-family: sans-serif;
+        font-size: 15px;
+        }
+        #menu ul {
+        width: 250px;
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+        background: #c46e0d;
+        }
+        #menu li {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #978f8f;
+        padding: 0 1em;
+        color: #f1f1f1;
+        }
+        #menu li a {
+        text-decoration: none;
+        color: rgb(196, 182, 182);
+        font-weight: bold;
+        display: block;
+        }
+        #menu li:hover {
+        background: #F1F1F1;
+        }
+
+        /*==Dropdown Menu==*/
+        #menu ul li {
+        position: relative;
+        }
+        #menu .sub-menu {
+        position: absolute;
+        left: -200px; 
+        /* -200px: menu hiện trái
+            200px: menu hiện phải
+         */
+        top: 0;
+        display: none;
+        }
+        #menu li:hover .sub-menu {
+        display: block;
+        }
+
+
+        /* END  */
+        .danhmuc{
+        /* background: rgb(209, 199, 199); */
+        font-weight: bold;
+        color: rgb(26, 17, 131);
+        width: 100%;
+        height: 40px;
+        padding-top: 10px;
+        }
+        /* radio */
+        .con{
+        display: inline-block;
+        position:relative;
+        cursor:pointer;
+        font-size:16px;
+        user-select: none;
+        padding-left:40px;
+        margin-bottom:10px;
+        }
+        .con input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        }
+        .checkmark{
+        position:absolute;
+        top:0;
+        left:0;
+        width:20px;
+        height:20px;
+        background:#eee;
+        border-radius:50%;
+        }
+        .con:hover .checkmark{
+        background:#ccc;
+        }
+        .checkmark:after{
+        content:"";
+        position:absolute;
+        display:none;
+        }
+        .con .checkmark:after{
+        top:50%;
+        left:50%;
+        width: 15px;
+        height: 15px;
+        border-radius:50%;
+        border: solid 3px white;
+        transform:translate(-50%,-50%) rotate(45deg);
+        }
+        .con input:checked ~ .checkmark{
+        background:#c77517;
+        }
+        .con input:checked ~ .checkmark:after{
+        display:block;
+        }
+        /* end radio */
+        .danhmuc1 .danhmuc2{
+            padding-top: 10px;
+            background-color: rgb(231, 225, 216);
+        }
+        
+        </style>
+</head>
+<body>
+<div class="container"> 
+    <!-- Layout of System -->
+    <header>
+        <div id="head">
+          <div class="logo">
+              <img src="./1.JPG" style="width: 1050px; height: 300px;"/>
+          </div>
+          <!-- <div class="banner">banner</div> -->
+        </div>
+        <div id="head-link">head-link</div>
+    </header>
+    <section class="content">
+        <div id="left">
+            <!-- Add dropdown list left -->
+            <div id="menu">
+                <div class="danhmuc"> DANH MỤC SẢN PHẨM</div>
+                <ul>
+                  <li><a href="#">> TRANG CHỦ</a></li>
+                  <li><a href="#">> SÁCH MẦM NON</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">> BÉ VÀO LỚP 1</a></li>
+                      <li><a href="#">> TỪ ĐIỂN TRANH</a></li>
+                      <li><a href="#">> THỦ CÔNG - TẬP TÔ</a></li>
+                      <li><a href="#">> THỦ CÔNG - TẬP TÔ</a></li>
+                      <li><a href="#">> PHÁT TRIỂN TRÍ TUỆ</a></li>
+                      <li><a href="#">> COMBO SÁCH MẦM NON</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">> SÁCH THIẾU NHI</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">> TRUYỆN TRANH MÀU</a></li>
+                        <li><a href="#">> SÁCH KĨ NĂNG SỐNG</a></li>
+                        <li><a href="#">> SÁCH TRUYỆN CHỮ</a></li>
+                        <li><a href="#">> KIẾN THỨC- KHOA HỌC</a></li>
+                        <li><a href="#">> TẬP TÔ MÀU - KHÉO TAY</a></li>
+                        <li><a href="#">> COMBO SÁCH THIẾU NHI</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">> SÁCH KĨ NĂNG</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">> KN - SÁCH LẺ</a></li>
+                        <li><a href="#">> KN - SÁCH COMBO</a></li>
+                      </ul>
+                  </li>
+                </div>
+                  <div class="danhmuc"> LỌC SẢN PHẨM</div>
+                  <div class="danhmuc1">
+                  <p style="color: orange; font-weight: bold;">NHÀ XUẤT BẢN</p>
+                  <!-- radio -->
+                  <label class="con">Khác
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="con">Fahasa
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="con">Tiki
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="con">Shoppee
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <HR>
+                    <div class="danhmuc2">
+                    <p style="color: orange; font-weight: bold;">GIÁ CẢ</p>
+                  <!-- radio -->
+                  <label class="con">Dưới 100,000₫
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="con">100,000₫ - 200,000₫
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="con">200,000₫ - 300,000₫
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="con">Trên 400,000₫
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </ul>
+            </div>
+            </div>
+            <!-- End  -->
+        </div>
+        <div id="content">
+            <!-- Add dropdown list -->
+            <div class="dropdown">
+                Sắp xếp theo &nbsp;<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:100px; background-color: rgb(107, 73, 11);">
+            
+                    Giá cả <span class="caret"></span>
+            
+            </button>
+            
+                    <ul class="dropdown-menu">
+            
+                                <li><a href="#"> Giá từ thấp đến cao</a></li>
+            
+                                <li><a href="#"> Giá từ cao đến thấp</a></li>
+            
+                    </ul>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: rgb(99, 67, 8);"> Phổ biến </button>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: rgb(107, 73, 8);">Mới nhất</button>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: rgb(85, 58, 8);">Bán chạy</button>    
+            </div>
+         
+            <!-- End Dropdown list -->
+
+            <!-- List product -->
+            <div class="row"> 
+                <div class="col-sm-6 col-md-3"> 
+                 <div class="product"> 
+                  <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/dao-giau-vang-13960-500_master.jpg" class="img-responsive" alt="Sản phẩm 1"> 
+                  </p> 
+                  <div class="caption"> 
+                   <div class="blur"></div> 
+                   <div class="caption-text"> 
+                    <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 1</h3> 
+                     <!-- --> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span></a> 
+                    <br><input type="button" class="button" value= "👁️ Chi tiết"/> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+                <div class="col-sm-6 col-md-3"> 
+                 <div class="product"> 
+                  <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/cuoc-phieu-luu-cua-thuyen-truong-corcoran-440_master.jpg" class="img-responsive" alt="Sản phẩm 2"> 
+                  </p> 
+                  <div class="caption"> 
+                   <div class="blur"></div> 
+                   <div class="caption-text"> 
+                    <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 2</h3> 
+                     <!-- --> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+                <div class="col-sm-6 col-md-3"> 
+                 <div class="product"> 
+                  <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/nhung-cuoc-phieu-luu-cua-sherlock-holmes-13896-500_master.jpg" class="img-responsive" alt="Sản phẩm 3"> 
+                  </p> 
+                  <div class="caption"> 
+                   <div class="blur"></div> 
+                   <div class="caption-text"> 
+                    <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 3</h3> 
+                   <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+                <div class="col-sm-6 col-md-3"> 
+                 <div class="product"> 
+                  <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/nhung-cuoc-phieu-luu-ki-la-cua-karik-va-valia-440_master.jpg"/>
+                  <div class="caption"> 
+                   <div class="blur"></div> 
+                   <div class="caption-text"> 
+                    <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 4</h3> 
+                     <span class="button" onclick=chuyenhuong();> 🛒Mua</span></a> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div>
+              <!-- add new  -->
+              <div class="row"> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/superjumbocrayons_1080x1080_d853006ccd234602b7fdfcaba26777ba_master.jpg" class="img-responsive" alt="Sản phẩm 1"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 1</h3> 
+                       <!-- --> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span></a> 
+                      <br><input type="button" class="button" value= "👁️ Chi tiết"/> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/80-ngay-vong-quanh-the-gioi-13840-500_master.jpg" class="img-responsive" alt="Sản phẩm 2"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 2</h3> 
+                       <!----> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/bia_truoc_f4374be05dbe41f9a31441fd94be6ce4_master.jpg" class="img-responsive" alt="Sản phẩm 3"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 3</h3> 
+                         <!----> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/bia_truoc_15572355267244a8972ab0c7654c8fb9_master.jpg" class="img-responsive" alt="Sản phẩm 4"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 4</h3> 
+                         <!----> <span class="button" onclick=chuyenhuong();> 🛒Mua</span></a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div>
+              <!--  -->
+              <!-- Add new  -->
+              <div class="row"> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/dao-giau-vang-13960-500_master.jpg" class="img-responsive" alt="Sản phẩm 1"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 1</h3> 
+                         <!----> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span></a> 
+                      <br><input type="button" class="button" value= "👁️ Chi tiết"/> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/dao-giau-vang-13960-500_master.jpg" class="img-responsive" alt="Sản phẩm 2"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 2</h3> 
+                         <!----><span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/bia_truoc_f4374be05dbe41f9a31441fd94be6ce4_master.jpg" class="img-responsive" alt="Sản phẩm 3"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 3</h3> 
+                         <!----> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/bia_truoc_15572355267244a8972ab0c7654c8fb9_master.jpg" class="img-responsive" alt="Sản phẩm 4"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 4</h3> 
+                         <!----> <span class="button" onclick=chuyenhuong();> 🛒Mua</span></a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div>
+              <!--  -->
+              <!-- Add new  -->
+              <div class="row"> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/dao-giau-vang-13960-500_master.jpg" class="img-responsive" alt="Sản phẩm 1"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 1</h3> 
+                         <!----> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span></a> 
+                      <br><input type="button" class="button" value= "👁️ Chi tiết"/> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/dao-giau-vang-13960-500_master.jpg" class="img-responsive" alt="Sản phẩm 2"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 2</h3> 
+                         <!----> <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:10x;"> <img style="width: 100%; height: 100%;" src="https://product.hstatic.net/1000237375/product/bia_truoc_f4374be05dbe41f9a31441fd94be6ce4_master.jpg" class="img-responsive" alt="Sản phẩm 3"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:5px;">Sản phẩm 3</h3> 
+                        <span class="button"  onclick=chuyenhuong();> 🛒Mua</span>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-6 col-md-3"> 
+                   <div class="product"> 
+                    <p style="text-align:center;margin-top:20px;"> <img style="width: 100%" src="https://product.hstatic.net/1000237375/product/bia_truoc_15572355267244a8972ab0c7654c8fb9_master.jpg" class="img-responsive" alt="Sản phẩm 4"> 
+                    </p> 
+                    <div class="caption"> 
+                     <div class="blur"></div> 
+                     <div class="caption-text"> 
+                      <h3 style="border-top:2px solid white;border-bottom:2px solid white;padding:10px;">Sản phẩm 4</h3> 
+                       <!-- --> <span class="button" onclick=chuyenhuong();> 🛒Mua</span></a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div>
+            <!-- End list -->
+
+        </div>
+        
+    </section>
+    <footer>footer</footer>
+    <!-- End layout -->
+
+    
+ 
+   
+<!--  -->
+</div>
+</body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
+<script>
+    function chuyenhuong() {
+               window.location="./chitiet.html";
+            }
+           
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+

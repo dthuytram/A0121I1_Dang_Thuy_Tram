@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  // cham than + enter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        #kq{
+           background-color:#4CAF50;
+           color:white;
+           font-size: 15px;
+           border:1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    // var a= new Customer("dang thuy tram","10201101","tramdangthuy3011@gmail.com","0914814420","30/11/2000","23 dong da",0.2,"diamond","villa",9,10);
+    
+    class Customer{
+        constructor(ten,cmnd,email,phone,birthdayYear,address,giamgia,type_cus,loaidichvu,ngaythue, count)
+        {   this.ten = ten;
+            this.cmnd = cmnd;
+            this.email = email;
+            this.phone = phone;
+            this.birthdayYear = birthdayYear;
+            this.address = address;
+            this.giamgia= giamgia;
+            this.type_cus= type_cus;
+            this.loaidichvu= loaidichvu;
+            this.ngaythue= ngaythue;
+            this.count = count;
+        }
+        setCmnd(cmnd){
+            this.cmnd = cmnd;
+        }
+        setEmail (email){
+            this.email = email;
+        }
+        setAge(age){
+            this.birthdayYear = age;
+        }
+        setNgaythue (ngaythue){
+            this.ngaythue = ngaythue;
+        }
+        setGiamgia(giamgia){
+            this.giamgia= giamgia;
+        }
+        setLoaidichvu(loaidichvu){
+            this.loaidichvu = loaidichvu;
+        }
+        setCount(count){
+            this.count = count;
+        }
+        setAddress(address){
+            this.address = address;
+        }
+        setLoaiCus(loaicus){
+            this.type_cus = loaicus;
+        }
+        getAddress(){
+            return this.address;
+        }
+        getTen(){
+            return this.ten;
+        }
+        getEmail(){
+            return this.email;
+        }
+        getPhone(){
+            return this.phone;
+        }
+        getBirthdayYear(){
+            return this.birthdayYear;
+        }
+        getNgaythue(){
+            return this.ngaythue;
+        }
+        getGiamgia(){
+            return this.giamgia;
+        }
+        getLoaiCus(){
+            return this.type_cus;
+        }
+        getLoaidichvu(){
+            // this.loaidichvu.toLocaleLowerCase(); // chuyen ve chu thuong
+            // alert(this.loaidichvu.toLocaleLowerCase());
+            switch( this.loaidichvu.toLocaleLowerCase()){
+                case 'villa':
+                    this.loaidichvu = 500;
+                    break;
+                case 'house':
+                    this.loaidichvu = 300;
+                    break;
+                case 'room':
+                    this.loaidichvu=100;
+                    break;
+            }
+                return this.loaidichvu;
+    
+        }
+        getTienphong(){
+                
+            var result = this.getLoaidichvu() * this.ngaythue * (1-this.giamgia/100);
+            // document.write(result);
+
+            document.getElementById("result").innerHTML = "Tien phai tra" + result + "dong";
+        }
+        displayCustomer(){
+            console.log("Display rea");
+            var result="";
+            // result += "<table>";
+            // result += "<tr><th> Name </th> <th>Address</th> <th>Phone </th> <th>Birthday </th> </tr> <tr> ";
+            //thêm tr trên để tạo hàng "tiêu đề" không bị lặp
+            for( var i=0;i<array.length;i++){
+         
+                    result += `<table>
+                                    <tr>
+                                        <td>${array[i].ten}</td>
+                                        <td>${array[i].email}</td>
+                                        <td>${array[i].ngaythue}</td>
+                                    </tr>
+                                </table>`;
+                   
+                    
+                
+               
+            }
+            // result+="</table>";
+            console.log(result);
+        
+        }
+    
+    
+        addNew(){
+            // var n= parseInt(prompt("So luong can nhap:"));
+        //     var ten = prompt("Enter name Customer :");
+        //     var pattern = /^[^ ][a-z]/;
+        //     while (!ten.match(pattern)) {
+        //         ten = prompt("data Error Enter name Customer again:");
+        //     }
+        //     // cmnd 
+        //     var cmnd = prompt("Enter cmnd Customer :");
+        //     pattern = /^\d{9}$/;
+        //     while (!cmnd.match(pattern)) {
+        //         cmnd = prompt("data Error Enter cmnd again:");
+        //     }            
+            
+        //     //check age
+        //     var birthdayYear = prompt("Enter age Customer :");
+        //     pattern = /^\d{2,3}$/;
+        //     while (!birthdayYear.match(pattern)) {
+        //         birthdayYear = prompt("data Error Enter age  again:");
+        //     }
+        //     var address = prompt("Enter address Customer :");
+        //     var phone = prompt("Enter phone Customer :");            
+        //     var email = prompt("Enter email Customer :");
+        //     var giamgia = prompt("Enter safeOff Customer :");
+        //   do
+        //   {
+        //      var loaidichvu = prompt("Nhập loại dịch vụ(villa,house,room):");
+          
+        //    }
+        //    while(loaidichvu!="villa"&&loaidichvu!="house"&&loaidichvu!="room");  
+        //   var type_cus = prompt("Nhập loại customer");
+
+        //    var count = prompt("Enter count people");
+        //     pattern = /^\d{1,3}$/;
+        //     while (!count.match(pattern)) {
+        //         count = prompt("data Error Enter count  again:");
+        //     }
+        //     var rentDay = prompt("Enter rentDays :");
+        //     pattern = /^\d{1,2}$/;
+        //     while (!rentDay.match(pattern)) {
+        //         rentDay = prompt("data Error Enter rentDay  again:");
+        //     }
+        //     array.push(new Customer(ten,cmnd,email,phone,birthdayYear,address,giamgia,type_cus,loaidichvu,rentDay,count));
+            array.push(new Customer(1,1,1,1,1,1,1,1,1,1,1));
+            array.push(new Customer(2,2,2,2,2,2,2,2,2,2,2));
+            this.displayCustomer();
+            
+        }
+       
+        deleteCustomer(){
+            for( var i=0;i<array.length;i++){
+                
+                    var choice = parseInt(prompt(i+" "+array[i].name));
+                    array.splice((choice - 1), 1);
+                    this.displayCustomer(); // Triển khai các thông tin trng hàm
+                }
+            }
+    
+    }
+
+
+    var array = new Array();
+    var b= new Array();
+    var result ="";
+    var choice = 0;
+    var obj = new Customer("ten","cmnd","email","phone","birthdayYear","address","giamgia","type_cus","loaidichvu","rentDay", "count");
+    // obj.displayCustomer();
+    while (choice < 6) {
+        choice = parseInt(prompt("Hãy chọn từ 1-> 5 \n1. Add new customer\n2. Display information customer\n3. Display money \n4. Edit customer\n5. Delete customer "));
+        switch (choice) {
+            case 1:
+                obj.addNew();
+                break;
+            case 2:
+                obj.displayCustomer();
+                break;
+            case 3:
+                obj.deleteCustomer();
+            default:
+                break;
+        }
+    }
+    
+</script>
+</html>
+
+
