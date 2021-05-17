@@ -2,15 +2,20 @@ package cleanCodeRefactoring.thuchanh.refactoring;
 
 public class Calculator {
 
+    public static final char SUBTRACTION = '-';
+    public static final char ADDTION = '+';
+    public static final char MULTIPLICATION = '*';
+    public static final char DIVISION = '/';
+
     public static int calculate(int firstOperand, int secondOperand, char operation) {
         switch (operation) {
-            case '+':
+            case ADDTION:
                 return firstOperand + secondOperand;
-            case '-':
+            case SUBTRACTION:
                 return firstOperand - secondOperand;
-            case '*':
+            case MULTIPLICATION:
                 return firstOperand * secondOperand;
-            case '/':
+            case DIVISION:
                 if (secondOperand != 0)
                     return firstOperand / secondOperand;
                 else
