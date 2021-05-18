@@ -1,12 +1,13 @@
-package automatedTesting_TDD.baitap;
-
-import java.util.Arrays;
-import java.util.Collection;
+package cleanCodeRefactoring.baitap;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TennisGameTest {

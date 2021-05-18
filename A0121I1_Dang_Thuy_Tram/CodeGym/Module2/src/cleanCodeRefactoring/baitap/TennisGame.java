@@ -1,4 +1,4 @@
-package automatedTesting_TDD.baitap;
+package cleanCodeRefactoring.baitap;
 
 public class TennisGame {
 
