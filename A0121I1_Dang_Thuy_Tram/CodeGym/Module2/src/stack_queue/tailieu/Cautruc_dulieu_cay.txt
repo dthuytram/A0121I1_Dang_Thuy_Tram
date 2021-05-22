@@ -1,0 +1,45 @@
+[Bài đọc] Cấu trúc dữ liệu cây
+1. Cấu trúc dữ liệu cây là gì?
+
+    Trong khoa học máy tính, cây là một cấu trúc dữ liệu được sử dụng rộng rãi gồm một tập hợp các nút (tiếng Anh: node) được liên kết với nhau theo quan hệ cha-con.
+    Cây trong cấu trúc dữ liệu đầu tiên là mô phỏng (hay nói cách khác là sự sao chép) của cây (có gốc) trong lý thuyết đồ thị.
+    Hầu như mọi khái niệm trong cây của lý thuyết đồ thị đều được thể hiện trong cấu trúc dữ liệu.
+    Tuy nhiên cây trong cấu trúc dữ liệu đã tìm được ứng dụng phong phú và hiệu quả trong nhiều giải thuật.
+    Khi phân tích các giải thuật trên cấu trúc dữ liệu cây, người ta vẫn thường vẽ ra các cây tương ứng trong lý thuyết đồ thị.
+
+    1. Các nút
+    Một nút có thể chứa một giá trị, một điều kiện, một cấu trúc dữ liệu riêng biệt hoặc chính một cây. Mỗi nút trong một cây có thể không có hoặc có một số nút con,
+    các nút con có mức cao hơn nó (theo quy ước khác với cây tự nhiên, cây trong cấu trúc dữ liệu phát triển từ trên xuống). Một nút có con được gọi là nút cha của các nút con. Một nút có nhiều nhất một nút cha.
+
+    2. Nút gốc
+    Trong mỗi cây có một nút đặc biệt được gọi là nút gốc (hay nói đơn giản là gốc).
+    Nút gốc là nút duy nhất không có nút cha. Nút gốc là nơi khởi đầu của nhiều giải thuật trên cây.
+    Tất cả các nút khác được nối về nút gốc bằng một đường đi qua các cạnh hay các liên kết.
+
+    3. Các nút lá
+    Các nút không có nút con được gọi là nút lá hay gọi đơn giản là lá.
+
+    4. Các nút trong (nút nhánh)
+    Nút trong của một cây là nút trên cây có ít nhất một con, nghĩa là các nút không phải là lá.
+    Các khái niệm về mức của mỗi nút, chiều cao của cây được định nghĩa giống như cây trong lý thuyết đồ thị.
+
+2. Các khái niệm cơ bản về cây
+    Dưới đây là một số khái niệm quan trọng liên quan tới cây nhị phân:
+
+    1. Nút gốc (Root): nút trên cùng của cây được gọi là nút gốc.
+    Một cây sẽ chỉ có một nút gốc và một đường xuất phát từ nút gốc tới bất kỳ nút nào khác.
+
+    2. Nút cha: một nút mà nối trực tiếp với một nút khác và ở gần nút gốc hơn nút đó.
+
+    3. Nút con: một nút mà nối trực tiếp với một nút khác và ở xa nút gốc hơn nút đó.
+
+    4. Tổ tiên: một nút mà có thể duyệt đến được bằng cách liên tục duyệt theo nút cha.
+    Hậu duệ: một nút mà có thể duyệt đến được bằng cách liên tục duyệt theo nút con.
+
+    5. Nút lá: nút không có nút con nào
+
+    6. Duyệt: duyệt qua các nút theo một thứ tự nào đó.
+
+    7. Đường: một chuỗi các nút cùng với các đường nối giữa chúng với nhau theo quan hệ hậu duệ.
+
+    8. Khóa (Key): biểu diễn một giá trị của một nút dựa trên những gì mà một thao tác tìm kiếm thực hiện trên nút.
