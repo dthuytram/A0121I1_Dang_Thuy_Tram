@@ -1,6 +1,5 @@
 package automatedTesting_TDD.baitap;
 
-import automatedTesting_TDD.thuchanh.calculateApplication.src.SimpleCalculator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
