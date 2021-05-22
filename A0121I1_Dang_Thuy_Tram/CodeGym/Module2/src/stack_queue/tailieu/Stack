@@ -1,0 +1,122 @@
+I. SƠ LƯỢC VỀ HOẠT ĐỘNG STACK
+
+    1. Hoạt động push(): lưu giữ một phần tử trên ngăn xếp.
+
+    2. Hoạt động pop(): xóa một phần tử từ ngăn xếp.
+
+    3. Hoạt động peek(): lấy phần tử dữ liệu ở trên cùng của ngăn xếp, mà không xóa phần tử này.
+
+    4. Hoạt động isFull(): kiểm tra xem ngăn xếp đã đầy hay chưa.
+
+    5. Hoạt động isEmpty(): kiểm tra xem ngăn xếp là trống hay không.
+
+II.  GIẢI THUẬT CHO CÁC HOẠT ĐỘNG
+
+    5.1 Hoạt động peek()
+
+            Bắt đầu phương thức peek
+             return stack[top]
+            kết thúc phương thức
+
+    5.2 Hoạt động isFull()
+
+            Bắt đầu phương thức isfull
+             if top bằng MAXSIZE
+             return true
+             else
+             return false
+             kết thúc if
+            kết thúc phương thức
+
+    5.3 Hoạt động isEmpty()
+
+            bắt đầu phương thức isempty
+             if top nhỏ hơn 1
+             return true
+             else
+             return false
+             kết thúc if
+            kết thúc phương thức
+
+    5.4 Hoạt động Push
+
+    Tiến trình đặt (thêm) một phần tử dữ liệu mới vào trên ngăn xếp còn được biết đến với tên Hoạt động PUSH. Hoạt động push bao gồm các bước sau:
+
+    Bước 1: kiểm tra xem ngăn xếp đã đầy hay chưa.
+
+    Bước 2: nếu ngăn xếp là đầy, tiến trình bị lỗi và thoát ra.
+
+    Bước 3: nếu ngăn xếp chưa đầy, tăng top để trỏ tới phần bộ nhớ trống tiếp theo.
+
+    Bước 4: thêm phần tử dữ liệu vào vị trí nơi mà top đang trỏ đến trên ngăn xếp.
+
+    Bước 5: trả về success.
+
+    Nếu Danh sách liên kết được sử dụng để triển khai ngăn xếp,
+    thì ở bước 3 chúng ta cần cấp phát một không gian động.
+
+    => GIẢI THUẬT CỦA PUSH
+
+            bắt đầu hoạt động push: stack, data
+             if stack là đầy
+             return null
+             kết thúc if
+             top ← top + 1
+             stack[top] ← data
+            kết thúc hàm
+            Hoạt động POP
+
+
+     5.5 Hoạt động của pop
+    Việc truy cập nội dung phần tử trong khi xóa nó từ ngăn xếp còn được gọi là Hoạt động POP. Trong sự triển khai Mảng của hoạt động pop(), phần tử dữ liệu không thực sự bị xóa, thay vào đó top sẽ bị giảm về vị trí thấp hơn trong ngăn xếp để trỏ tới giá trị tiếp theo. Nhưng trong sự triển khai Danh sách liên kết, hoạt động pop() thực sụ xóa phần tử xữ liệu và xóa nó khỏi không gian bộ nhớ.
+
+    Hoạt động POP có thể bao gồm các bước sau:
+
+    Bước 1: kiểm tra xem ngăn xếp là trống hay không.
+
+    Bước 2: nếu ngăn xếp là trống, tiến trình bị lỗi và thoát ra.
+
+    Bước 3: nếu ngăn xếp là không trống, truy cập phần tử dữ liệu tại top đang trỏ tới.
+
+    Bước 4: giảm giá trị của top đi 1.
+
+    Bước 5: trả về success.
+
+    => GIẢI THUẬT CỦA POP
+
+            bắt đầu hàm pop: stack
+             if stack là trống
+             return null
+             kết thúc if
+             data ← stack[top]
+             top ← top - 1
+             return data
+            kết thúc hàm
+
+III. ỨNG DỤNG
+
+    1. Ứng dụng trực tiếp
+
+        Lịch sử duyệt web
+
+        Dãy Undo trong bộ soạn thảo văn bản
+
+        Chains of method calls
+
+        Kiểm tra tính hợp lệ của dấu ngoặc đơn trong biểu thức toán học
+
+        Đổi cơ số
+
+        Ứng dụng trong cài đặt chương trình Compiler. (Compiler implementation)
+
+        Tính giá trị biểu thức toán học
+
+        Quay lui (Backtracking)
+
+        Khử đệ quy
+
+    2. Ứng dụng gián tiếp
+
+        Cấu trúc dữ liệu hỗ trợ cho các thuật toán
+
+        Thành phần của các cấu trúc dữ liệu khác
