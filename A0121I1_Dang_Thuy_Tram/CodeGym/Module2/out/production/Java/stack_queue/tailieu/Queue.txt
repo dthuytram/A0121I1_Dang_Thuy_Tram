@@ -1,0 +1,74 @@
+I. HOẠT ĐỘNG CƠ BẢN CỦA QUEUE
+
+    1. Phương thức enqueue(): thêm (hay lưu trữ) một phần tử vào trong hàng đợi.
+
+    2. Phương thức dequeue(): xóa một phần tử từ hàng đợi.
+
+    3. Phương thức peek(): lấy phần tử ở đầu hàng đợi, mà không xóa phần tử này.
+
+    4. Phương thức isFull(): kiểm tra xem hàng đợi là đầy hay không.
+
+    5. Phương thức isEmpty(): kiểm tra xem hàng đợi là trống hay hay không.
+
+    **) Trong cấu trúc dữ liệu hàng đợi, chúng ta luôn luôn:
+        (1) dequeue (xóa) dữ liệu được trỏ bởi con trỏ front
+        (2) enqueue (nhập) dữ liệu vào trong hàng đợi bởi sự giúp đỡ của con trỏ rear.
+
+II. HOẠT ĐỘNG ENQUEUE
+
+    4.4 Hoạt động enqueue trong cấu trúc dữ liệu hàng đợi
+
+    Bởi vì cấu trúc dữ liệu hàng đợi duy trì hai con trỏ dữ liệu: front và rear, do đó các hoạt động của loại cấu trúc dữ liệu này là khá phức tạp khi so sánh với cấu trúc dữ liệu ngăn xếp.
+
+    Dưới đây là các bước để enqueue (chèn) dữ liệu vào trong hàng đợi:
+
+    Bước 1: kiểm tra xem hàng đợi là có đầy không.
+
+    Bước 2: nếu hàng đợi là đầy, tiến trình bị lỗi và bị thoát.
+
+    Bước 3: nếu hàng đợi không đầy, tăng con trỏ rear để trỏ tới vị trí bộ nhớ trống tiếp theo.
+
+    Bước 4: thêm phần tử dữ liệu vào vị trí con trỏ rear đang trỏ tới trong hàng đợi.
+
+    Bước 5: trả về success.
+
+
+    => GIẢI THUẬT ENQUEUE
+                bắt đầu enqueue(data)
+                 if queue là đầy
+                 return overflow
+                 endif
+                 rear ← rear + 1
+                 queue[rear] ← data
+                 return true
+                kết thúc phương thức
+
+III. HOẠT ĐỘNG DEQUEUE
+
+    Việc truy cập dữ liệu từ hàng đợi là một tiến trình gồm hai tác vụ: truy cập dữ liệu tại nơi con trỏ front đang trỏ tới và xóa dữ liệu sau khi đã truy cập đó. Dưới đây là các bước để thực hiện hoạt động dequeue:
+
+    Bước 1: kiểm tra xem hàng đợi là trống hay không.
+
+    Bước 2: nếu hàng đợi là trống, tiến trình bị lỗi và bị thoát.
+
+    Bước 3: nếu hàng đợi không trống, truy cập dữ liệu tại nơi con trỏ front đang trỏ.
+
+    Bước 4: tăng con trỏ front để trỏ tới vị trí chứa phần tử tiếp theo.
+
+    Bước 5: trả về success.
+
+    => Giải thuật cho hoạt động dequeue
+
+            bắt đầu phương thức dequeue
+             if queue là trống
+             return underflow
+             end if
+             data = queue[front]
+             front ← front + 1
+             return true
+            kết thúc phương thức
+
+
+
+
+
