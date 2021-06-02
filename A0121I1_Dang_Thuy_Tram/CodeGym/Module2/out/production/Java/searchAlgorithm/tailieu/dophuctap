@@ -1,0 +1,88 @@
+[Bài đọc] Độ phức tạp của thuật toán
+1. Độ phức tạp thuật toán là gì?
+Thời gian mà máy tính khi thực hiện một thuật toán không chỉ phụ thuộc vào bản thân thuật toán đó, ngoài ra còn tùy thuộc từng máy tính. Để đánh giá hiệu quả của một thuật toán, có thể xét số các phép tính phải thực hiện khi thực hiện thuật toán này. Thông thường số các phép tính được thực hiện phụ thuộc vào cỡ của bài toán, tức là độ lớn của đầu vào. Vì thế độ phức tạp thuật toán là một hàm phụ thuộc đầu vào.
+
+Khi chúng ta đánh giá độ phức tạp của một thuật toán nghĩa là chúng ta đang tìm ra một đánh giá về thời gian và không gian cần thiết để thực hiện thuật toán đó.
+
+Không gian ở đây được hiểu là các yêu cầu về bộ nhớ, thiết bị lưu trữ, … của máy tính để thuật toán có thể làm việc. Việc xem xét về không gian của thuật toán phụ thuộc phần lớn vào cách tổ chức dữ liệu của thuật toán.
+
+Trong bài viết này, khi nói đến độ phức tạp của thuật toán, mình sẽ chỉ đề cập đến những đánh giá về mặt thời gian.
+
+Ðánh giá về thời gian thực hiện thuật toán không phải là xác định thời gian tuyệt đối (chạy thuật toán mất bao nhiêu giây, bao nhiêu phút, …) để thực hiện thuật toán mà là xác định mối liên quan giữa dữ liệu đầu vào (input) của thuật toán và chi phí (số thao tác, số phép tính cộng, trừ, nhân, chia, căn, …) để thực hiện thuật toán. Sở dĩ người ta không quan tâm đến thời gian tuyệt đối của thuật toán vì thời gian chạy chương trình phụ thuộc vào rất nhiều yếu tố như: cấu hình máy tính, ngôn ngữ sử dụng, trình biên dịch, dữ liệu đầu vào, …
+
+Một cách tổng quát, thời gian thực hiện thuật toán là một hàm số phụ thuộc vào dữ liệu đầu vào: T = f(input)
+
+Tuy vậy, khi phân tích thuật toán, người ta thường chỉ chú ý đến độ lớn (kích thước) của dữ liệu đầu mà thôi. Độ lớn này thường được thể hiện bằng một số nguyên n. Chẳng hạn: sắp xếp một dãy n số, tìm giá trị lớn nhất trong n số, tính điểm trung bình của n học sinh, …
+
+Lúc này, thời gian thực hiện thuật toán là một hàm số phụ thuộc vào n: T = f(n)
+
+Việc xây dựng một hàm T tổng quát như trên trong mọi trường hợp của thuật toán là một việc rất khó khăn, nhiều lúc không thể thực hiện được. Chính vì vậy mà người ta chỉ xây dựng hàm T cho một số trường hợp đáng chú ý nhất của thuật toán, thường là trường hợp tốt nhất, xấu nhất hoặc trung bình.
+
+2. Đánh giá độ phức tạp thuật toán
+2.1. Ký hiệu Big-O
+Khi đánh giá độ phức tạp của một thuật toán, ta thường dùng 2 ký hiệu O-lớn (Big-O) và Theta (Θ). Nhưng chúng ta quen sử dụng ký hiệu O-lớn hơn.
+
+Thuật toán A có thời gian thực hiện là T(n) = O(f(n)). Khi đó, thuật toán A có độ phức tạp f(n).
+
+Ví dụ khi ta nói thời gian thực hiện T(n) của chương trình là O(n2), có nghĩa là tồn tại các hằng số dương C và n0 sao cho T(n) <= Cn2 với n >= n0.
+
+2.2. Các quy tắc tính độ phức tạp
+Quy tắc bỏ hằng số
+
+T(n) = O(Cf(n)) = O(f(n)) với C là một hằng số dương
+
+Quy tắc cộng
+
+2 chương trình P1 và P2 nối tiếp nhau. T1(n) = O(f(n)) là thời gian thực hiện chương trình 1 và T2(n) = O(g(n)) là thời gian thực hiện chương trình 2.
+
+Thời gian thực hiện tổng thể 2 chương trình này là O(f(n) + g(n)) = O(max(f(n), g(n))).
+
+Quy tắc nhân
+
+2 chương trình P1 và P2 lồng nhau. T1(n) = O(f(n)) là thời gian thực hiện chương trình P1 và T2(n) = O(g(n)) là thời gian thực hiện chương trình P2.
+
+=> Thời gian thực hiện tổng thể 2 chương trình này là O(f(n).g(n)).
+
+3. Thời gian thực hiện các câu lệnh trong các ngôn ngữ lập trình
+3.1. Các câu lệnh đơn giản
+Các câu lệnh đơn giản như gán, so sánh, return, đọc/ghi, … có thời gian thực hiện là O(1).
+
+3.2. Vòng lặp
+Trong phần lớn các trường hợp, thời gian thực hiện vòng lặp = thời gian thực hiện thân vòng lặp x số vòng lặp.
+
+Ví dụ 1:
+
+// Thực hiện n lần
+for (int i = 0; i < ;n; i++) {
+    // Thời gian thực hiện là hằng số.
+    s += i;
+}
+Tổng thời gian thực hiện = O(Cn) = O(n).
+
+Ví dụ 2:
+
+// Thực hiện m lần
+for (int i = 0; i < m; i++) {
+   // Thực hiện n lần
+   for (int j = 0; j < n; j++) {
+        // Thời gian thực hiện là hằng số.
+        s += a[i][j];
+   }
+}
+Tổng thời gian thực hiện = O(m.(Cn)) = O(mn).
+
+3.4. Câu lệnh rẽ nhánh
+Tổng thời gian thực hiện lớn nhất = Thời gian kiểm tra điều kiện if (thường là hằng số) + thời gian thực hiện then + thời gian thực hiện else.
+
+Ví dụ:
+
+
+if (a < 0) { // Thời gian thực hiện là hằng số
+    m = 0; // Thời gian thực hiện là hằng số
+} else {
+    // Thực hiện n lần
+    for (int i = 0; i < n; i++) {
+       m += 1; // Thời gian thực hiện là hằng số
+    }
+}
+Tổng thời gian thực hiện = C1 + C2 + C3.n = O(max(C1, C2, C3.n)) = O(C3.n) = O(n).
