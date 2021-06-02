@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CheckMain {
     public static void main(String[] args) {
-        Student sv1 = new Student("Tram","Male", "30-11-2000");
+        Student sv1 = new Student("Hoang","Male", "30-11-2000");
         Student sv2 = new Student("Nga","Female","02-11-2000");
         Student sv3 = new Student("Uyen","Female","10-09-2000");
 
