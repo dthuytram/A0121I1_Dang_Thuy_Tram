@@ -1,5 +1,9 @@
 package searchAlgorithm.thuchanh.binarySearch;
 
+/**
+ * Binary Search chỉ dùng cho list đã sắp xếp sẵn
+ * Để lựa chọn giá trị giữa
+ */
 public class BinarySearch {
     static int[] list = {2, 4, 7, 10, 11, 45, 50, 59, 60, 66, 69, 70, 79};
     /**
@@ -14,10 +18,13 @@ public class BinarySearch {
         int low = 0;
         int high = list.length - 1;
         while (high >= low) {
+            // chia list thành bên trái và phải
             int mid = (low + high) / 2;
+
+            //nếu key nhỏ hơn giá trị giữa -> chọn nhánh bên trái
             if (key < list[mid])
                 high = mid - 1;
-            else if (key == list[mid])
+            else if (key == list[mid])   // nếu lớn hơn -> chọn nhánh bên phải
                 return mid;
             else
                 low = mid + 1;
