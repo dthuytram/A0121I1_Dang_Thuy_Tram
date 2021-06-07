@@ -4,5 +4,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/automatedTesting_TDD/thuchanh/calculateApplication" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/p9_automatedTesting_TDD/thuchanh/calculateApplication" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/plus_automatedTesting_TDD/thuchanh/calculateApplication" vcs="Git" />
   </component>
 </project>
