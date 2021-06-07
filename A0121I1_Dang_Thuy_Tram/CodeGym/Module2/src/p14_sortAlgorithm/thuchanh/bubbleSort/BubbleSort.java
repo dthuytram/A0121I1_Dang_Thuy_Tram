@@ -10,6 +10,9 @@ import java.util.Scanner;
  * Viết một chương trình cho phép quan sát các bước thực hiện của thuật toán sắp xếp nổi bọt.
  *
  * Chương trình cho phép định nghĩa một mảng các số nguyên, hiển thị lần lượt các bước của thuật toán sắp xếp nổi bọt.
+ * 
+ * ĐỘ PHỨC TẠP:
+ * (Edit needing)
  */
 public class BubbleSort {
     /**
