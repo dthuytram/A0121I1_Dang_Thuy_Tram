@@ -9,7 +9,8 @@ public class IllegalTriangleException {
         int b = sc.nextInt();
         int c = sc.nextInt();
         boolean check = (a+b)<c||(b+c)<a||(a+c)<b;
-        if( check || (a*b*c<0)){
+        boolean checkNegative = (a<0) || (b<0) || (c<0);
+        if( check || checkNegative){
                 throw new IllegalAccessException(" Sai lỗi nhập");
 
         }
