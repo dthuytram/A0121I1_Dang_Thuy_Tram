@@ -1,10 +1,13 @@
-001	Nguyen Van A	20/04/1991	Da Nang
-002	Nguyen Van C	21/04/1991	Thanh Hoa
-003	Nguyen Van G	19/04/1991	Quang Nam
-004	Nguyen Van A	20/04/1991	Hue
-005	Nguyen Van T	01/04/1991	Phu Yen
-006	Nguyen Van U	20/04/1991	Da Nang2
-007	Nguyen Van M	27/04/1991	Da Nan3
-008	Nguyen Van L	22/04/1991	Da Nang4
-009	Nguyen Van M	12/04/1991	Da Nang5
-0010	Nguyen Van L	16/04/1991	Da Nang6
+A01	Nguyen Van A	20/04/1991	Da Nang
+A02	Dang Van B	21/04/1991	Thanh Hoa
+A03	Nguyen Van D	19/04/1991	Ha Noi
+A04	Nguyen Thi N	"	20/04/1991"	Quang Nam
+A05	Ho Thi H	01/04/1991	Quang Ngai
+A06	Tang Thi N	20/04/1991	Da Nang
+A07	Taran	"	27/04/1991"	Nha Trang
+A08	Miako	"	22/04/1991"	Phu Yen
+A09	Kikko	"	22/04/1991"	HCM
+A10	Chikko	"	27/04/1991"	Hue
+			
+			
+			
