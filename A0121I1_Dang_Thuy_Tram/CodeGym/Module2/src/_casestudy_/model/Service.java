@@ -1,6 +1,6 @@
 package _casestudy_.model;
 
-public class Service {
+public abstract class Service {
     private String nameService;
     private int usedArea;
     private int costRent;
@@ -78,4 +78,17 @@ public class Service {
         this.plusService = plusService;
     }
 
+    @Override
+    public String toString(){
+        return "Services{" +
+                "nameService='" + nameService + '\'' +
+                ", usedArea=" + usedArea +
+                ", cost=" + costRent +
+                ", maxMember=" + maxMember +
+                ", rentType='" + rentType + '\'' +
+                ", id='" + id + '\'' +
+                ", plusServices='" + plusService + '\'' +
+                '}';
+    }
+    public abstract void showInfor();
 }
