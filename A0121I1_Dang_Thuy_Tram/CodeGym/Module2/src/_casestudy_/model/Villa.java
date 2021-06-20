@@ -1,51 +1,43 @@
 package _casestudy_.model;
 
-public class Villa extends Service {
-    private String roomStandards;
-    private String otherDescription;
-    private int poolArea;
+public class Villa extends Services{
+    private String roomType;
+    private String otherService;
+    private double poolArea;
     private int floorNumber;
 
-    public Villa(String roomStandards, String otherDescription, int poolArea, int floorNumber) {
-        this.roomStandards = roomStandards;
-        this.otherDescription = otherDescription;
+    public Villa() {
+    }
+
+    public Villa(String id, String serviceName, double area, double rate, int maxCapacity, String rentType, String roomType, String compService, double poolArea, int floor) {
+        super(id, serviceName, area, rate, maxCapacity, rentType);
+        this.roomType = roomType;
+        this.otherService = compService;
         this.poolArea = poolArea;
-        this.floorNumber = floorNumber;
+        this.floorNumber = floor;
     }
 
-    public Villa(String nameService, int usedArea, int cost, int maxMember, String rentType, String id, String plusServices, String roomStandard, String facilitiesDes, int floorNumber, int poolArea) {
-        super(nameService, usedArea, cost, maxMember, rentType, id, plusServices);
-        this.roomStandards = roomStandard;
-        this.otherDescription = facilitiesDes;
-        this.floorNumber = floorNumber;
-        this.poolArea = poolArea;
+    public String getRoomType() {
+        return roomType;
     }
 
-    public Villa(String nameService, String s, int cost, int maxMember, String rentType, String id, String plusServices, String roomStandard, String facilitiesDes, int floorNumber, int poolArea) {
-
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
-    public String getRoomStandards() {
-        return roomStandards;
+    public String getOtherService() {
+        return otherService;
     }
 
-    public void setRoomStandards(String roomStandards) {
-        this.roomStandards = roomStandards;
+    public void setOtherService(String otherService) {
+        this.otherService = otherService;
     }
 
-    public String getOtherDescription() {
-        return otherDescription;
-    }
-
-    public void setOtherDescription(String otherDescription) {
-        this.otherDescription = otherDescription;
-    }
-
-    public int getPoolArea() {
+    public double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(int poolArea) {
+    public void setPoolArea(double poolArea) {
         this.poolArea = poolArea;
     }
 
@@ -58,24 +50,52 @@ public class Villa extends Service {
     }
 
     @Override
-    public String toString() {
-        return "Villa{" +
-                "roomStandard='" + roomStandards + "\n" +
-                ", facilitiesDes='" + otherDescription + "\n" +
-                ", floors=" + floorNumber + "\n" +
-                ", poolArea=" + poolArea + "\n" +
-                "nameService='" + getNameService() + "\n" +
-                ", usedArea=" + getUsedArea() + "\n" +
-                ", cost=" + getCostRent() + "\n" +
-                ", maxMember=" + getMaxMember() + "\n" +
-                ", rentType='" + getRentType() + "\n" +
-                ", id='" + getId() + "\n" +
-                ", plusServices='" + getPlusService() + "\n" +
-                '}';
+    public String showInfo() {
+        return "Villa: \n" +
+                "id='" + getId() + "'\n" +
+                "serviceName='" + getServiceName() + "'\n" +
+                "area=" + getArea() + "'\n" +
+                "rate=" + getRate() + "'\n" +
+                "maxCapacity=" + getMaxCapacity() +"'\n" +
+                "rentType='" + getRentType() + "'\n" +
+                "roomType='" + roomType + "'\n" +
+                "compService='" + otherService + "'\n" +
+                "poolArea=" + poolArea + "'\n" +
+                "floor=" + floorNumber + "'\n";
     }
 
     @Override
-    public void showInfor() {
-        System.out.println(this.toString());
+    public String writeToCSV() {
+        return getId() +
+                "," + getServiceName() +
+                "," + getArea() +
+                "," + getRate() +
+                "," + getMaxCapacity() +
+                "," + getRentType() +
+                "," + roomType +
+                "," + otherService +
+                "," + poolArea +
+                "," + floorNumber;
+    }
+
+
+    public String getHeader() {
+        return "Villa Id,Service Name,Area,Rate,Max Capacity,Rent Type,Room Type,Comp Service,Pool Area,floor";
+    }
+
+    @Override
+    public String toString() {
+        return "Villa{" +
+                "id='" + getId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", area=" + getArea() +
+                ", rate=" + getRate() +
+                ", maxCapacity=" + getMaxCapacity() +
+                ", rentType='" + getRentType() + '\'' +
+                ", roomType='" + roomType + '\'' +
+                ", compService='" + otherService + '\'' +
+                ", poolArea=" + poolArea +
+                ", floor=" + floorNumber +
+                '}';
     }
 }

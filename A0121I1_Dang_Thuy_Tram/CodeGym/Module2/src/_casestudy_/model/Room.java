@@ -1,42 +1,66 @@
 package _casestudy_.model;
 
-public class Room extends Service{
-    private String freeServices;  //Dich vu mien phi di kem
+public class Room extends Services {
+    private String otherService;
 
     public Room() {
     }
 
-    public Room(String freeServices) {
-        this.freeServices = freeServices;
-    }
-    public Room(String nameService, int usedArea, int cost, int maxMember, String rentType, String id, String plusServices, String freeService) {
-        super(nameService, usedArea, cost, maxMember, rentType, id, plusServices);
-        this.freeServices = freeService;
-    }
-    public String getFreeServices() {
-        return freeServices;
+    public Room(String compServices) {
+        this.otherService = compServices;
     }
 
-    public void setFreeServices(String freeServices) {
-        this.freeServices = freeServices;
+    public Room(String id, String serviceName, double area, double rate, int maxCapacity, String rentType, String compServices) {
+        super(id, serviceName, area, rate, maxCapacity, rentType);
+        this.otherService = compServices;
     }
+
+    public String getOtherService() {
+        return otherService;
+    }
+
+    public void setOtherService(String otherService) {
+        this.otherService = otherService;
+    }
+
+    @Override
+    public String showInfo() {
+        return  "Room: \n" +
+                "id='" + getId() + "'\n" +
+                "serviceName='" + getServiceName() + "'\n" +
+                "area=" + getArea() + "'\n" +
+                "rate=" + getRate() + "'\n" +
+                "maxCapacity=" + getMaxCapacity() + "'\n" +
+                "rentType='" + getRentType() + "'\n" +
+                "compServices='" + otherService + "'\n" ;
+    }
+
+
+
+    public String writeToCSV() {
+        return getId() +
+                "," + getServiceName() +
+                "," + getArea() +
+                "," + getRate() +
+                "," + getMaxCapacity() +
+                "," + getRentType() +
+                "," + otherService;
+    }
+
+    public String getHeader() {
+        return "Room Id,Service Name,Area,Rate,Max Capacity,Rent Type,Comp Services";
+    }
+
     @Override
     public String toString() {
-        return "Room{" +
-                "freeService='" + freeServices + '\'' +
-                "nameService='" + getNameService() + '\'' +
-                ", usedArea=" + getUsedArea() +
-                ", cost=" + getCostRent() +
-                ", maxMember=" + getMaxMember() +
-                ", rentType='" + getRentType() + '\'' +
-                ", id='" + getId() + '\'' +
-                ", plusServices='" + getPlusService() + '\'' +
+        return  "Room{" +
+                "id='" + getId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", area=" + getArea() +
+                ", rate=" + getRate() +
+                ", maxCapacity=" + getMaxCapacity() +
+                ", rentType='" + getRentType() + '\''+
+                ", compServices='" + otherService + '\''+
                 '}';
     }
-
-    @Override
-    public void showInfor() {
-        System.out.println(this.toString());
-    }
 }
-

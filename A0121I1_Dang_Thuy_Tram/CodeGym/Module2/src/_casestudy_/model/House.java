@@ -1,66 +1,91 @@
 package _casestudy_.model;
 
-public class House extends Service {
-    private String roomStandards;
-    private String otherDescription;
-    private int floorNumber;
+public class House extends Services {
+    private String roomType;
+    private String compService;
+    private int floor;
 
     public House() {
     }
 
-    public House(String roomStandards, String otherDescription, int floorNumber) {
-        this.roomStandards = roomStandards;
-        this.otherDescription = otherDescription;
-        this.floorNumber = floorNumber;
-    }
-    public House(String nameService, int usedArea, int cost, int maxMember, String rentType, String id, String plusServices, String roomStandard, String facilitiesDes, int floors) {
-        super(nameService, usedArea, cost, maxMember, rentType, id, plusServices);
-        this.roomStandards = roomStandard;
-        this.otherDescription = facilitiesDes;
-        this.floorNumber = floors;
-    }
-    public String getRoomStandards() {
-        return roomStandards;
+    public House(String roomType, String compService, int floor) {
+        this.roomType = roomType;
+        this.compService = compService;
+        this.floor = floor;
     }
 
-    public void setRoomStandards(String roomStandards) {
-        this.roomStandards = roomStandards;
+    public House(String id, String serviceName, double area, double rate, int maxCapacity, String rentType, String roomType, String compService, int floor) {
+        super(id, serviceName, area, rate, maxCapacity, rentType);
+        this.roomType = roomType;
+        this.compService = compService;
+        this.floor = floor;
     }
 
-    public String getOtherDescription() {
-        return otherDescription;
+    public String getRoomType() {
+        return roomType;
     }
 
-    public void setOtherDescription(String otherDescription) {
-        this.otherDescription = otherDescription;
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
-    public int getFloorNumber() {
-        return floorNumber;
+    public String getCompService() {
+        return compService;
     }
 
-    public void setFloorNumber(int floorNumber) {
-        this.floorNumber = floorNumber;
+    public void setCompService(String compService) {
+        this.compService = compService;
     }
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    @Override
+    public String showInfo() {
+        return "House \n" +
+                "id='" + getId() + "'\n" +
+                "serviceName='" + getServiceName() + "'\n" +
+                "area=" + getArea() + "'\n" +
+                "rate=" + getRate() + "'\n" +
+                "maxCapacity=" + getMaxCapacity() + "'\n" +
+                "rentType='" + getRentType() + "'\n" +
+                "roomType='" + roomType + "'\n" +
+                "compService='" + compService + "'\n" +
+                "floor=" + floor;
+    }
+
+    public String writeToCSV() {
+        return getId() +
+                "," + getServiceName() +
+                "," + getArea() +
+                "," + getRate() +
+                "," + getMaxCapacity() +
+                "," + getRentType() +
+                "," + roomType +
+                "," + compService +
+                "," + floor;
+    }
+
+    public String getHeader() {
+        return "House Id,Service Name,Area,Rate,Max Capacity,Rent Type,Room Type,Comp Service,floor";
+    }
+
     @Override
     public String toString() {
-        return "House{" +
-                "roomStandard='" + roomStandards + '\'' +
-                ", facilitiesDes='" + otherDescription + '\'' +
-                ", floors=" + floorNumber +
-                "nameService='" + getNameService() + '\'' +
-                ", usedArea=" + getUsedArea() +
-                ", cost=" + getCostRent() +
-                ", maxMember=" + getMaxMember() +
-                ", rentType='" + getRentType() + '\'' +
-                ", id='" + getId() + '\'' +
-                ", plusServices='" + getPlusService() + '\'' +
-                '}';
+        return "House: \n" +
+                "id='" + getId() + "'\n" +
+                "serviceName='" + getServiceName() + "'\n" +
+                "area=" + getArea() + "'\n" +
+                "rate=" + getRate() + "'\n" +
+                "maxCapacity=" + getMaxCapacity() + "'\n" +
+                "rentType='" + getRentType() + "'\n" +
+                "roomType='" + roomType + "'\n" +
+                "compService='" + compService + "'\n" +
+                "floor=" + floor + "'\n" ;
     }
-
-    @Override
-    public void showInfor() {
-        System.out.println(this.toString());
-    }
-
 }

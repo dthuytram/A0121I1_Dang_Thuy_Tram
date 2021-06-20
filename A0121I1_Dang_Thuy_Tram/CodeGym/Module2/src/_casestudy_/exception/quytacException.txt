@@ -1,0 +1,14 @@
+Task 5 ( đề mục 4 ):
+    1. Tạo user Exception để valid các trường hợp sau:
+    2. Tạo NameException để kiếm tra Name Customer phải có định dạng in hoa ký tự đầu tiên
+        và không cho phép kí tự khoảng trống thừa. Ví dụ “Nguyễn Kiên” là đúng còn “Nguyễn kIÊn” là sai. Nếu không hợp lệ thì sẽ hiển thị thông báo “Tên Khách hàng phải in hoa ký tự đầu tiên trong mỗi từ”.
+    3. Tạo EmailException để kiểm tra,
+        Email phải nhập đúng kiểu dữ liệu của email ở mức độ tương đối. Email bao gồm duy nhất chữ @ và tối thiểu 1 dấu . , có thể suy nghĩ và phát triển thêm. Nếu không hợp lệ thì sẽ hiển thị thông báo “Email phải đúng định dạng abc@abc.abc”.
+    4. Tạo GenderException để  bắt buộc người dùng phải nhập vào Male, Female
+        hoặc Unknow. Trong trường hợp người dùng nhập sai in hoa hoặc in thường vẫn chấp nhận nhưng phải chuẩn hóa dữ liệu đúng trước khi lưu vào file.
+            Ví dụ: uNKNOW, maLE vẫn chấp nhận và chuẩn hóa dữ liệu thành Unknow và Male sau đó lưu vào File.
+    5. Tạo IdCardException kiểm tra Id Card phải gồm có 9 chữ số theo định dạng XXX XXX XXX.
+        Nếu sai thì hiển thị thông báo “Id Card phải có 9 chữ số và theo định dạng XXX XXX XXX”.
+    6. Tạo BirthdayException để kiểm tra Birthday phải có định dạng đúng ngày sinh theo kiểu dd/MM/yyyy
+        và có năm sinh >1900 và nhỏ hơn ngày hiện tại là 18 năm.
+        Nếu sai thì hiển thị thông báo lỗi “Năm sinh phải >1900 và nhỏ hơn năm hiện tại 18 năm, đúng định dạng dd/mm/yyyy”.

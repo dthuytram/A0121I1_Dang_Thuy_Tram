@@ -1,6 +1,10 @@
 Using tramdang.dut@
 Link tải tài liệu:
 1. File doc đề casestudy:
-https://drive.google.com/file/d/1ME60NRMe-G9mYvCQ3TASTjVeA_heDNUI/view?usp=sharing
+    https://drive.google.com/file/d/1ME60NRMe-G9mYvCQ3TASTjVeA_heDNUI/view?usp=sharing
+
 2. File audit:
-https://drive.google.com/file/d/1HFudSfEI-i4d5iXx9fTJmnng3mnb7L4d/view?usp=sharing
+    https://drive.google.com/file/d/1HFudSfEI-i4d5iXx9fTJmnng3mnb7L4d/view?usp=sharing
+
+3. Link ôn tập cuối kì:
+   https://docs.google.com/document/d/1Z_EaDm4OQzCY9hmivdiH6G0eGXep4oVPMBOyK-tyt8M/edit?usp=sharing
