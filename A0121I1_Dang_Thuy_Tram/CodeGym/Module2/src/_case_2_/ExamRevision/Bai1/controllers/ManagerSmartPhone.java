@@ -3,8 +3,8 @@ package _case_2_.ExamRevision.Bai1.controllers;
 public class ManagerSmartPhone {
     Scanner scanner = new Scanner(System.in);
     public final String P = ",";
-    public final String LINK_CH = "E:\\A1120I1\\Module2\\src\\_thi\\_data\\data\\data.csv";
-    public final String LINK_XT = "E:\\A1120I1\\Module2\\src\\_thi\\_data\\data\\mobiles.csv";
+    public final String LINK_CH = "data.csv";
+    public final String LINK_XT = "mobiles.csv";
 
     public int exceptionInputNumber() {
         int temp = 0;

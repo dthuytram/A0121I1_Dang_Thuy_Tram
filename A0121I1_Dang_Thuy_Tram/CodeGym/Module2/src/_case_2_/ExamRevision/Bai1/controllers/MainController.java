@@ -1,5 +1,12 @@
 package _case_2_.ExamRevision.Bai1.controllers;
 
+import _case_2_.ExamRevision.Bai1.models.PhoneChinhHang;
+import _case_2_.ExamRevision.Bai1.models.PhoneXachTay;
+
+import java.util.Scanner;
+
+import static _case_2_.ExamRevision.Bai1.commons.FileUtils.*;
+
 public class MainController {
     public static void main(String[] args) {
         int id = 0;
@@ -9,8 +16,8 @@ public class MainController {
         String brand;
         int timeGuarantee;
         String rangeGuarante;
-        BrandMobile brandMobile;
-        SecondMobile secondMobile;
+        PhoneChinhHang brandMobile;
+        PhoneXachTay secondMobile;
         String fromNation;
         String status;
         Scanner scanner = new Scanner(System.in);
@@ -55,7 +62,7 @@ public class MainController {
                                 System.out.print("Nhap pham vi bao hanh: ");
                                 scanner.nextLine();
                                 rangeGuarante = scanner.nextLine();
-                                brandMobile = new BrandMobile(id, name, price, quantity, brand, timeGuarantee, rangeGuarante);
+                                brandMobile = new PhoneChinhHang(id, name, price, quantity, brand, timeGuarantee, rangeGuarante);
                                 //Ghi file
                                 writeBrandMobile(brandMobile);
                             } else {
@@ -63,7 +70,7 @@ public class MainController {
                                 fromNation = scanner.nextLine();
                                 System.out.print("Nhap trang thai: ");
                                 status = scanner.nextLine();
-                                secondMobile = new SecondMobile(id, name, price, quantity, brand, fromNation, status);
+                                secondMobile = new PhoneXachTay(id, name, price, quantity, brand, fromNation, status);
                                 //Ghi file
                                 writeSecondMobile(secondMobile);
                             }
