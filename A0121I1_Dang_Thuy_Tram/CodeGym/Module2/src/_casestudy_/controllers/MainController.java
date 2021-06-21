@@ -1,6 +1,6 @@
 package _casestudy_.controllers;
 import static _casestudy_.controllers.BookingController.addNewBooking;
-import static _casestudy_.controllers.CinemaTicketController.cinemaTicket;
+import static _casestudy_.controllers.TicketController.cinemaTicket;
 import static _casestudy_.controllers.EmployeeController.searchEmployee;
 import static _casestudy_.controllers.EmployeeController.showEmployee;
 import static _casestudy_.main.MainView.scanner;

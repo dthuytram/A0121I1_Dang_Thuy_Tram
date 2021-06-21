@@ -10,14 +10,14 @@ import _casestudy_.model.Customer;
 import java.util.Collections;
 
 import static _casestudy_.controllers.MainController.displayMainMenu;
-import static _casestudy_.main.MainView.CUSTOMER_FILE_PATH;
+import static _casestudy_.main.MainView.CUSTOMER_LINK;
 import static _casestudy_.main.MainView.customerList;
 
 public class CustomerController {
     public static void addNewCustomer() {
         Customer customer = Input.customer();
         customerList.add(customer);
-        FileCSV.writeCustomerToCSV(customerList, CUSTOMER_FILE_PATH);
+        FileCSV.writeCustomerToCSV(customerList, CUSTOMER_LINK);
         System.out.println("Add " + customer.showInfo() + " successfully");
         System.out.println("Press ENTER to continue");
         scanner.nextLine();

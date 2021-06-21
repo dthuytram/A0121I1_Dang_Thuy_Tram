@@ -9,7 +9,7 @@ import static _casestudy_.main.MainView.waitingList;
 
 import static _casestudy_.main.MainView.*;
 
-public class CinemaTicketController {
+public class TicketController {
     public static void cinemaTicket() {
         System.out.println("------------------");
         System.out.println("CINEMA TICKET MENU:\n" +

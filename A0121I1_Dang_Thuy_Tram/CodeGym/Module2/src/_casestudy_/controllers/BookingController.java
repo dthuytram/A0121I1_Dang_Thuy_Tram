@@ -30,8 +30,8 @@ public class BookingController {
                     customer.setServices(service);
                     bookingList.add(customer);
                 }
-                FileCSV.writeCustomerToCSV(customerList,CUSTOMER_FILE_PATH);
-                FileCSV.writeBookingToCSV(bookingList, BOOKING_FILE_PATH);
+                FileCSV.writeCustomerToCSV(customerList, CUSTOMER_LINK);
+                FileCSV.writeBookingToCSV(bookingList, BOOKING_LINK);
                 System.out.println("Add " + customer.showInfo() + " successfully");
                 System.out.println("Press ENTER to continue");
                 scanner.nextLine();
@@ -46,8 +46,8 @@ public class BookingController {
                     customer.setServices(service);
                     bookingList.add(customer);
                 }
-                FileCSV.writeCustomerToCSV(customerList,CUSTOMER_FILE_PATH);
-                FileCSV.writeBookingToCSV(bookingList, BOOKING_FILE_PATH);
+                FileCSV.writeCustomerToCSV(customerList, CUSTOMER_LINK);
+                FileCSV.writeBookingToCSV(bookingList, BOOKING_LINK);
                 System.out.println("Add " + customer.showInfo() + " successfully");
                 System.out.println("Press ENTER to continue");
                 scanner.nextLine();
@@ -62,8 +62,8 @@ public class BookingController {
                     customer.setServices(service);
                     bookingList.add(customer);
                 }
-                FileCSV.writeCustomerToCSV(customerList,CUSTOMER_FILE_PATH);
-                FileCSV.writeBookingToCSV(bookingList, BOOKING_FILE_PATH);
+                FileCSV.writeCustomerToCSV(customerList, CUSTOMER_LINK);
+                FileCSV.writeBookingToCSV(bookingList, BOOKING_LINK);
                 System.out.println("Add " + customer.showInfo() + " successfully");
                 System.out.println("Press ENTER to continue");
                 scanner.nextLine();

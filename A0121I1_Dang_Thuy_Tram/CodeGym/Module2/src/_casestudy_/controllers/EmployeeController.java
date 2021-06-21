@@ -21,11 +21,11 @@ public class EmployeeController {
 
     public static void searchEmployee(){
         for (String key : employeeHashMap.keySet()) {
-            profileCarbinet.add(employeeHashMap.get(key));
+            profile.add(employeeHashMap.get(key));
         }
         System.out.print("Input employee name: ");
         String name = scanner.nextLine();
-        Employee employee = profileCarbinet.search(name);
+        Employee employee = profile.search(name);
         if (employee == null) {
             System.out.println("Employee profile not found");
         } else {
