@@ -1,4 +1,4 @@
-package _casestudy_.exception;
+package ab.exception;
 
 public class NameException extends Exception {
 

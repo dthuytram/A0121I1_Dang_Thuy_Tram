@@ -1,6 +1,6 @@
-package _case_2_.examRevision.bai1_mxduy.controller;
+package abab.examRevision.bai1_mxduy.controller;
 
-import _case_2_.examRevision.bai1_mxduy.models.*;
+import abab.examRevision.bai1_mxduy.models.*;
 
 import java.util.ArrayList;
 import java.util.List;

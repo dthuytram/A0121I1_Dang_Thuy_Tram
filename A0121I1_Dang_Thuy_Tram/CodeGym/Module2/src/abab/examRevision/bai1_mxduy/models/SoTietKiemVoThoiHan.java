@@ -1,4 +1,4 @@
-package _case_2_.examRevision.bai1_mxduy.models;
+package abab.examRevision.bai1_mxduy.models;
 
 public class SoTietKiemVoThoiHan extends SoTietKiem {
 

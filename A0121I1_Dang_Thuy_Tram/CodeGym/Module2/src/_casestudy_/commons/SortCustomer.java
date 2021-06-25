@@ -1,6 +1,6 @@
-package _casestudy_.commons;
+package ab.commons;
 
-import _casestudy_.model.Customer;
+import ab.model.Customer;
 
 import java.util.Comparator;
 

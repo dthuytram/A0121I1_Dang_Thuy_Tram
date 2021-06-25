@@ -1,4 +1,4 @@
-package _case_2_.examRevision.bai1_mxduy.exception;
+package abab.examRevision.bai1_mxduy.exception;
 
 public class MaSoTietKiemException extends Exception{
     public MaSoTietKiemException(String message) {

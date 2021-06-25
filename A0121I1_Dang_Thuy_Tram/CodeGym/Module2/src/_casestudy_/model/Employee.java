@@ -1,4 +1,4 @@
-package _casestudy_.model;
+package ab.model;
 
 public class Employee {
     private String name;

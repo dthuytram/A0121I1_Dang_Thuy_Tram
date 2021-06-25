@@ -1,4 +1,4 @@
-package _casestudy_.model;
+package ab.model;
 
 public class Villa extends Services{
     private String roomType;

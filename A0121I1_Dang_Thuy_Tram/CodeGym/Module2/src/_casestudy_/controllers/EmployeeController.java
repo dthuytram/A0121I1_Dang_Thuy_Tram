@@ -1,11 +1,11 @@
-package _casestudy_.controllers;
+package ab.controllers;
 
-import _casestudy_.model.Employee;
+import ab.model.Employee;
 
-import static _casestudy_.controllers.MainController.displayMainMenu;
-import static _casestudy_.main.MainView.employeeHashMap;
+import static ab.controllers.MainController.displayMainMenu;
+import static ab.main.MainView.employeeHashMap;
 
-import static _casestudy_.main.MainView.*;
+import static ab.main.MainView.*;
 
 public class EmployeeController {
     public static void showEmployee(){

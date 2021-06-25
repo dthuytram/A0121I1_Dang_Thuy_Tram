@@ -1,13 +1,13 @@
-package _casestudy_.controllers;
+package ab.controllers;
 
-import _casestudy_.commons.Input;
-import _casestudy_.model.Customer;
+import ab.commons.Input;
+import ab.model.Customer;
 
-import static _casestudy_.controllers.MainController.displayMainMenu;
-import static _casestudy_.main.MainView.boughtTicketList;
-import static _casestudy_.main.MainView.waitingList;
+import static ab.controllers.MainController.displayMainMenu;
+import static ab.main.MainView.boughtTicketList;
+import static ab.main.MainView.waitingList;
 
-import static _casestudy_.main.MainView.*;
+import static ab.main.MainView.*;
 
 public class TicketController {
     public static void cinemaTicket() {

@@ -1,6 +1,6 @@
-package _casestudy_.commons;
+package ab.commons;
 
-import _casestudy_.model.Services;
+import ab.model.Services;
 
 import java.util.List;
 

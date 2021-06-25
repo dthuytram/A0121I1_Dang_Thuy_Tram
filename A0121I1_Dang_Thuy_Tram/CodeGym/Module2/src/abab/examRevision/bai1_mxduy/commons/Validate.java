@@ -1,4 +1,4 @@
-package _case_2_.examRevision.bai1_mxduy.commons;
+package abab.examRevision.bai1_mxduy.commons;
 
 public class Validate {
     private static String regex = "";

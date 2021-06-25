@@ -1,11 +1,11 @@
-package _case_2_.examRevision.bai2_thphuong.controllers;
+package abab.examRevision.bai2_thphuong.controllers;
 
-import _case_2_.examRevision.bai2_thphuong.models.BrandMobile;
-import _case_2_.examRevision.bai2_thphuong.models.SecondMobile;
+import abab.examRevision.bai2_thphuong.models.BrandMobile;
+import abab.examRevision.bai2_thphuong.models.SecondMobile;
 
 import java.util.Scanner;
 
-import static _case_2_.examRevision.bai2_thphuong.commons.FileUtils.*;
+import static abab.examRevision.bai2_thphuong.commons.FileUtils.*;
 
 public class MainController {
     public static void main(String[] args) {

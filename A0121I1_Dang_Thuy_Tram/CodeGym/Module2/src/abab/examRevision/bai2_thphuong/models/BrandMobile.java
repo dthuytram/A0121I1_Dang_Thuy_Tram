@@ -1,4 +1,4 @@
-package _case_2_.examRevision.bai2_thphuong.models;
+package abab.examRevision.bai2_thphuong.models;
 
 public class BrandMobile extends Mobile {
         private int timeGuarantee;

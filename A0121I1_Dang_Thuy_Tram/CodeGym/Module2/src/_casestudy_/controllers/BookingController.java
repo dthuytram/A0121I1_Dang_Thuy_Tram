@@ -1,12 +1,12 @@
-package _casestudy_.controllers;
+package ab.controllers;
 
-import _casestudy_.commons.FileCSV;
-import _casestudy_.commons.Input;
-import _casestudy_.model.Customer;
-import _casestudy_.model.Services;
+import ab.commons.FileCSV;
+import ab.commons.Input;
+import ab.model.Customer;
+import ab.model.Services;
 
-import static _casestudy_.controllers.MainController.displayMainMenu;
-import static _casestudy_.main.MainView.*;
+import static ab.controllers.MainController.displayMainMenu;
+import static ab.main.MainView.*;
 
 public class BookingController {
     public static void addNewBooking() {

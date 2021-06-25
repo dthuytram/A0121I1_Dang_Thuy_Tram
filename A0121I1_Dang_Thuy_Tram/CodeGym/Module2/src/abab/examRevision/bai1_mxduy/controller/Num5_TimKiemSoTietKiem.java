@@ -1,27 +1,23 @@
-package _case_2_.examRevision.bai1_mxduy.controller;
+package abab.examRevision.bai1_mxduy.controller;
 
-import _case_2_.examRevision.bai1_mxduy.commons.DocGhiFile;
-import _case_2_.examRevision.bai1_mxduy.exception.MaSoTietKiemException;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiem;
+import abab.examRevision.bai1_mxduy.exception.MaSoTietKiemException;
+import abab.examRevision.bai1_mxduy.models.SoTietKiem;
 
 import java.util.Scanner;
 
-import static _case_2_.examRevision.bai1_mxduy.controller.MainController.*;
+import static abab.examRevision.bai1_mxduy.controller.MainController.*;
 
-public class Num2_XoaSoTietKiem {
+public class Num5_TimKiemSoTietKiem {
     static Scanner input = new Scanner(System.in);
-    public static void xoaSoTietKiem() {
 
+    public static void timKiemSotietKiem() {
         System.out.println("1. Dai Han");
         System.out.println("2. Ngan Han");
         System.out.print("Your choose: ");
         String choose = input.nextLine();
+
         switch (choose) {
             case "1": {
-                for (SoTietKiem soTietKiem : listSotietKiemDaiHan) {
-                    System.out.println(soTietKiem.toString());
-                }
-
                 String maSo;
                 do {
                     System.out.print("Nhap ma so muon xoa: ");
@@ -31,7 +27,7 @@ public class Num2_XoaSoTietKiem {
                 boolean flag = false;
                 for (SoTietKiem soTietKiem : listSotietKiemDaiHan) {
                     if (maSo.equals(soTietKiem.getMaSo())) {
-                        listSotietKiemDaiHan.remove(soTietKiem);
+                        System.out.println(soTietKiem.toString());
                         flag = true;
                         break;
                     }
@@ -43,10 +39,6 @@ public class Num2_XoaSoTietKiem {
                 break;
             }
             case "2": {
-                for (SoTietKiem soTietKiem : ListSotietKiemVoThoiHan) {
-                    System.out.println(soTietKiem.toString());
-                }
-
                 String maSo;
                 do {
                     System.out.print("Nhap ma so muon xoa: ");
@@ -56,7 +48,7 @@ public class Num2_XoaSoTietKiem {
                 boolean flag = false;
                 for (SoTietKiem soTietKiem : ListSotietKiemVoThoiHan) {
                     if (maSo.equals(soTietKiem.getMaSo())) {
-                        ListSotietKiemVoThoiHan.remove(soTietKiem);
+                        System.out.println(soTietKiem.toString());
                         flag = true;
                         break;
                     }
@@ -68,14 +60,11 @@ public class Num2_XoaSoTietKiem {
                 break;
             }
             default: {
-                System.out.println("Fail!! Enter to continue");
+                System.out.println("Fail! Enter to continue");
                 input.nextLine();
-                xoaSoTietKiem();
+                timKiemSotietKiem();
             }
         }
-
-        DocGhiFile.writeFileSoTietKiemDaiHan(listSotietKiemDaiHan);
         displayMainMenu();
     }
-
 }

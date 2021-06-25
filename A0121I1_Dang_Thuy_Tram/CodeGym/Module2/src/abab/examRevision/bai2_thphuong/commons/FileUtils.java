@@ -1,8 +1,8 @@
-package _case_2_.examRevision.bai2_thphuong.commons;
+package abab.examRevision.bai2_thphuong.commons;
 
 
-import _case_2_.examRevision.bai2_thphuong.models.BrandMobile;
-import _case_2_.examRevision.bai2_thphuong.models.SecondMobile;
+import abab.examRevision.bai2_thphuong.models.BrandMobile;
+import abab.examRevision.bai2_thphuong.models.SecondMobile;
 
 import java.io.*;
 import java.util.ArrayList;

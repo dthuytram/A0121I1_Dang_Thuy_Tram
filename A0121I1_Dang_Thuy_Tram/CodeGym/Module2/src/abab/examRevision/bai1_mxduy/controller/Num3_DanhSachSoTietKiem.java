@@ -1,8 +1,8 @@
-package _case_2_.examRevision.bai1_mxduy.controller;
+package abab.examRevision.bai1_mxduy.controller;
 
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiem;
+import abab.examRevision.bai1_mxduy.models.SoTietKiem;
 
-import static _case_2_.examRevision.bai1_mxduy.controller.MainController.*;
+import static abab.examRevision.bai1_mxduy.controller.MainController.*;
 
 public class Num3_DanhSachSoTietKiem {
 

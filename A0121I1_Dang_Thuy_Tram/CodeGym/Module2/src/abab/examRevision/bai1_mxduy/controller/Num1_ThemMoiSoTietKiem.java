@@ -1,15 +1,13 @@
-package _case_2_.examRevision.bai1_mxduy.controller;
+package abab.examRevision.bai1_mxduy.controller;
 
-import _case_2_.examRevision.bai1_mxduy.commons.DocGhiFile;
-import _case_2_.examRevision.bai1_mxduy.commons.Validate;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiem;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiemDaiHan;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiemVoThoiHan;
-import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
+import abab.examRevision.bai1_mxduy.commons.DocGhiFile;
+import abab.examRevision.bai1_mxduy.commons.Validate;
+import abab.examRevision.bai1_mxduy.models.SoTietKiemDaiHan;
+import abab.examRevision.bai1_mxduy.models.SoTietKiemVoThoiHan;
 
 import java.util.Scanner;
 
-import static _case_2_.examRevision.bai1_mxduy.controller.MainController.*;
+import static abab.examRevision.bai1_mxduy.controller.MainController.*;
 
 public class Num1_ThemMoiSoTietKiem {
     static Scanner input = new Scanner(System.in);

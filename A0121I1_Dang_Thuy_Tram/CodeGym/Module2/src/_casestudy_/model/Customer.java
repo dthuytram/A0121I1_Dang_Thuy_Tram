@@ -1,4 +1,4 @@
-package _casestudy_.model;
+package ab.model;
 
 import java.time.LocalDate;
 

@@ -1,14 +1,14 @@
-package _casestudy_.main;
+package ab.main;
 
-import _casestudy_.commons.FileCSV;
-import _casestudy_.model.Customer;
-import _casestudy_.model.Employee;
-import _casestudy_.model.Profile;
-import _casestudy_.model.Services;
+import ab.commons.FileCSV;
+import ab.model.Customer;
+import ab.model.Employee;
+import ab.model.Profile;
+import ab.model.Services;
 
 import java.util.*;
 
-import static _casestudy_.controllers.MainController.displayMainMenu;
+import static ab.controllers.MainController.displayMainMenu;
 
 public class MainView {
     public static Scanner scanner = new Scanner(System.in);

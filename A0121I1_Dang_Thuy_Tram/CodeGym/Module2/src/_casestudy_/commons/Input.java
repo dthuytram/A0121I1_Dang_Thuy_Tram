@@ -1,10 +1,10 @@
-package _casestudy_.commons;
+package ab.commons;
 
-import _casestudy_.model.*;
+import ab.model.*;
 import java.util.*;
 
-import static _casestudy_.commons.CustomerValidate.*;
-import static _casestudy_.main.MainView.*;
+import static ab.commons.CustomerValidate.*;
+import static ab.main.MainView.*;
 
 public class Input {
     static Room room;

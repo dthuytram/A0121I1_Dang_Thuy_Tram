@@ -1,6 +1,6 @@
-package _case_2_.examRevision.bai1_mxduy.commons;
+package abab.examRevision.bai1_mxduy.commons;
 
-import _case_2_.examRevision.bai1_mxduy.models.KhachHang;
+import abab.examRevision.bai1_mxduy.models.KhachHang;
 
 import java.util.Comparator;
 

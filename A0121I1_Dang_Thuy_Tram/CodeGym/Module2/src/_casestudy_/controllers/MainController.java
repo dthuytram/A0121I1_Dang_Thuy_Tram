@@ -1,13 +1,13 @@
-package _casestudy_.controllers;
-import static _casestudy_.controllers.BookingController.addNewBooking;
-import static _casestudy_.controllers.TicketController.cinemaTicket;
-import static _casestudy_.controllers.EmployeeController.searchEmployee;
-import static _casestudy_.controllers.EmployeeController.showEmployee;
-import static _casestudy_.main.MainView.scanner;
-import static _casestudy_.controllers.CustomerController.addNewCustomer;
-import static _casestudy_.controllers.CustomerController.showCustomerList;
-import static _casestudy_.controllers.ServiceController.addNewServices;
-import static _casestudy_.controllers.ServiceController.showServices;
+package ab.controllers;
+import static ab.controllers.BookingController.addNewBooking;
+import static ab.controllers.TicketController.cinemaTicket;
+import static ab.controllers.EmployeeController.searchEmployee;
+import static ab.controllers.EmployeeController.showEmployee;
+import static ab.main.MainView.scanner;
+import static ab.controllers.CustomerController.addNewCustomer;
+import static ab.controllers.CustomerController.showCustomerList;
+import static ab.controllers.ServiceController.addNewServices;
+import static ab.controllers.ServiceController.showServices;
 
 public class MainController {
     public static void displayMainMenu() {

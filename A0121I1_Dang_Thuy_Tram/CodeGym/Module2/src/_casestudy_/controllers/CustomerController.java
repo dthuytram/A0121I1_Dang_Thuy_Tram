@@ -1,17 +1,17 @@
-package _casestudy_.controllers;
+package ab.controllers;
 
-import static _casestudy_.main.MainView.scanner;
+import static ab.main.MainView.scanner;
 
-import _casestudy_.commons.FileCSV;
-import _casestudy_.commons.Input;
-import _casestudy_.commons.SortCustomer;
-import _casestudy_.model.Customer;
+import ab.commons.FileCSV;
+import ab.commons.Input;
+import ab.commons.SortCustomer;
+import ab.model.Customer;
 
 import java.util.Collections;
 
-import static _casestudy_.controllers.MainController.displayMainMenu;
-import static _casestudy_.main.MainView.CUSTOMER_LINK;
-import static _casestudy_.main.MainView.customerList;
+import static ab.controllers.MainController.displayMainMenu;
+import static ab.main.MainView.CUSTOMER_LINK;
+import static ab.main.MainView.customerList;
 
 public class CustomerController {
     public static void addNewCustomer() {

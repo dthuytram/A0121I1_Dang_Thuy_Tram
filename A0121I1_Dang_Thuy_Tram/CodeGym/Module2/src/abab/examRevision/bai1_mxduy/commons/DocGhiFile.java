@@ -1,9 +1,9 @@
-package _case_2_.examRevision.bai1_mxduy.commons;
+package abab.examRevision.bai1_mxduy.commons;
 
-import _case_2_.examRevision.bai1_mxduy.models.KhachHang;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiem;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiemDaiHan;
-import _case_2_.examRevision.bai1_mxduy.models.SoTietKiemVoThoiHan;
+import abab.examRevision.bai1_mxduy.models.KhachHang;
+import abab.examRevision.bai1_mxduy.models.SoTietKiem;
+import abab.examRevision.bai1_mxduy.models.SoTietKiemDaiHan;
+import abab.examRevision.bai1_mxduy.models.SoTietKiemVoThoiHan;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

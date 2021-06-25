@@ -1,4 +1,4 @@
-package _casestudy_.model;
+package ab.model;
 
 public class Room extends Services {
     private String otherService;

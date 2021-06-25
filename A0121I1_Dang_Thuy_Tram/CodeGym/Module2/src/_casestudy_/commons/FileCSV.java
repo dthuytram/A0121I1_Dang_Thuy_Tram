@@ -1,6 +1,6 @@
-package _casestudy_.commons;
+package ab.commons;
 
-import _casestudy_.model.*;
+import ab.model.*;
 
 import java.io.*;
 import java.nio.file.*;

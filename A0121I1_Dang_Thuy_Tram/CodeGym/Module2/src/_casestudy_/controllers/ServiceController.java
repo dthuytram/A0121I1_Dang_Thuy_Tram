@@ -1,11 +1,11 @@
-package _casestudy_.controllers;
+package ab.controllers;
 
-import _casestudy_.commons.*;
-import _casestudy_.model.*;
+import ab.commons.*;
+import ab.model.*;
 import java.util.*;
 
-import static _casestudy_.controllers.MainController.displayMainMenu;
-import static _casestudy_.main.MainView.*;
+import static ab.controllers.MainController.displayMainMenu;
+import static ab.main.MainView.*;
 
 public class ServiceController {
     static Villa villa;
