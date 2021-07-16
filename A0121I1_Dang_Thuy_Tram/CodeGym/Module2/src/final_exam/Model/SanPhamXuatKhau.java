@@ -1,16 +1,16 @@
 package final_exam.Model;
 
-public class SPXuatKhau  extends SanPham{
+public class SanPhamXuatKhau extends SanPham{
   private String giaXuatKhau;
-  private String quocGia;
-  public SPXuatKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat) {
+  private String quocGiaNhap;
+  public SanPhamXuatKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat) {
     super(id, masp, ten, giaban, soluong, nhasanxuat);
   }
 
-  public SPXuatKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat, String giaXuatKhau, String quocGia) {
+  public SanPhamXuatKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat, String giaXuatKhau, String quocGia) {
     super(id, masp, ten, giaban, soluong, nhasanxuat);
     this.giaXuatKhau = giaXuatKhau;
-    this.quocGia = quocGia;
+    this.quocGiaNhap = quocGia;
   }
 
   public String getGiaXuatKhau() {
@@ -21,17 +21,17 @@ public class SPXuatKhau  extends SanPham{
     this.giaXuatKhau = giaXuatKhau;
   }
 
-  public String getQuocGia() {
-    return quocGia;
+  public String getQuocGiaNhap() {
+    return quocGiaNhap;
   }
 
-  public void setQuocGia(String quocGia) {
-    this.quocGia = quocGia;
+  public void setQuocGiaNhap(String quocGiaNhap) {
+    this.quocGiaNhap = quocGiaNhap;
   }
 
   @Override
   public String toString() {
-    return getId()+","+getMasp()+","+getTen()+","+getGiaban()+","+getSoluong()+","+getNhasanxuat()+","
-            +getGiaXuatKhau()+","+getQuocGia();
+    return getIdSanPham()+","+ getMaSanPham()+","+ getTenSanPham()+","+ getGiaBan()+","+ getSoLuong()+","+ getNhaSanXuat()+","
+            +getGiaXuatKhau()+","+ getQuocGiaNhap();
   }
 }

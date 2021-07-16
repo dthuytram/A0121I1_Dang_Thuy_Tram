@@ -1,67 +1,67 @@
 package final_exam.Model;
 
 public abstract class SanPham {
-    private String id;
-    private String masp;
-    private String ten;
-    private String giaban;
-    private String soluong;
-    private String nhasanxuat;
+    private String idSanPham;
+    private String maSanPham;
+    private String tenSanPham;
+    private String giaBan;
+    private String soLuong;
+    private String nhaSanXuat;
 
     public SanPham(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat) {
-        this.id = id;
-        this.masp = masp;
-        this.ten = ten;
-        this.giaban = giaban;
-        this.soluong = soluong;
-        this.nhasanxuat = nhasanxuat;
+        this.idSanPham = id;
+        this.maSanPham = masp;
+        this.tenSanPham = ten;
+        this.giaBan = giaban;
+        this.soLuong = soluong;
+        this.nhaSanXuat = nhasanxuat;
     }
 
-    public String getId() {
-        return id;
+    public String getIdSanPham() {
+        return idSanPham;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdSanPham(String idSanPham) {
+        this.idSanPham = idSanPham;
     }
 
-    public String getMasp() {
-        return masp;
+    public String getMaSanPham() {
+        return maSanPham;
     }
 
-    public void setMasp(String masp) {
-        this.masp = masp;
+    public void setMaSanPham(String maSanPham) {
+        this.maSanPham = maSanPham;
     }
 
-    public String getTen() {
-        return ten;
+    public String getTenSanPham() {
+        return tenSanPham;
     }
 
-    public void setTen(String ten) {
-        this.ten = ten;
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
     }
 
-    public String getGiaban() {
-        return giaban;
+    public String getGiaBan() {
+        return giaBan;
     }
 
-    public void setGiaban(String giaban) {
-        this.giaban = giaban;
+    public void setGiaBan(String giaBan) {
+        this.giaBan = giaBan;
     }
 
-    public String getSoluong() {
-        return soluong;
+    public String getSoLuong() {
+        return soLuong;
     }
 
-    public void setSoluong(String soluong) {
-        this.soluong = soluong;
+    public void setSoLuong(String soLuong) {
+        this.soLuong = soLuong;
     }
 
-    public String getNhasanxuat() {
-        return nhasanxuat;
+    public String getNhaSanXuat() {
+        return nhaSanXuat;
     }
 
-    public void setNhasanxuat(String nhasanxuat) {
-        this.nhasanxuat = nhasanxuat;
+    public void setNhaSanXuat(String nhaSanXuat) {
+        this.nhaSanXuat = nhaSanXuat;
     }
 }

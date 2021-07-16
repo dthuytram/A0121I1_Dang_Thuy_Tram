@@ -1,5 +1,6 @@
 package final_exam.Commons;
 
+
 import java.io.*;
 
 public class ReadWriteFile {

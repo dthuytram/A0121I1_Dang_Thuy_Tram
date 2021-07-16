@@ -1,15 +1,15 @@
 package final_exam.Model;
 
-public class SPNhapKhau extends SanPham {
+public class SanPhamNhapKhau extends SanPham {
     private String giaNhapKhau;
     private String tinhThanhNhap;
     private String thueNhapKhau;
 
-    public SPNhapKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat) {
+    public SanPhamNhapKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat) {
         super(id, masp, ten, giaban, soluong, nhasanxuat);
     }
 
-    public SPNhapKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat, String giaNhapKhau, String tinhThanhNhap, String thueNhapKhau) {
+    public SanPhamNhapKhau(String id, String masp, String ten, String giaban, String soluong, String nhasanxuat, String giaNhapKhau, String tinhThanhNhap, String thueNhapKhau) {
         super(id, masp, ten, giaban, soluong, nhasanxuat);
         this.giaNhapKhau = giaNhapKhau;
         this.tinhThanhNhap = tinhThanhNhap;
@@ -44,7 +44,7 @@ public class SPNhapKhau extends SanPham {
 
     @Override
     public String toString() {
-        return getId()+","+getMasp()+","+getTen()+","+getGiaban()+","+getSoluong()+","+getNhasanxuat()+","
+        return getIdSanPham()+","+ getMaSanPham()+","+ getTenSanPham()+","+ getGiaBan()+","+ getSoLuong()+","+ getNhaSanXuat()+","
                 +getGiaNhapKhau()+","+getTinhThanhNhap()+","+getThueNhapKhau();
     }
 }

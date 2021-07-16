@@ -1,114 +1,61 @@
 package final_exam.Controller;
 
-import final_exam.Service.NhapKhauService;
-import final_exam.Service.XuatKhauService;
+import final_exam.Commons.*;
 
 import java.util.Scanner;
 
-public class MainController {
-    private static NhapKhauService nhapKhauService;
-    private static XuatKhauService xuatKhauService;
-    static{
-        nhapKhauService = new NhapKhauService();
-        xuatKhauService = new XuatKhauService();
+import static final_exam.Controller.AnotherController.*;
 
+public class MainController {
+    static Scanner sc = new Scanner(System.in);
+    public static InputNhapKhau inputNhapKhau;
+    public static InputXuatKhau inputXuatKhau;
+    static int choice ;
+    static {
+        inputNhapKhau = new InputNhapKhau();
+        inputXuatKhau = new InputXuatKhau();
     }
+
     public static void main(String[] args) {
         displayMenu();
-    }
-    private static void addNew(){
-        System.out.println(
-                "1. Them san pham nhap khau\n" +
-                        "2. them san xuat khau\n" );
-        Scanner sc = new Scanner(System.in);
-        int choice = Integer.parseInt(sc.nextLine());
-        switch(choice){
-            case 1:
-                nhapKhauService.inputNewNhapKhau();
-                break;
-            case 2:
-                xuatKhauService.inputNewXuatKhau();
-        }
+
     }
 
-    private static void delete(){
-        System.out.println(
-                "1. xoa san pham nhap khau\n" +
-                        "2. xoasan xuat khau\n" );
-        Scanner sc = new Scanner(System.in);
-        int choice = Integer.parseInt(sc.nextLine());
-        switch(choice){
-            case 1:
-                nhapKhauService.deleteNhapKhau();
-                break;
-            case 2:
-                xuatKhauService.deleteXuatKhau();
+    public static void displayMenu() {
+        System.out.println(choice);
+        while (choice <= 4) {
+            System.out.println(
+                    " ------------ CHUONG TRINH QUAN LI SAN PHAM --------------------\n" +
+                            "Chon chuc nang theo so (de tiep tuc): \n" +
+                            "1. Thêm mới\n" +
+                            "2. Xóa\n" +
+                            "3. Xem danh sách sản phẩm\n" +
+                            "4. Tìm kiếm\n" +
+                            "5. Thoát\n");
+
+            Scanner sc = new Scanner(System.in);
+            choice = Integer.parseInt(sc.nextLine());
+            switch (choice) {
+                case 1:
+                    themMoiSanPham();
+                    displayMenu();
+                    break;
+                case 2:
+                    xoaSanPham();
+                    displayMenu();
+                    break;
+                case 3:
+                    xemSanPham();
+                    break;
+                case 4:
+                    timkiemSanPham();
+                    displayMenu();
+                    break;
+                case 5:
+                    System.exit(0);
+                    break;
+
+            }
         }
-    }
-    private static void search(){
-        System.out.println(
-                "1. tim san pham nhap khau\n" +
-                        "2. tim san xuat khau\n" );
-        Scanner sc = new Scanner(System.in);
-        int choice = Integer.parseInt(sc.nextLine());
-        switch(choice){
-            case 1:
-                nhapKhauService.searchNhapKhau();
-                break;
-            case 2:
-                xuatKhauService.deleteXuatKhau();
-        }
-    }
-    private static void view(){
-        System.out.println(
-                "1. tim san pham nhap khau\n" +
-                        "2. tim san xuat khau\n" );
-        Scanner sc = new Scanner(System.in);
-        int choice = Integer.parseInt(sc.nextLine());
-        switch(choice){
-            case 1:
-                nhapKhauService.view();
-                break;
-            case 2:
-                xuatKhauService.view();
-        }
-    }
-    private static void displayMenu()  {
-
-        System.out.println(
-                "!-----------MENU----------!\n"+
-                        "1. Thêm mới\n" +
-                        "2. Xóa\n" +
-                        "3. Xem danh sách sản phẩm\n" +
-                        "4. Tìm kiếm\n" +
-                        "5. Thoát\n" );
-
-        Scanner sc = new Scanner(System.in);
-        int choice =Integer.parseInt(sc.nextLine());
-        switch (choice){
-            case 1:
-                addNew();
-                displayMenu();
-                break;
-            case 2:
-               delete();
-               displayMenu();
-                break;
-            case 3:
-                view();
-                break;
-            case 4:
-                search();
-                displayMenu();
-
-                break;
-            case 5:
-//                addNewBooking();
-
-                break;
-
-
-        }
-
     }
 }
