@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comic</title>
+    <link rel="stylesheet" >
+    <style>
+        #naval {
+    list-style-type: none;
+    margin: 20px 0px 0 0;
+    padding: 0;
+    float: left;
+    font-size: 16pt;
+    color: red;
+    font-weight: bolder;
+    }
+    .navbar{
+        background-color: rgba(255,69,110,0.65);
+        width: 100%;
+        height: 60px;
+        position: sticky;
+        display: flex;
+        justify-content: space-around;
+
+    }
+    #naval li {
+        display: inline;
+    }
+    #naval li a:link, #naval li a:visited, #naval li a:active {
+        text-decoration: none;
+        color: #000000;
+        padding: 0 16px 0 10px;
+        margin: 0;
+        border-right: 2px solid #B4B4B4;
+    }
+    #naval li a:link.last-link {
+        border-right: 0px;
+    }
+    #naval li a:hover {
+        /* change color on hover (mouseover) */
+        color: white;
+    }
+
+    #top-color-splash {
+        width: 100%;
+        height: 70px;
+        background: #EB6361;
+    }
+
+
+    .one-third {
+        width: 75%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .two-third {
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        padding-left: 40px;
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    #image1 {
+        width: 220px;
+        height: 300px;
+    }
+
+    .menu_list {
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    .menuitem {
+        background-color: #04ff00   ;
+        border: 1px solid #d4d4d4;
+        list-style-type: none;
+        padding: 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 4px;
+        color: #FFFFFF;
+        width: 100px;
+        height: 50px;
+    }
+
+    .menuitem:hover {
+        background-color: #ffffff;
+    }
+
+    .no-margin-top {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #menu_1 {
+        width: 33%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    #menu_2 {
+        width: 33%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    #menu_3 {
+        width: 34%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+    .normal-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .menuitem>a{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <ul id="naval">
+        <li><a href="http://www.nettruyen.com/">Home</a></li>
+        <li><a href="http://www.nettruyen.com/hot">Hot</a></li>
+        <li><a href="http://www.nettruyen.com/tim-truyen-nang-cao">Find</a></li>
+        <li><a href="https://vi.wikipedia.org/wiki/Truy%E1%BB%87n_tranh_Vi%E1%BB%87t_Nam" class="last-link">Contact</a>
+        </li>
+    </ul>
+</div>
+
+<div class="normal-wrapper">
+    <div class="one-third">
+        <h2 class="no-margin-top">CATEGORY</h2>
+        <div id="menu_1">
+            <ul class="menu_list">
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/action">Action</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/adventure">Adventure</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/comedy">Comedy</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/cooking">Cooking</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/psychological">Psychological</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/sports">Sports</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/supernatural">Supernatural</a></li>
+            </ul>
+        </div>
+
+        <div id="menu_2">
+            <ul class="menu_list">
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/fantasy">Fantasy</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/drama">Drama</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/horror">Horror</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/comic">Comic</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/historical">Historical</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/anime">Anime</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/mature">Mature</a></li>
+            </ul>
+        </div>
+
+        <div id="menu_3">
+            <ul class="menu_list">
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/school-life">School Life</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/mystery">Mystery</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/tragedy">Tragedy</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/sci-fi">Sci-fi</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/live-action">Live Action</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/manga">Manga</a></li>
+                <li class="menuitem"><a href="http://www.nettruyen.com/tim-truyen/harem">Harem</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

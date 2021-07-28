@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao layout với RWD</title>
+    <style>
+        body{
+            width: 70%;
+            margin: auto;
+            font-size: 15px;
+        }
+
+        #header{
+            display: flex;
+            background-color: black;
+            color: white;
+        }
+
+        .logo, .menu,.login,.nav,.content,.ads, #footer{
+            border: 1px solid black;
+            font-size: 20px;
+        }
+
+        .logo{
+            width: 10%;
+        }
+        .menu{
+            width: 80%;
+        }
+        .menu  ul{
+            list-style-type: none;
+            display: flex;
+        }
+        ul li{
+            margin:0 20px;
+        }
+        .menu ul a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .login{
+            width: 10%;
+
+        }
+        #main{
+            display: flex;
+        }
+        .nav{
+            width: 20%;
+        }
+        .nav ul{
+            list-style-type: none;
+        }
+        .content{
+            width: 60%;
+        }
+        .ads{
+            width: 20%;
+        }
+        #footer{
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            .content{
+                width: 80%;
+            }
+            .ads{
+                display: none;
+            }
+            #header{
+                display: block;
+            }
+        }
+        </style>
+</head>
+<body>
+<div id="header">
+    <div class="logo">
+        <h3>Logo</h3>
+    </div>
+    <div class="menu">
+        <ul>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Projects</li></a>
+            <a href=""><li>Contact</li></a>
+        </ul>
+    </div>
+    <div class="login">
+        <h3><a href="">Login</a></h3>
+    </div>
+</div>
+<div id="main">
+    <div class="nav">
+        <ul>
+            <a href=""><li>Link</li></a>
+            <a href=""><li>Link</li></a>
+            <a href=""><li>Link</li></a>
+        </ul>
+    </div>
+    <div class="content">
+        <div>
+            <h2>Welcome to VietNam</h2>
+            <p>We have compiled the most important country information and useful links to make your trip to Vietnam as comfortable as possible. We wish you a pleasant journey and a successful stay in Ho Chi Minh City.</p>
+
+        </div>
+        <hr style="width: 95%">
+        <div>
+            <h2>Climate</h2>
+            <p>Vietnam has a surprisingly varied climate. In the north winter is from November to April and is characterised by cool damp weather. Summers run from May to October and are hot with periods of heavy rain. South Vietnam has a more tropical climate with a dry hot season from December to April and a wet season from May to November. From March through to May humidity it at its highest. Central areas can experience heavy rain from December to February especially in costal areas.</p>
+        </div>
+    </div>
+    <div class="ads">
+        <a href="">ADS</a>
+    </div>
+</div>
+<div id="footer">
+    Footer Text
+</div>
+</body>
+</html>
