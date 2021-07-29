@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo Gallery</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /*.responsive*/
+        /*{*/
+        /*    padding: 0 6px;*/
+        /*    !*float: left;*!*/
+        /*    width: 24.9999%;*/
+        /*}*/
+        .bor
+        {
+            border: 1px solid #ccc;
+            margin: 0 6px;
+            padding: 5px  5px  5px  5px;
+
+
+        }
+        .bor:hover
+        {
+            border: 2px solid #004C00;
+            margin: 0 6px;
+            padding: 5px  5px  5px  5px;
+
+
+        }
+        .desc
+        {
+            padding: 15px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="display-1">
+        <h1>
+            Responsive Image Gallery
+        </h1>
+    </div>
+    <div class="my-3">
+        <h6>
+            Resize the browser window to see the effect.
+        </h6>
+    </div>
+    <div class="row responsive">
+        <div class="col my-3 bor  ">
+                <img  src="http://tuoidep.net/img/uploads/cache_image/480-320-1467929709249.jpg" width="350" height="200" />
+            <div class="desc">
+                <p>Add a description of the image here</p>
+            </div>
+
+
+        </div>
+        <div class="col  my-3 bor ">
+            <img src="https://ximgo.com/upload/2020/09/30/vuonquocgiauminhha1.jpg"width="350" height="200" />
+            <div class="desc">
+                <p>Add a description of the image here</p>
+            </div>
+        </div>
+
+        <div class="col my-3 bor">
+            <img src="https://cdn.24h.com.vn/upload/4-2020/images/2020-12-06/mua_sao_bang_czzt-1607216681-114-width586height392.jpg"width="350" height="200" />
+            <div class="desc">
+                <p>Add a description of the image here</p>
+            </div>
+        </div>
+        <div class="col my-3 bor">
+            <img src="https://toplist.vn/images/800px/phan-si-pang-sapa-lao-cai-159004.jpg"width="350" height="200" />
+            <div class="desc">
+                <p>Add a description of the image here</p>
+            </div>
+        </div>
+        <div style="margin: 0px 0px 0px 10px">
+            <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

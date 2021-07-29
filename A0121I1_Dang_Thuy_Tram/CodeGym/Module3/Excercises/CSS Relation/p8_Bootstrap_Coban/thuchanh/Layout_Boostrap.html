@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Layout</title>
+    <style>
+        header {
+            position: relative;
+        }
+        .shopping-mall {
+            margin-top: auto;
+            font-variant: small-caps;
+        }
+        .shopping-mall>h1 {
+            font-family: Impact;
+            font-size: 50px;
+            color: white;
+            letter-spacing: 0.3px;
+            text-shadow: 0 0 2px black;
+            padding-bottom: 0px;
+            border-bottom: 1px dotted gray;
+            margin: 0px;
+            width: 49%;
+        }
+        .shopping-mall>h5 {
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+            font-size: small;
+        }
+        .poly-cart .panel-heading strong {
+            font-variant: small-caps;
+            font-size: larger;
+            text-shadow: 0 0 2px darkgray;
+        }
+
+    </style>
+</head>
+<body>
+<div class="conyainer" style="height: auto  " >
+    <header class="row">
+        <div class="col-sm-8 shopping-mall">
+            <h1>Online shopping mall</h1>
+            <h5>The center point of the professional programming</h5>
+        </div>
+       <img class="col-sm-3" src="../img/anh-1-bai-10.png"/>
+
+    </header>
+            <nav class="navbar navbar-expand-lg  navbar-dark bd-bark  " style="background: black; color: white">
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-home"></span>
+                    Trang Chủ
+                </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <span class="glyphicon glyphicon-list-alt"></span>
+                                <a class="nav-link" href="#">Giới Thiệu <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Góp ý</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hỏi đáp</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tài Khoản
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <ul class="navbar-nav mr-right">
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">English</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Tiếng Việt</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </nav>
+
+    </div>
+<!--            <div class="col-sm-3 poly-prod" style="display: inline-block">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <h4 class="card-title">
+                            Nokia
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                    <div class="card-footer">
+                        $ 100.25
+                    </div>
+                </div>
+            </div>
+            </div>
+-->
+
+    <div class="row">
+        <article class="col-sm-9">
+            <div class="row">
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div  class="col-sm-3">
+                    <div class="poly-prod" style="display: inline-block">
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    Nokia
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="col-sm-12" src="../img/iphone1.jpg" height="180px" width="500px"/>
+                                <div class="card-footer">
+                                    $ 100.25
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <article class="col-sm-3">
+            <div class="poly-cart">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <img   src="../img/giohang1.png" style="display: inline-block" width="100px" />
+                            </div>
+                            <div  class="col-sm-7">
+                                <ul >
+                                    <li>100 items</li>
+                                    <li>$56.8</li>
+                                    <li><a href="#">Xem giỏ hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card card-default">
+                        <div class="card-body">
+                            <form>
+                                <input placeholder="Keywords" class="form-control" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <strong>Chủng Loại</strong>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">Điện thoại di động</a>
+                            <a href="#" class="list-group-item">Máy tính xách tay</a>
+                            <a href="#" class="list-group-item">Máy tính để bàn</a>
+                            <a href="#" class="list-group-item">Quạt máy</a>
+                            <a href="#" class="list-group-item">Tivi</a>
+                            <a href="#" class="list-group-item">Tủ lạnh</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    </div>
+    <footer class="card">
+        <div class="card-header text-center">
+            <p>Codegym &quynhnhucopy : 2021</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

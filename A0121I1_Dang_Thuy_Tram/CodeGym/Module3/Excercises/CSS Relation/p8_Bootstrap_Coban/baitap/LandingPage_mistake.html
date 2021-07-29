@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing_Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .link_head:hover {
+            text-decoration: underline;
+        }
+
+        .link_head:focus {
+            border: dashed black;
+            background: #F5F5F5;
+        }
+
+        .bgr {
+
+            margin: 60px;
+            top: inherit;
+        }
+
+        .bgrr {
+            margin: 60px;
+            bottom: inherit;
+        }
+
+        .bgr1 {
+            margin: 100px 80px 100px 120px;
+            left: inherit;
+            background: #F5F5F5;
+        }
+
+        .ori {
+            text-align: center;
+        }
+
+        .orri {
+            margin: 20px 0px 30px 0px;
+        }
+
+        .borimg {
+            margin: 5px 0px 0px 5px;
+        }
+
+        .hedd {
+            font-size: xx-large;
+            text-align: center;
+
+        }
+
+        .hedd1 {
+            text-align: center;
+            color: #0067B8;
+        }
+
+        .hedd1 :focus {
+            border: dashed black;
+            background: #F5F5F5;
+            display: block;
+        }
+
+        .anh12 {
+            margin: 0px 2px 0px 150px;
+        }
+
+        .anh14 {
+
+            margin: 0px 150px 0px 2px;
+        }
+
+        .chan1 {
+            margin: 0px 2px 0px 250px;
+        }
+
+        .chan4 {
+
+            margin: -10px 150px 0px 2px;
+        }
+
+        .hederden {
+            background: #2F2F2F;
+            width: 100%;
+            height: 90px;
+            padding: 40px 0px 20px 60px;
+        }
+
+        .hederden1 {
+            height: 80px;
+            padding: 10px 0px 20px 60px;
+        }
+
+        .bokyhieu {
+            list-style: none;
+            font-size: x-small;
+        }
+
+        .kichthuoc {
+            margin: 13px 0px 0px 0px;
+            font-size: x-small;
+            text-decoration-color: aliceblue;
+        }
+
+        .kichthuoc:hover {
+            margin: 13px 0px 0px 0px;
+            text-decoration: underline;
+        }
+
+        .kichthuoc1 {
+
+            margin: 20px 0px 0px 0px;
+        }
+
+        .kichthuoc1:hover {
+
+            text-decoration: underline;
+        }
+
+        .bokyhieu2 {
+            display: flex;
+            list-style: none;
+            font-size: x-small;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <!--            buttton  khi thu nhỏ lại sẽ chứa all dữ kiện-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav mr-right ">
+                <li class="nav-item">
+                    <div>
+                        <a class="navbar-brand" href="#">
+                            <img src="https://brasol.vn/public/uploads/1571642460-logo-microsofts.jpg" height="30" width="180"/>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="pt-2 ms-7">
+                        <a style="color: black" href="#">
+                            <h4>
+                                Surface
+                            </h4>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item pt-1">
+                    <div class="dropdown">
+                        <button type="button" class="btn  dropdown-toggle link_head" data-toggle="dropdown">
+                            computers
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item pt-1">
+                    <div class="dropdown">
+                        <button type="button" class="btn  dropdown-toggle link_head" data-toggle="dropdown">
+                            Computers for Business
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item pt-1">
+                    <div class="dropdown">
+                        <button type="button" class="btn  dropdown-toggle link_head" data-toggle="dropdown">
+                            Accessories
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item pt-1">
+                    <div class="dropdown">
+                        <button type="button" class="btn  dropdown-toggle link_head" data-toggle="dropdown">
+                            Shop now
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-right">
+                <li class="nav-item">
+                    <a class="nav-link link_head " style="color: black" href="#">All Microsoft</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link_head" style="color: black" href="#">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link_head" style="color: black" href="#">Cart
+                        <img src="https://www.pngkit.com/png/detail/116-1169537_cart-png-clipart-icon-gi-hng-png.png" class="w-25"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link_head" style="color: black" href="#">Sign in
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-373-456325.png" class="w-25"/></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="card bg-light text-white " style="width: 100% ">
+        <img src="https://e7.pngegg.com/pngimages/294/931/png-clipart-laptop-macbook-computer-repair-technician-the-lappy-shop-damage-maintenance-computer-laptop.png"/>
+        <div class="card-img-overlay bgr">
+            <div style=" display: inline-block; background: goldenrod ">
+                SEE WHAT'S NEW
+            </div>
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Style and speed</div>
+            <p class="card-text">Do it all with a perfect balance of sleek design,<br/> performance, immersive audio, HD
+                video calls, vibrant <br/>touchscreen, choice of two sizes, and two keyboard<br/> finishes.</p>
+            <a href="#"><h6>Meet Surface Laptop 4 ></h6></a>
+        </div>
+    </div>
+    <br/>
+
+    <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-1" style="text-align: center; padding: 0px; margin: 0px 20px 0px 20px">
+
+            <img src="https://previews.123rf.com/images/oliviart/oliviart2004/oliviart200400716/148385848-laptop-icon-isolated-on-white-background-laptop-vector-icon.jpg" height="69" width="87"/>
+            <h6>
+                Compare devices
+            </h6>
+        </div>
+        <div class="col-1" style="text-align: center; padding: 9px 0px 0px 0px; margin: 0px 20px 0px 20px">
+            <img src="https://cdn4.iconfinder.com/data/icons/smart-phones-technologies/512/android-phone-color.png" height="60" width="67"/>
+            <h6>
+                Help me choose
+            </h6>
+
+        </div>
+        <div class="col-1" style="text-align: center;padding: 9px 0px 0px 0px; margin: 0px 20px 0px 20px">
+            <img src="https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-document-in-folder-icon-png-image_553822.jpg" height="59" width="66"/>
+            <h6>
+                Deals
+            </h6>
+
+        </div>
+        <div class="col-1" style="text-align: center;padding: 9px 0px 0px 0px; margin: 0px 20px 0px 20px">
+            <img src="https://icons-for-free.com/iconfiles/png/512/mac+mac+laptop+macbook+macbook+pro+macbook+retina+notebook-1320168235604156297.png" height="56" width="71"/>
+
+            <h6>
+                Surfar at home
+            </h6>
+        </div>
+        <div class="col-1" style="text-align: center;padding: 9px 0px 0px 0px; margin: 0px 20px 0px 20px">
+            <img src="https://c8.alamy.com/comp/2DAYGNH/grey-headphone-or-headset-icon-vector-illustration-symbol-2DAYGNH.jpg" height="54" width="63"/>
+            <h6>
+                for Business
+            </h6>
+        </div>
+    </div>
+
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://cdn.twistarticle.com/wp-content/uploads/2018/10/Dell-Inspiron-15-7572-Laptop.jpg" height="137" width="1711"/>
+        </div>
+        <div class="carousel-item"><img src="https://m.economictimes.com/thumb/msid-78825344,width-1200,height-900,resizemode-4,imgsize-247196/to-spread-the-festive-season-cheer-the-good-folks-at-apple-have-introduced-attractive-deals-and-offers-for-those-who-wish-to-save-on-their-purchase-of-the-latest-iphone-.jpg" height="163" width="1710"/>
+        </div>
+        <div class="carousel-item"><img src="https://newspaperads.ads2publish.com/wp-content/uploads/2021/03/samsung-galaxy-s-21-5g-at-54999-plus-get-galazy-watch-active2-ad-times-of-india-mumbai-05-03-2021.jpg" height="166" width="1711"/>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 ">
+    </div>
+    <div class="col-sm-8 ori ">
+        <div class="display-4 orri" style="font-size: xx-large">
+            Original by design
+        </div>
+        <div>
+            Whether you do your best thinking at home or in nature, alone or with others, every Surface has been
+            designed to fuel your originality. You never know where your next inspiration will come from. Check out
+            these true originals and their stories.
+        </div>
+        <div class="orri">
+            <a href="#"><h6>
+                Meet our Surface originals >
+            </h6></a>
+        </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/45/2018/08/Surface-Book-2.png"/>
+        <div class="card-img-overlay bgr">
+            <div style=" display: inline-block; background: goldenrod ">
+                NEW
+            </div>
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Laptop 4</div>
+            <p class="card-text">Slim and stylish, 13.5” or 15” touchscreen</p>
+            <a href="#"><h6>Explore Surface Laptop 4 ></h6></a>
+        </div>
+    </div>
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://cdna.artstation.com/p/assets/images/images/014/344/606/medium/sneha-mirwani-sss.jpg?1543576116"/>
+        <div class="card-img-overlay bgr">
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Pro 7</div>
+            <p class="card-text">12.3” touchscreen with tablet-to-laptop versatility*</p>
+            <a href="#"><h6>Meet Surface Pro 7></h6></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://cdn.i.haymarketmedia.asia/?n=campaign-asia/content/Dell%20global.png"/>
+        <div class="card-img-overlay bgr">
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Laptop Go</div>
+            <p class="card-text">Sleek, light, and a standout value, with 12.4” touchscreen</p>
+            <a href="#"><h6>Meet Surface Laptop Go></h6></a>
+        </div>
+    </div>
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="../img/anh4.jpg"/>
+        <div class="card-img-overlay bgr">
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Go 2</div>
+            <p class="card-text">Smallest, lightest Surface with 10.5” touchscreen*</p>
+            <a href="#"><h6>Meet Surface Go 2></h6></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://cdn.tgdd.vn/Files/2020/02/05/1234605/hp348g5i3_800x450.jpg"/>
+        <div class="card-img-overlay bgrr">
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Duo</div>
+            <p class="card-text">Mobile productivity powered by two 5.6” screens and a revolutionary 360° hinge</p>
+            <a href="#"><h6>Meet Surface Duo></h6></a>
+        </div>
+    </div>
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://cdn.tgdd.vn/Files/2021/07/29/1371564/galaxy-m51-2_1280x720-800-resize.jpg"/>
+
+        <div class="card-img-overlay bgr">
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Pro X</div>
+            <p class="card-text">Edge to edge 2-in-1 laptop with LTE and 13” touchscreen*</p>
+            <a href="#"><h6>Discover Surface Pro X ></h6></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://cdn.tgdd.vn/Files/2021/07/28/1371342/dienthoaichoigame_1280x720-800-resize.jpg"/>
+        <div class="card-img-overlay bgr">
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Book 3</div>
+            <p class="card-text">Our most powerful 13.5” or 15” touchscreen laptop</p>
+            <a href="#"><h6>Learn about Surface Book 3 ></h6></a>
+        </div>
+    </div>
+    <div class="col-sm-6 text-black ">
+        <img class="w-100 borimg" src="https://cdn.tgdd.vn/Files/2021/07/27/1371075/beuwatchkw33_1280x720-800-resize.jpg"/>
+        <div class="card-img-overlay bgr">
+
+            <div class="display-4 " style="margin: 0px 0px 20px 0px">Surface Studio 2</div>
+            <p class="card-text">Brilliant color, blazing graphics, and 28” touchscreen*</p>
+            <a href="#"><h6>See Surface Studio 2></h6></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2 ">
+    </div>
+    <div class="col-sm-8 ori ">
+        <div class="display-4 orri" style="font-size: xx-large">
+            Original by design, inspired by you
+        </div>
+        <div>
+            Inspiration can come from anywhere. Originality is where you take it.
+        </div>
+        <div class="orri">
+            <a href="#"><h6>
+                Meet our Surface originals
+            </h6></a>
+        </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+<div class="row">
+
+    <div class="embed-responsive embed-responsive-16by9" style="margin: 20px 50px 0px 50px">
+        <iframe class=" w-100 embed-responsive-item" src="https://www.microsoft.com/en-us/videoplayer/embed/RWBtR2"
+                allowfullscreen></iframe>
+    </div>
+
+</div>
+
+<div class="col-sm-12 text-black " style="margin: 50px 0px 40px 0px">
+    <img class="w-100 borimg " src="https://cdn.tgdd.vn/Products/Images/7077/231683/beu-pt1-den-thumb-400x400.jpg"/>
+    <div class="card-img-overlay bgr1 w-25">
+        <div class="hedd " style="margin: 0px 0px 20px 0px">Choose your perfect Surface</div>
+        <p class="card-text">Just answer a few simple questions about what you're looking for and we'll help you choose.
+            Or compare tech specs of each computer and find the Surface built to unlock your originality.</p>
+        <a class="hedd1" href="#"><h6>Help me choose ></h6></a>
+        <br/>
+        <a class="hedd1" href="#"><h6>Compare Surface ></h6></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col  anh12">
+        <img class="w-100 " src="https://cdn.tgdd.vn/Products/Images/7077/231682/beu-b2-den-thumb-400x400.jpg"/>
+        <br/>
+        <br/>
+        <div><h6>Protect your Surface</h6></div>
+        <a href="#"><h6>See Microsoft Complete protection plans ></h6></a>
+    </div>
+    <div class="col ">
+        <img class="w-100" src="../img/anh13.jpg"/>
+        <br/>
+        <br/>
+        <div><h6>Surface for your business</h6></div>
+        <a href="#"><h6>Shop for Business></h6></a>
+    </div>
+    <div class="col anh14">
+        <img class="w-100" src="https://cdn.tgdd.vn/Products/Images/7077/231775/dong-ho-thong-minh-beu-pt2-hong-thumb-400x400.jpg"/>
+        <br/>
+        <br/>
+        <div><h6>Accessories</h6></div>
+        <a href="#"><h6>Shop Surface accessories></h6></a>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <hr/>
+
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col chan1" style="text-align: center">
+            <img class="w-25" src="https://st3.depositphotos.com/16244452/32649/v/950/depositphotos_326491596-stock-illustration-air-mattress-system-color-line.jpg"/>
+            <a href="#"><h6>Surface support</h6></a>
+        </div>
+        <div class="col" style="text-align: center">
+            <img class="w-25" src="https://icon-library.com/images/register-icon-free/register-icon-free-16.jpg"/>
+            <a href="#"><h6>Register your Surface
+            </h6></a>
+
+        </div>
+        <div class="col" style="text-align: center">
+            <img class="w-25" src="https://image.flaticon.com/icons/png/512/2258/2258814.png"/>
+            <a href="#"><h6>Get the Surface newsletter</h6></a>
+
+        </div>
+        <div class="col chan4 " style="text-align: center">
+            <img class="w-25" src="https://image.shutterstock.com/image-vector/recall-ribbon-megaphone-icon-flat-600w-551703037.jpg"/>
+            <a href="#"><h6>Power cord recall</h6></a>
+
+        </div>
+
+    </div>
+    <br/>
+    <br/>
+    <hr/>
+</div>
+</div>
+<div class="hederden">
+    <div style="color: #F5F5F5 ;font-size: x-small">
+        <p>* Some accessories and software sold separately. See individual product pages for details.</p>
+    </div>
+</div>
+<div class="hederden1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col ">
+                <p>
+                    Follow this page
+                    <a><img class="chantrang " src="https://gonline.vn/wp-content/uploads/2019/03/facebook-icon-4.png"></a>
+                    <a><img class="chantrang" src="https://www.creativefreedom.co.uk/wp-content/uploads/2017/06/Twitter-featured.png"></a>
+                    <a><img class="chantrang" src="https://cdn5.vectorstock.com/i/1000x1000/63/54/mail-icon-simple-envelope-flat-design-vector-4306354.jpg"></a>
+                    <a><img class="chantrang" src="https://baobire.com/wp-content/uploads/2020/05/icon-web-Zalo.png"></a>
+                </p>
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col ">
+                <p>
+                    Share this page
+                    <a><img class="chantrang " src="https://gonline.vn/wp-content/uploads/2019/03/facebook-icon-4.png"></a>
+                    <a><img class="chantrang" src="https://www.creativefreedom.co.uk/wp-content/uploads/2017/06/Twitter-featured.png"></a>
+                    <a><img class="chantrang" src="https://baobire.com/wp-content/uploads/2020/05/icon-web-Zalo.png"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="background:whitesmoke">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <ul class="bokyhieu">
+                    <li class="kichthuoc">
+                        <b>What`s new</b>
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Laptop 4
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Laptop Go
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Go 2
+                    <li class="kichthuoc">
+                    <li>Surface Pro X
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Duo
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft 365
+                    </li>
+                    <li class="kichthuoc">
+                        Windows 10 apps
+                    </li>
+                    <li class="kichthuoc">
+                        HoloLens 2
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="bokyhieu">
+                    <li class="kichthuoc">
+                        <b>Microsoft Store</b>
+                    </li>
+                    <li class="kichthuoc">
+                        Account profile
+
+                    </li>
+                    <li class="kichthuoc">
+                        Download Center
+
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft Store support
+                    <li class="kichthuoc">
+                    <li>
+                        Returns
+                    </li>
+                    <li class="kichthuoc">
+                        Order tracking
+                    </li>
+                    <li class="kichthuoc">
+                        Virtual workshops and training
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft Store Promise
+                    </li>
+                    <li class="kichthuoc">
+                        Financing
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="bokyhieu">
+                    <li class="kichthuoc">
+                        <b>Education</b>
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft in education
+                    </li>
+                    <li class="kichthuoc">
+                        Office for students
+                    </li>
+                    <li class="kichthuoc">
+                        Office 365 for schools
+                    <li class="kichthuoc">
+                    <li>Deals for students & parents
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft Azure in education
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="bokyhieu">
+                    <li class="kichthuoc">
+                        <b>Enterprise</b>
+                    </li>
+                    <li class="kichthuoc">
+                        Azure
+                    </li>
+                    <li class="kichthuoc">
+                        AppSource
+                    </li>
+                    <li class="kichthuoc">
+                        Automotive
+                    <li class="kichthuoc">
+                    <li>Government
+                    </li>
+                    <li class="kichthuoc">
+                        Healthcare
+                    </li>
+                    <li class="kichthuoc">
+                        Financial services
+                    </li>
+                    <li class="kichthuoc">
+                        Windows 10 apps
+                    </li>
+                    <li class="kichthuoc">
+                        Retail
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="bokyhieu">
+                    <li class="kichthuoc">
+                        <b>Developer</b>
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Laptop 4
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Laptop Go
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Go 2
+                    <li class="kichthuoc">
+                    <li>Surface Pro X
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Duo
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft 365
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="bokyhieu">
+                    <li class="kichthuoc">
+                        <b>Company</b>
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Laptop 4
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Laptop Go
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Go 2
+                    <li class="kichthuoc">
+                    <li>Surface Pro X
+                    </li>
+                    <li class="kichthuoc">
+                        Surface Duo
+                    </li>
+                    <li class="kichthuoc">
+                        Microsoft 365
+                    </li>
+                    <li class="kichthuoc">
+                        Windows 10 apps
+                    </li>
+                    <li class="kichthuoc">
+                        HoloLens 2
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="background:whitesmoke">
+        <div class="container-fluid ">
+
+            <div class="row">
+                <div class="col col-3  kichthuoc bokyhieu">
+                    <img src="../img/chancuoi.PNG"/>
+                    English (United States)
+                </div>
+                <div class="col col-9">
+                    <ul class="bokyhieu2">
+                        <li class="kichthuoc1">
+                            Sitemap
+                        </li>
+                        <li class="kichthuoc1">
+                            Contact Microsoft
+                        </li>
+                        <li class="kichthuoc1">
+                            Privacy
+                        </li>
+                        <li class="kichthuoc1">
+                            Terms of use
+                        </li>
+                        <li class="kichthuoc1">
+                            Trademarks
+                        </li>
+                        <li class="kichthuoc1">
+                            Safety & eco
+
+                        </li>
+                        <li class="kichthuoc1">
+                            About our ads
+                        </li>
+                        <li class="kichthuoc1">
+                            © Microsoft 2021
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

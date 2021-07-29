@@ -1,0 +1,105 @@
+<!-- LÝ THUYẾT CẦN GHI NHỚ:
+Có 3 cách để nhúng mã CSS vào trong một tài liệu HTML, bao gồm:
+
+    Khai báo trực tiếp ở thẻ HTML (Inline style sheet)
+    Khai báo trong thẻ <style> của tài liệu HTML (Internal style sheet)
+    Khai báo trong file .css riêng biệt (External style sheet)
+
+**1. Khai báo trực tiếp ở thẻ HTML (Inline style)
+    Chúng ta có thể khai báo mã CSS trực tiếp trên một thẻ HTML bằng cách sử dụng thuộc tính style.
+
+    [
+        Ví dụ sau đây sử dụng cách khai báo CSS trực tiếp để thay đổi màu chữ và căn lề trái của một thẻ <h1>:
+     
+        <h1 style="color:blue;margin-left:30px;">This is a heading</h1>
+
+    ]
+=> NHƯỢC ĐIỂM: PHẢI KHAI BÁO TẤT CẢ THẺ HTML ( MÀ TA MUỐN ĐIỀU KHIỂN)
+
+**2.Khai báo trong thẻ <style> của tài liệu HTML (Internal style sheet)
+
+    Bên trong thẻ <style> chúng ta có thể đưa ra tất cả các khai báo CSS cần thiết rồi sau đó áp dụng cho từng thẻ HTML.
+    Thông thường, thẻ <style> được đặt bên trong thẻ <head>, nhưng đó không phải là bắt buộc, chúng ta có thể đặt chúng ở bất cứ đâu. Một tài liệu HTML có thể có rất nhiều thẻ <style> khác nhau.
+    Trong ví dụ sau đây, chúng ta sẽ khai báo các thuộc tính CSS trong thẻ <style> để thay đổi màu nền của trang web, màu chữ và căn lề trái của thẻ <h1>.
+    
+    [
+    <head>
+        <style>
+        body {
+            background-color: linen;
+        }
+
+        h1 {
+            color: maroon;
+            margin-left: 40px;
+        }
+        </style>
+    </head>
+    <body>
+            <h1>This is a heading</h1>
+    <body>
+    ]
+**3. Khai báo trong file .css riêng biệt (External style sheet)
+    Với cách làm này, chúng ta tạo một file có đuôi là .css, chẳng hạn là style.css. Trong file này chúng ta khai báo tất cả các thuộc tính CSS mong muốn. Sau đó, chúng ta nhúng file .css này vào trong tài liệu HTML bằng cách sử dụng thẻ <link>.
+    Thẻ <link> được đặt ở trong thẻ <head> của tài liệu HTML.
+    Trong ví dụ sau, chúng ta sử dụng một file mystyle.css để thay đổi màu nền của trang web, màu chữ và căn lề trái của thẻ <h1>.
+    [  "TRONG FILE HTML"
+        <head>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+        </head>
+        <body>
+        </body>
+            <h1>This is a heading</h1>
+        <body>
+    ]
+    ["TRONG FILE CSS"
+          body {
+                background-color: lightblue;
+            }
+
+            h1 {
+                color: navy;
+                margin-left: 20px;
+            }  
+    ]
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- INTERNAL STYLE -->
+    <style>
+        h1 {
+            color: darkgreen ;
+        }
+        p
+        {
+            color: blue;
+        }
+
+    </style>
+    <!-- EXTERNAL STYLE -->
+    <link rel="stylesheet" type="text/css" href="Bt_Nhungcss.css">
+    <!--
+        "TRONG FILE BTNHUNG.CSS" 
+        h1 {
+            color: darkgreen ;
+        }
+        p
+        {
+            color: blue;
+        }
+     -->
+</head>
+<body>
+<!-- INLINE STYLE -->
+<h1 style="color: darkgreen">
+    This is heading 1
+</h1>
+<p style="color: blue ">
+    This is an orfinary paragraph. Notice that this text is blue.<br/>
+The default text color for a page is degined in the body selector.
+</p>
+</body>
+</html>
