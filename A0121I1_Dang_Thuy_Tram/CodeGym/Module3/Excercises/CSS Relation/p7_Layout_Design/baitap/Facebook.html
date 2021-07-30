@@ -18,14 +18,27 @@
     {
         margin: 25px;
     }
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 100%;
+        }
+    @media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
 </style>
 </head>
 <body>
+<div class ="responsive">
 <div class="container-fluid">
 <div class="row"  style="background: #3B5998">
     <div class="col col-sm-5">
         <div class="col">
-            <img style="margin: 0px 0px 0px 30px;width: 30% ;height: 100%" src="https://anh.eva.vn/upload/4-2016/images/2016-11-30/1480494815-facebook-sao-viet.png " />
+            <img style="margin: 0px 0px 0px 30px;width: 20% ;height: 50%; border-radius: 8px; " src="https://anh.eva.vn/upload/4-2016/images/2016-11-30/1480494815-facebook-sao-viet.png " />
         </div>
         <div class="col ">
         </div>
@@ -55,12 +68,12 @@
                 <input type="text" class="form-control"  style="height: 30px" >
             </li>
             <li style="margin: 3px 0px 0px 0px;color: #cccccc">
-                Quyên mật khẩu?
+                Quên mật khẩu?
             </li>
         </ul>
     </div>
     <div class="col col-2 dangnhap">
-        <button class="btn " style="background: #4267b2 ;color:white" type="submit">Đăng Nhập</button>
+        <button class="btn " style="background: #4267b2 ;color:white" type="submit" onclick="location.href='./profile_page.html '">Đăng Nhập</button>
 
     </div>
 </div>
@@ -178,6 +191,7 @@
 
     </div>
     </div>
+</div>
 </div>
 </body>
 </html>

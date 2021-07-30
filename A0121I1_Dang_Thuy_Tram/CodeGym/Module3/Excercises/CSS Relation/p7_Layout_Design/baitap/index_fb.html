@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="./facebook.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Facebook</title>
+    <style>
+        nav {
+        background: #4267b2;
+        width: 100%;
+        padding: 0px;
+        height: auto;
+        position: sticky;
+    }
+
+    table[title=links] > tr > td:hover {
+        border: 1px solid #f5f6f7;
+        background: #f5f6f7;
+        transition-delay: 0.1s;
+        cursor: pointer;
+    }
+
+
+    .hoverable:hover {
+        background: #354f9c;
+        cursor: pointer;
+    }
+
+    #createPost {
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+
+    #leftPage{
+        border-radius: 6px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    #createPost button {
+        background: #f5f6f7;
+        border: none;
+        border-radius: 14px;
+    }
+
+    #post {
+        border-radius:6px; 
+        margin-bottom: 8px;
+    }
+
+    body {
+        background: #e9ebee;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #firstItem {
+        margin-bottom: 51px; 
+    }
+
+
+
+    .sideBar li {
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+
+    .sideBar li:hover {
+        border: 1px solid #f5f6f7;
+        background: #f5f6f7;
+        transition-delay: 0.1s;
+        cursor: pointer;
+    }
+
+    .mainContent {
+        margin: 75px 10px;
+    }
+
+
+
+    nav > div > div > ul > li {
+        display: inline;
+        color: white;
+        margin: 4px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    #requestsDiv {
+        position: fixed;
+        border: 1px solid white;
+        z-index: 1;
+        background: aliceblue;
+        width: 226px;
+        transform: translate(781px, -20px);
+        border-radius: 7px;
+        display: none;
+    }
+
+    #inputSearch {
+        border-radius: 4px 0px 0px 4px;
+        width: 353px;
+    }
+
+    #search {
+        background: #f5f6f7;
+        border: none;
+        margin-left: -1px;
+        border-radius: 0px 4px 4px 0px;
+        border-radius: 15px 15px -1px 0px;
+        border-radius: -3px;
+        height: 30px;
+        color: black;
+        padding: 0px 20px;
+    }
+
+    .icon {
+        color:#1a2947;
+        margin-top: 7px;
+    }
+    </style>
+</head>
+
+<body>
+        <div id="requestsDiv">
+                <div class="container-fluid">
+                    <ul style="list-style-type: none;">
+                        <li><span><img src="./avatar.png" height="24px" width="24px" class="rounded-circle" alt=""></span> Ali
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="fixed-top">
+                <div class="row">
+                    <div class="col" style="margin-top: 7px;">
+                        <table>
+                            <tr>
+                                <td>
+                                    <i style="color: white" class="fab fa-facebook-square fa-2x"></i>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Search" name="" id="inputSearch">
+                                </td>
+                                <td>
+                                    <button id="search"><i class="fa fa-search"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+        
+                    <div class="col" style="margin-top:1px;">
+                        <ul class="rightLinks">
+                            <li class="hoverable" id="firstItem"><span><img src="./avatar.png" height="24px" width="24px" class="rounded-circle"
+                                        alt=""></span>
+                                User</li>
+                            <li style="color: #1a2947">|</li>
+                            <li class="hoverable">Home</li>
+                            <li style="color: #1a2947">|</li>
+                            <li class="hoverable">Create</li>
+                            <li style="color: #1a2947">|</li>
+                            <li class="icon" id="request"><i class="fas fa-user-friends fa-2x"></i></li>
+                            <li class="icon" id=""><i class="fab fa-facebook-messenger fa-2x"></i></li>
+                            <li class="icon"><i class="fas fa-bell fa-2x"></i></li>
+                            <li style="color: #1a2947">|</li>
+                            <li class="icon"><i class="fas fa-question-circle fa-2x"></i></li>
+                            <li class="icon"><i class="fas fa-caret-down fa-2x"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+            <section class="mainContent">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="sideBar">
+                            <li><span><img src="./avatar.png" height="24px" width="24px" class="rounded-circle" alt=""></span>
+                                User Name</li>
+                            <li><i style="color:#3680f8;" class="fas fa-rss-square fa-2x"></i><span> News Feed</span></li>
+                            <li><i style="color: #01a6ff;" class="fab fa-facebook-messenger fa-2x"></i><span> Messenger</span>
+                            </li>
+                            <li><i style="color:#3884fe;" class="fas fa-video fa-2x"></i> Watch</li>
+                            <li><i class="fas fa-users fa-2x"></i> Groups</li>
+                            <li><i class="fab fa-affiliatetheme fa-2x"></i> Something</li>
+        
+        
+        
+                        </ul>
+                    </div>
+        
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" id="createPost">
+                                    <div class="card-header">
+                                        Create Post
+                                    </div>
+                                    <div class="card-body">
+                                        <table>
+                                            <tr>
+                                                <td><img src="./avatar.png" height="32px" width="32px" class="rounded-circle"
+                                                        alt=""></td>
+                                                <td>
+                                                    <p class="card-text text-muted">What's on your mind, User ?</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <hr>
+                                        <table>
+                                            <tr>
+                                                <td><button><span><i class="fas fa-video"></i></span> Photo/Video</button></td>
+                                                <td><button><span><i class="fas fa-user-tag"></i></span> Tag Friends</button>
+                                                </td>
+                                                <td><button>...</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                        </div>
+        
+                        <div class="row" style="margin-bottom: 8px;" id="post">
+                            <div class="card" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #385898;">John Adam</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">2hrs. <i class="fas fa-globe-asia"></i></h6>
+                                    <p class="card-text">Hello Guys I need Help ?</p>
+                                    <table>
+                                        <tr>
+                                            <td><i style="color: #5baefb;" class="fas fa-thumbs-up"></i> 2,11k</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>3 comments</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                    <table class="table" title="links">
+                                        <tr>
+                                            <td><i class="far fa-thumbs-up"></i> Like</td>
+                                            <td><i class="far fa-comment-alt"></i> Comments</td>
+                                            <td><i class="far fa-share-square"></i> Share</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="row" style="margin-bottom: 8px;" id="post">
+                            <div class="card" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #385898;">John Adam</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">2hrs. <i class="fas fa-globe-asia"></i></h6>
+                                    <img src="./dummy.jpg" class="card-img" alt="postimage">
+                                    <table>
+                                        <tr>
+                                            <td><i style="color: #5baefb;" class="fas fa-thumbs-up"></i> 2,11k</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>3 comments</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                    <table class="table" title="links">
+                                        <tr>
+                                            <td><i class="far fa-thumbs-up"></i> Like</td>
+                                            <td><i class="far fa-comment-alt"></i> Comments</td>
+                                            <td><i class="far fa-share-square"></i> Share</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="row" style="margin-bottom: 8px;" id="post">
+                            <div class="card" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #385898;">John Adam</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">2hrs. <i class="fas fa-globe-asia"></i></h6>
+                                    <img src="./dummy.jpg" class="card-img" alt="postimage">
+                                    <table>
+                                        <tr>
+                                            <td><i style="color: #5baefb;" class="fas fa-thumbs-up"></i> 2,11k</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>3 comments</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                    <table class="table" title="links">
+                                        <tr>
+                                            <td><i class="far fa-thumbs-up"></i> Like</td>
+                                            <td><i class="far fa-comment-alt"></i> Comments</td>
+                                            <td><i class="far fa-share-square"></i> Share</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="row" style="margin-bottom: 8px;" id="post">
+                            <div class="card" style="width:100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #385898;">John Adam</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">2hrs. <i class="fas fa-globe-asia"></i></h6>
+                                    <img src="./dummy.jpg" class="card-img" alt="postimage">
+                                    <table>
+                                        <tr>
+                                            <td><i style="color: #5baefb;" class="fas fa-thumbs-up"></i> 2,11k</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>3 comments</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                    <table class="table" title="links">
+                                        <tr>
+                                            <td><i class="far fa-thumbs-up"></i> Like</td>
+                                            <td><i class="far fa-comment-alt"></i> Comments</td>
+                                            <td><i class="far fa-share-square"></i> Share</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+        
+        
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="card" style="width:100%; margin-left: 10px;border-radius: 6px;">
+                                <div class="card-body">
+                                    <ul style="list-style: none;margin: 0px;" class="container-fluid">
+                                        <li><span><img
+                                                    src="https://scontent.fisb7-1.fna.fbcdn.net/v/t39.2081-6/c0.0.17.17a/p16x16/44645647_698864953818076_2004693160982216704_n.png?_nc_cat=1&_nc_oc=AQkttKgspTKwedPd1B5_73olm2bxjdzkmWMtXwsbwdRUKUkpgNxv90aIrL1x0cYzxzo&_nc_ht=scontent.fisb7-1.fna&oh=c5f7daa310264a8affa71613c59d3d3b&oe=5DEE9A8B"
+                                                    alt=""></span> 2 requests <p class="text-muted">from Fahad</p>
+                                        </li>
+                                        <li><span><img
+                                                    src="https://scontent.fisb7-1.fna.fbcdn.net/v/t39.2081-6/c0.0.17.17a/p16x16/851590_758403470850796_466814304_n.png?_nc_cat=1&_nc_oc=AQnRahCND2n0YIgd9l92_UGkI02Q7dQQ80yz_3hLzW1XU3F8WCUT1tcp_rhmqAhS2Kc&_nc_ht=scontent.fisb7-1.fna&oh=38ee38bb53589b043fb3bdd2ed8d3120&oe=5DEAAE27"
+                                                    alt=""></span> 1 gift <p class="text-muted">from Zeashan</p>
+                                        </li>
+                                        <li><i class="fas fa-birthday-cake"></i> Usman <p class="text-muted"></p>
+                                        </li>
+                                        <li><span><img
+                                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/tgEh3EXTbcT.png?_nc_x=rRTMRB-QJ_k"
+                                                    alt=""></span> 3 event invites</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" id="leftPage">
+                                    <div class="card-header">
+                                        Suggested Pages
+                                        Your Friends like this
+                                    </div>
+                                    <div class="card-body">
+                                        <span><img src="https://scontent.fkhi11-1.fna.fbcdn.net/v/t1.0-1/p50x50/48374727_1010470979155006_8235139227851948032_n.png?_nc_cat=106&_nc_oc=AQlZ0-0nqql2TcRXp-txdZ7Yu4DgEDaMzeATDlJYPdwsNCb-WOXAhbx1KklDYRDIX5w&_nc_ht=scontent.fkhi11-1.fna&oh=b71d51d8fc2494919e6fdbbace7d7e52&oe=5DB3BAA6" alt=""></span> A Nice Page
+                                        <p class="text-muted" style="font-size: 10px;">A Graphic design compnay.</p>
+                                        <img src="./dummy.jpg" class="card-img" alt="postimage">
+                                        <button style="    border: none;
+                                        background: white;
+                                        width: 100%;
+                                        margin-top: 5px;"><i class="far fa-thumbs-up"></i> Like Page</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="width: inherit;background: #e9ebee;">
+                            <div class="col" style="font-size: 13px;">
+                                <table>
+                                    <tr>
+                                        <td class="text-muted">Privacy</td>
+                                        <td class="text-muted">Terms&nbsp;</td>
+                                        <td class="text-muted">Advertising&nbsp;</td>
+                                        <td class="text-muted">Cookies&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facebook101 &copy; 2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
