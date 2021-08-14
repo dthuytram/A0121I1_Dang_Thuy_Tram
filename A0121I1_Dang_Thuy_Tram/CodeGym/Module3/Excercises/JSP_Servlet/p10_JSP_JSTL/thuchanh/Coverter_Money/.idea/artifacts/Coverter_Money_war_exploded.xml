@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Coverter_Money:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Coverter_Money_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Coverter_Money/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Coverter_Money" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
