@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ebefb24-8dea-4b1f-bd09-4a02bf16fe76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../../Module2/src/p9_automatedTesting_TDD/thuchanh/calculateApplication" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Module2/src/p9_automatedTesting_TDD/thuchanh/calculateApplication" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../p10_JSP_JSTL/baitap/Simple_Calculator/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../p10_JSP_JSTL/baitap/Simple_Calculator/web/index .jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../p10_JSP_JSTL/thuchanh/Coverter_Money/out/artifacts/Coverter_Money_war_exploded/covert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../p10_JSP_JSTL/thuchanh/Coverter_Money/out/artifacts/Coverter_Money_war_exploded/covert.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../p10_JSP_JSTL/thuchanh/Coverter_Money/out/artifacts/Coverter_Money_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../p10_JSP_JSTL/thuchanh/Coverter_Money/out/artifacts/Coverter_Money_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/java/com/example/CustomerManager/controller/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/java/com/example/CustomerManager/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/java/com/example/CustomerManager/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/java/com/example/CustomerManager/service/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/webapp/customer/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/webapp/customer/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/webapp/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/webapp/customer/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/webapp/customer/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CustomerManager/src/main/webapp/error_404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../p9_TongquanVeWeb/Product_Discount_Calculator/src/main/java/com/example/Product_Discount_Calculator/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../p9_TongquanVeWeb/Product_Discount_Calculator/src/main/java/com/example/Product_Discount_Calculator/CalculatorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../p9_TongquanVeWeb/Product_Discount_Calculator/src/main/webapp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../p9_TongquanVeWeb/Product_Discount_Calculator/src/main/webapp/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../p9_TongquanVeWeb/thuchanh/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../../p9_TongquanVeWeb/thuchanh/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Slides/Slide 8 - Bootstrap.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../../.." />
+  </component>
+  <component name="ProjectId" id="1wzYDY48d1LVzqkZsWOtuCqfp3P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ebefb24-8dea-4b1f-bd09-4a02bf16fe76" name="Default Changelist" comment="" />
+      <created>1629462764214</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629462764214</updated>
+      <workItem from="1629462766320" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1629462777389">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1629462777389" />
+    <state x="209" y="0" key="new project wizard" timestamp="1629462821098">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1629462821098" />
+  </component>
+</project>
