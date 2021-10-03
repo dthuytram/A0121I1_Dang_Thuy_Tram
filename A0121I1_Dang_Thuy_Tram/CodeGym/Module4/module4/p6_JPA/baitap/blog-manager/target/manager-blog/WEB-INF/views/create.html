@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo mới </title>
+</head>
+<body>
+<!--<h1 th:text="${action} == 'create' ? 'Create new user' : 'Edit user'" >Create new user</h1>-->
+<form name="create" th:action="@{/create}" method="post" th:object="${blog}">
+    <table>
+
+           <input  type="hidden" name="id" th:field="*{id}">
+        <tr>
+            <td>Tiltle</td>
+            <td><input type="text" th:placeholder="${'Name of user'}" name="name" th:field="*{title}"></td>
+        </tr>
+        <tr>
+            <td>Context</td>
+            <td><input type="text" th:placeholder="${'Age of user'}" name="id" th:field="*{context}"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="reset">Reset</button>
+            </td>
+            <td>
+                <button th:text="${action=='edit'?'Update':'Create'}" type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    <input type="hidden" name="action" th:value="${action}">
+</form>
+</body>
+</html>

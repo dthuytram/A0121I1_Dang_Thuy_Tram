@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+<body>
+    <div th:insert="~{user/template.html::header}"></div>
+    <h1>List product </h1>
+    <a href="/product/create">Create new product</a>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>description</th>
+            <th>price</th>
+            <th>Detail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="product, row: ${products}">
+            <td th:text="${row.index + 1}"></td>
+            <td th:text="${product.idProduct}"></td>
+            <td th:text="${product.nameProduct}"></td>
+            <td th:text="${product.description}"></td>
+            <td th:text="${product.priceProduct}"></td>
+            <td><a th:href="@{/product/detail/{id}(id=${product.idProduct})}">Detail</a></td>
+            <td><a th:href="@{/product/edit/{id}(id=${product.idProduct})}">Edit</a></td>
+            <td><a th:href="@{/product/delete/{id}(id=${product.idProduct})}">Delete</a></td>
+        </tr>
+    </table>
+    <p th:if="${message}" th:text="${message}"></p>
+    <div th:replace="~{user/template.html::footer}"></div>
+</body>
+</html>

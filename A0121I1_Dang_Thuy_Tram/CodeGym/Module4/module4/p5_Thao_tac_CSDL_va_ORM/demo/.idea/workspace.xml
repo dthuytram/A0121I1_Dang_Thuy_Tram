@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57572f82-5485-497b-9d38-14243cf23942" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../module3/BAI_13_JDBC_Quering_&amp;_Transaction/Task/JDBC_Tu_Proce/src/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module3/BAI_13_JDBC_Quering_&amp;_Transaction/Task/JDBC_Tu_Proce/src/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module3/BAI_14_Dependency_Management_&amp;_Packaging/Practice/Dong_goi_thu_vien/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/classes/java/main/com/codegym/AppConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/classes/java/main/com/codegym/AppConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/classes/java/main/com/codegym/AppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/classes/java/main/com/codegym/AppInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/classes/java/main/com/codegym/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/classes/java/main/com/codegym/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/libs/product-manager-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/libs/product-manager-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/src/main/java/com/codegym/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/src/main/java/com/codegym/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/src/main/java/com/codegym/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/src/main/java/com/codegym/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/src/main/webapp/WEB-INF/views/products/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Practice/product-manager/src/main/webapp/WEB-INF/views/products/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/repository/iml/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/repository/iml/ProductRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/repository/iml/UserRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/service/iml/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/service/iml/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/out/production/thymeleaf/codegym/service/iml/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/src/codegym/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf/src/codegym/controller/ProductController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1yX547mNWD6N0icz3Q4XTTUg7EE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Bai3_Views_and_Thymeleaf/Task/thymeleaf" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : cg.wbd : Gran Demonstration-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="19cf1dd6-66a8-46d6-bac2-b5db6e5e28e1" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53072" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : cg.wbd : Gran Demonstration-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57572f82-5485-497b-9d38-14243cf23942" name="Changes" comment="" />
+      <created>1632384899794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632384899794</updated>
+      <workItem from="1632384901103" duration="2504000" />
+      <workItem from="1632401688144" duration="5308000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
