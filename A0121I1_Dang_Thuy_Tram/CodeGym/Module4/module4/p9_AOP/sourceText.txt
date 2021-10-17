@@ -1,0 +1,4 @@
+Tối nay lớp mình sẽ học bài AOP, mọi người nhớ xem trước slide và tham khảo thêm ở site sau nhé
+https://levunguyen.com/laptrinhspring/2020/04/27/su-dung-aop-advise-trong-spring/
+https://levunguyen.com/laptrinhspring/2020/04/27/spring-aop-pointcut-trong-spring/
+https://levunguyen.com/laptrinhspring/2020/04/27/spring-aop-annotation-trong-spring/
