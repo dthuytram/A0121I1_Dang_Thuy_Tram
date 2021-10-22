@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View Customer</title>
+</head>
+<body>
+<table>
+    <th:block th:object="${customer}">
+        <p th:text="${customer.name}"></p>
+        <p th:text="${customer.birthday}"></p>
+    </th:block>
+</table>
+</body>
+</html>

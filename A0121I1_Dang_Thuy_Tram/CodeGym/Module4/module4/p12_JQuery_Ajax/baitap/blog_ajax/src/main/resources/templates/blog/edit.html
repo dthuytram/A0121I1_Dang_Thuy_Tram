@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/layout::head}">
+
+</head>
+<body>
+<form action="/blogs/edit" method="post" th:object="${blog}">
+    <div class="fade">
+        <input class="idBlog" type="text" th:field="${blog.id}">
+    </div>
+    <div>
+        Category:
+        <select th:field="${blog.category}" id="selectValue">
+            <option th:each="category : ${categories}" th:value="${category.id}" th:utext="${category.nameCategory}"></option>
+        </select>
+    </div>
+    <div>
+        <label>
+            Title Blog:
+        </label>
+        <input type="text" th:field="*{titleBlog}" id="titleBlog">
+    </div>
+    <div>
+        <label>Description blog:</label>
+        <input type="text"  th:field="*{descBlog}" id="descBlog"/>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+</body>
+</html>
